@@ -1,0 +1,161 @@
+.conteiner-register{
+    background-color: white;
+    width: 95%;
+    height: 50px;
+    border-radius: 22px;
+    margin-bottom: 21px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.p-register{
+    margin-right: 15px;
+    font-family: 'Nunito';
+}
+
+.date-filter label {
+    text-align: center; 
+    font-family: 'Nunito';
+}
+
+.date-filter select {
+    width: 100%;
+    height: 3vh;
+}
+.date-filter{
+    background-color: white;
+    font-family: 'Open Sans';
+    padding: 20px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto; 
+    width: 93%;
+    margin-bottom: 21px;
+    margin-top: 10px;
+}
+/* Estilo para el fondo oscurecido */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+/*  */
+.content-tableVentasTotal{
+    font-family: 'Nunito';
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    align-items: center;
+    justify-content: flex-start;
+}
+table {
+    width: 100%;
+    margin:  auto; 
+    border-collapse: collapse; 
+    border-spacing: 0; 
+
+   border-color: #444;
+   border-radius: 10%;
+    height: 300px; 
+
+}
+.miTabla {
+    border-radius: 10%;
+    width: 100%;
+    height: 100px;
+    padding: 30px;
+
+    font-weight: normal; 
+    font-family: 'Nunito';
+
+}
+/* Estilo para la tarjeta (card) */
+.card {
+    width: 300px; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+#VentaPagina{
+
+    border-radius: 10%;
+    width: 100%;
+    height: 100px;
+    padding: 30px;
+
+    font-weight: normal; 
+    font-family: 'Nunito';
+}
+/* Estilo para el botón de cierre */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+}
+
+/* Estilo para el botón de abrir modal */
+#openModal {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#fecha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+#fecha select{
+
+    width: 70px;
+    margin-right: 11px;
+}
+.content-fecha{
+    display: flex;
+    justify-content: column;
+    flex-direction: column;
+    width: 17%;
+    height: 6vh;
+
+    align-content: center;
+}
+.filters{
+    width: 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.filters option{
+    width: 10%;
+}
+.button-ventasTotal{
+    margin-top: 19px;
+ 
+}

@@ -1,0 +1,107 @@
+.conteiner-infoo {
+    font-family: 'Open Sans';
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    display: flex;
+
+    height: 55vh;
+    background-color: rgb(254, 254, 254);
+    width: 95%;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.service-image{
+    width: 90%;
+    height: 90%;
+    padding: 30px 10px 50px 50px;
+    margin: auto;
+}
+.service-image img{
+    margin: 7px;
+    padding-right: 30px ;
+
+}
+.input {
+    width: 95%;
+    border-radius: 23px;
+    height: 4vh;
+    border: none;
+    margin-left: 30px;
+    background-color: #d3d2d2;
+}
+.title {
+    font-weight: bold;
+    font-family: 'Open Sans';
+    margin-left: 30px;
+    font-size: 22px;
+}
+
+.content-1-PagoServicios button {
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+    all: unset;
+    background-color:#8cc909;
+    width: 20%;
+    height: 8vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.conteiner-info2{
+    font-family: 'Open Sans';
+    border-top-left-radius: 20px;
+    border-bottom: 5px solid #706f6f;
+    border-top-right-radius: 20px;
+    display: flex;
+    padding: 5px;
+    background-color: rgb(254, 254, 254);
+    width: 95%;
+    flex-direction: row;
+    height: 7vh;
+    justify-content: flex-start;
+    margin-top: 42px;
+
+    align-items: center;
+}
+.content-1-PagoServicios{
+    display: flex;
+    align-items: center; 
+
+    width: 100%;
+    border-bottom: 5px solid #706f6f;
+    font-family: 'Open Sans';
+}
+.parrafo2{
+    font-size: 15px;
+    padding: 5px;
+    font-family: 'Open Sans';
+    width: 95%;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    background-color: white;
+}
+#contenido{
+    display: flex;
+    flex-direction: column;
+    width: 99%;
+}
+/* .container-contenido{
+    display: flex;
+    height: 40vh;
+    flex-direction: column;
+    width: 100%;
+*/
+.container-contenido {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.button-container {
+    width: 15%;
+    margin-left: 5px;
+}

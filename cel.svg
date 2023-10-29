@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.25 104.33">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b9d36f;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #8dbf22;
+      }
+
+      .cls-3 {
+        fill: #d1e19e;
+      }
+
+      .cls-4 {
+        fill: #6a982e;
+      }
+
+      .cls-5 {
+        fill: #476728;
+      }
+
+      .cls-6 {
+        fill: #e7efce;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x="6.66" y="2.6" width="55.76" height="99.12" rx="9.29" ry="9.29" transform="translate(-8.47 6.73) rotate(-9.92)"/>
+  <rect class="cls-5" x="9.76" y="21.19" width="49.56" height="61.95" transform="translate(-8.47 6.73) rotate(-9.92)"/>
+  <circle class="cls-1" cx="17.19" cy="15.89" r="1.55"/>
+  <path class="cls-1" d="m40.07,11.89c.15.84-.42,1.65-1.26,1.79l-15.26,2.67c-.84.15-1.65-.42-1.79-1.26s.42-1.65,1.26-1.79l15.26-2.67c.84-.15,1.65.42,1.79,1.26Z"/>
+  <circle class="cls-1" cx="41.47" cy="91.83" r="6.2"/>
+  <rect class="cls-6" x="38.38" y="88.73" width="6.2" height="6.2" transform="translate(-15.2 8.52) rotate(-9.92)"/>
+  <polygon class="cls-4" points="54.86 24.52 53.61 17.38 4.79 25.92 14.58 81.87 54.86 24.52"/>
+  <path class="cls-1" d="m66.74,2.51c-16.85,2.95-28.83,14.98-26.75,26.87,1.02,5.82,5.23,10.52,11.23,13.47l-3.86,19.65,16.16-16.42c3.43.28,7.05.15,10.76-.5,16.85-2.95,28.83-14.98,26.75-26.87C98.94,6.82,83.59-.44,66.74,2.51Z"/>
+  <path class="cls-3" d="m66.74,2.51c-16.85,2.95-28.83,14.98-26.75,26.87,1.02,5.82,5.23,10.52,11.23,13.47l-3.86,19.65.58-.58L88.22,4.54c-6.03-2.53-13.58-3.42-21.49-2.04Z"/>
+  <circle class="cls-4" cx="58.27" cy="26" r="3.1"/>
+  <circle class="cls-4" cx="70.47" cy="23.87" r="3.1"/>
+  <circle class="cls-4" cx="82.68" cy="21.73" r="3.1"/>
+</svg>

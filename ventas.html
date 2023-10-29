@@ -1,0 +1,78 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+        <script src="venta.js"></script>
+    <link rel="stylesheet" href="stylesVentasTotal.css">
+</head>
+
+<div id="content">
+    <!-- Contenido de ventas.html -->
+    <div class="content-table">
+        <div class="date-filterVentas">
+            <div class="content-fechaVentas">
+                <div id="fechaDesde">
+                    <label>Desde</label>
+                    <select id="desdeDia">
+                    </select>
+                    <select id="desdeMes">
+                    </select>
+                    <select id="desdeAño">
+                    </select>
+                </div>
+                <div id="fechaHasta">
+                    <label>Hasta</label>
+                    <select id="hastaDia">
+                    </select>
+                    <select id="hastaMes">
+                    </select>
+                    <select id="hastaAño">
+                    </select>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="search" onclick="buscar()">BUSCAR</button>
+            </div>
+        </div>
+        <div class="table-container">
+            <table class="miTabla">
+                <thead>
+                    <tr class="a">
+                        <th>FECHA</th>
+                        <th>APROBADAS/TOTAL</th>
+                        <th>TOTAL</th>
+                    </tr>
+                </thead>
+                <tbody id="VentaPagina">
+                    <tr>
+                        <td></td>
+                        <td>0/0</td>
+                        <td>$0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    // Función para generar opciones de selección para días, meses y años
+    function generarOpciones(selectId, min, max) {
+        var select = document.getElementById(selectId);
+        for (var i = min; i <= max; i++) {
+            var option = document.createElement("option");
+            option.value = i < 10 ? "0" + i : i.toString(); 
+            option.text = i < 10 ? "0" + i : i.toString(); 
+            select.appendChild(option);
+        }
+    }
+
+    generarOpciones("desdeDia", 1, 31);
+    generarOpciones("desdeMes", 1, 12);
+    generarOpciones("desdeAño", 2020, 2029);
+    generarOpciones("hastaDia", 1, 31);
+    generarOpciones("hastaMes", 1, 12);
+    generarOpciones("hastaAño", 2020, 2029);
+
+</script>

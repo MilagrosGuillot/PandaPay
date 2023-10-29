@@ -1,0 +1,123 @@
+/*-----------------Dark Mode---------------------------------------------------------- */
+.night-mode {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.night-content {
+}
+
+.night-mode body {
+    background-color: #222;
+    color: #fff;
+}
+
+.night-mode .container {
+    background-color: #111;
+    color: #fff;
+}
+
+.night-mode .options {
+    color: #fff;
+}
+
+.night-mode .option {
+    color: #fff;
+}
+
+.night-mode input {
+    background-color: #333;
+    color: #fff;
+    border-color: #666;
+}
+
+.night-mode .button {
+    background-color: #333;
+    color: #fff;
+    border-color: #666;
+}
+
+.night-mode .header {
+    background-color: #111;
+}
+
+.night-mode .navbar {
+    background-color: #111;
+}
+
+.night-mode .nav-paragraph {
+    color: #fff;
+}
+
+.night-mode .navbar a {
+    color: #fff;
+}
+
+.night-mode .navbar .button {
+    background-color: #333;
+    color: #fff;
+}
+
+.night-mode .menu {
+    background-color: #111;
+}
+
+.night-mode .menu ul {
+    color: #fff;
+}
+
+.night-mode .menu button {
+    color: #fff;
+}
+
+.night-mode .menu li {
+    border-color: #666;
+}
+
+.night-mode .menu li.active {
+    background-color: #666;
+    color: #fff;
+}
+
+.night-mode #content {
+    background-color: #111;
+}
+
+.night-mode #nightModeButton {
+    background-color: #333;
+    color: #fff;
+}
+
+.night-mode .table-container {
+    background-color: #555;
+    color: #fff;
+}
+
+.night-mode tbody {
+    background-color: #555;
+    color: #020202;
+}
+
+.night-mode #content .date-filter {
+    background-color: #555;
+    color: #fff;
+}
+
+.night-mode #content .cambiarContraseña {
+    background-color: #666;
+    color: #fff;
+}
+
+.night-mode #content .cambiarContraseña label {
+    color: #fff;
+}
+
+.night-mode #content .cambiarContraseña input {
+    background-color: #777;
+    color: #fff;
+}
+
+.night-mode #content .dialog-box {
+    background-color: #444;
+    color: #fff;
+}

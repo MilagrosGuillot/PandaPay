@@ -1,0 +1,325 @@
+:root {
+
+    --text-color: #333;
+    --link-color: rgb(13, 13, 12);
+    --border-color: rgb(231, 231, 231);
+    --font-size: 2.3vh;
+}
+
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color) ;
+    font-size: 120%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    height: 100vh;
+    align-items: flex-start;
+}
+
+.header {
+    background-color: #ffffff;
+    height: 10vh;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: nowrap !important;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.custom-background {
+    background-color: #706f6f;
+}
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    margin-left: 16px;
+    margin-right: 80px;
+}
+li button img {
+    width: 55px; 
+    height: 55px; 
+    margin-right: 10px; 
+    vertical-align: middle; 
+}
+li a img {
+    width: 55px; 
+    height: 55px; 
+    margin-right: 10px; 
+    vertical-align: middle; 
+}
+.img-panda {
+    width: 26%; 
+    height: 8vh; 
+    background-image: url(../assets/logos/iso.png);
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+
+.img-logo {
+    width: 100%; 
+    height: 5vh; 
+    background-image: url(../assets/logos/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#datos-json {
+    display: flex;
+    justify-content: center;
+    width: 98%;
+    align-items: center;
+    align-content: center;
+}
+
+.nav-User {
+        font-weight: bold;
+        width: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+}
+.cuenta{
+    display: flex;
+    align-items: center;
+}
+.nav-paragraph {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-right: 10px;
+}
+.nav-icons-img{
+    width: 36px
+}
+
+#dinero-en-cuenta{
+    margin-top: 5px;
+}
+#merchant-id{
+    margin-bottom: 12px;
+}
+.nav-User.cuenta .valor,
+.nav-User.liquidar .valor {
+  align-items: flex-start; 
+  display: flex;
+}
+
+#dinero-a-liquidar{
+    margin-top: 5px;
+}
+
+.nav-User img {
+    margin-right: 7px;
+    width: 50px;
+    vertical-align: middle; 
+}
+
+.nav-paragraph:hover {
+    color: var(--link-color);
+}
+.nav-icon {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-right: 5px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .button {
+    width: 100%;
+    justify-content: flex-start;
+}
+
+#menu {
+    height: 90vh;
+    bottom: 0;
+    left: 0;
+    width: 23%;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-top: 13px;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+#menu button .icon {
+    display: inline-block;
+    width: 100px; 
+    height: 40px; 
+    background-image: url('../css/assets/homeIcon.jpg');
+    background-repeat: no-repeat;
+    background-size: contain; 
+    margin-right: 5px;
+}
+
+#menu a .icon {
+    display: inline-block;
+    width: 100px; 
+    height: 40px; 
+    background-image: url('../css/assets/homeIcon.jpg'); 
+    background-repeat: no-repeat;
+    background-size: contain; 
+    margin-right: 5px; 
+}
+#menu button {
+    text-decoration: none;
+    color: var(--link-color);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: var(--font-size);
+    text-align: left;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+#menu a {
+    text-decoration: none;
+    color: var(--link-color);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: var(--font-size);
+    text-align: left;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+
+#menu a:focus {
+    outline: none;
+}
+
+#menu button:focus {
+    outline: none;
+}
+
+#menu li {
+    padding: 12px;
+    text-align: left;
+    transition: border-left 0.3s, background-color 0.3s;
+    border-left: 4px solid transparent;
+    text-decoration: none;
+}
+
+#menu li.active {
+    border-left: 10px solid #8cc909;
+    background-color: var(--border-color);
+    font-weight: bold;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.option {
+    text-align: left;
+    padding: 10px 20px;
+    color: #888888;
+    cursor: pointer;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* justify-content: center; */
+    height: 90vh;
+    background-color: #d1e99d;
+}
+.row {
+    display: flex;
+    width: 102%;
+    margin: auto;
+    padding: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+#miTabla {
+    border-collapse: collapse;
+    /* width: 30%; */
+}
+
+.a {
+    border-bottom: 4px solid #706f6f;
+}
+
+#content .table-container {
+    overflow: hidden;
+}
+
+.date-filter {
+    background-color: white;
+    padding: 20px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 92%;
+}
+.fi-rr-key {
+    font-size: 30px; 
+}
+.fi-rs-document{
+    font-size: 30px
+}
+.fi-rr-yin-yang{
+    font-size: 30px
+}
+.fi-rr-eclipse{
+    font-size: 30px
+}
+.fi-rr-power{
+    font-size: 30px
+}
+.miboton{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    color: inherit;
+    -webkit-appearance: none;
+}

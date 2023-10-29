@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANDAPAY</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="stylesHome.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Enlace a Bootstrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilos para dispositivos de escritorio */
+        @media (min-width: 576px) {
+            .mobile-fields {
+                display: none;
+                /* Oculta los campos en dispositivos de escritorio */
+            }
+        }
+
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 576px) {
+            .link-tree {
+                display: none;
+            }
+
+            .mobile-fields {
+                display: block;
+                /* Muestra los campos en dispositivos móviles */
+            }
+
+            .right-side {
+                border: none
+            }
+            
+            .button{
+                height: 5vh;
+    width: 60%;
+
+            }
+            .terms {
+                display: flex;
+                flex-direction: column;
+                font-weight: normal;
+                justify-content: center;
+                align-content: center;
+                align-items: flex-start;
+                margin-bottom: 10px;
+                margin-left: 20px;
+            }
+
+            .form {
+                margin-bottom: 19px;
+            }
+
+            .ingresar {
+                margin-bottom: 19px;
+            }
+
+            .terms label,
+            .mobile-fields label {
+                font-size: 12px;
+                color: #888888;
+                white-space: nowrap;
+                margin-left: 5px;
+                /* Añadido para dar espacio al checkbox */
+            }
+
+            .terms input,
+            .mobile-fields input {
+                font-size: 14px;
+                color: #888888;
+                width: auto;
+                /* Ajustar el ancho automáticamente */
+            }
+
+            .terms .mobile-fields {
+                margin-top: 5px;
+                /* Espacio entre los campos en dispositivos móviles */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid text-center">
+        <p class="text-form">¡Hola! Te damos la bienvenida a <span class="welcome"><span class="high">PANDA</span><span
+                    class="highlight" style="color: #8cc909;">PAY</span></span>.<br>Completá tus datos y empezá a
+            operar.</p>
+        <form action="../home/home.html">
+            <div class="form">
+                <input class="form-control" style="margin-bottom: 30px" type="text" placeholder="Email" required
+                    minlength="10">
+                <input class="form-control" style="margin-bottom: 30px;" type="password" placeholder="Clave" required
+                    minlength="10">
+                <div class="terms">
+                    <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                    <label class="form-check-label" for="terms">ACEPTO TERMINOS Y CONDICIONES</label>
+                </div>
+                <!-- Nuevos campos que solo se mostrarán en dispositivos móviles -->
+                <div class="mobile-fields terms">
+                    <input class="form-check-input" type="checkbox" id="rememberTerms" name="rememberTerms">
+                    <label class="form-check-label" for="rememberTerms">RECORDAR USUARIO Y CONTRASEÑA</label>
+                </div>
+            </div>
+            <div class="ingresar">
+                <button type="submit" class="button">INGRESAR</button>
+            </div>
+        </form>
+        <p><a href="https://www.pandapay.com.ar/" class="link-tree clave" target="_blank">Olvidé mi clave</a></p>
+    </div>
+    <div class="verde">
+    </div>
+</body>
+
+</html>

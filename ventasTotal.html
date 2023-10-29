@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+    <link rel="stylesheet" href="stylesVentasTotal.css">
+    <script src="ventaTotal.js"></script>
+</head>
+<body>
+    <div id="content">
+        <div class="content-tableVentasTotal">
+            <div class="date-filter">
+                <div class="content-fecha">
+                    <label class="filters" for="fecha">Fecha:</label>
+                    <div id="fecha">
+                        <select id="Dia">
+                            <option value="1">1</option>
+                        </select>
+                        <select id="Mes">
+                            <option value="1">1</option>
+                        </select>
+                        <select id="Año">
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filters">
+                    <label for="operacion">Operacion:</label>
+                    <select class="select-all" id="operacion" name="operacion">
+                        <option value="TODAS">TODAS</option>
+                        <option value="PAGO">PAGO</option>
+                        <option value="ANULACIÓN">ANULACIÓN</option>
+                        <option value="DEVOLUCIÓN">DEVOLUCIÓN</option>
+                    </select>
+                </div>
+                <div class="filters">
+                    <label for="status">Status:</label>
+                    <select id="status" name="status">
+                        <option value="TODAS">TODAS</option>
+                        <option value="APROBADA">APROBADA</option>
+                        <option value="FALLIDA">FALLIDA</option>
+                        <option value="PENDIENTE">PENDIENTE</option>
+                        <option value="RECHAZADA">RECHAZADA</option>
+                    </select>
+                </div>
+                <div class="filters">
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" name="tipo">
+                        <option value="TODAS">TODAS</option>
+                        <option value="DEBITO">DEBITO</option>
+                        <option value="CREDITO">CREDITO</option>
+                        <option value="OTRA">OTRA</option>
+                    </select>
+                </div>
+                <div class="filters">
+                    <label for="marca">Marca:</label>
+                    <select id="marca" name="marca">
+                        <option value="TODAS">TODAS</option>
+                        <option value="VISA">VISA</option>
+                        <option value="MASTERCARD">MASTERCARD</option>
+                        <option value="OTRA">OTRA</option>
+                    </select>
+                </div>
+                <div class="filters">
+                    <label for="terminal">Terminal:</label>
+                    <select id="terminal" name="terminal">
+                        <option value="TODAS">TODAS</option>
+                    </select>
+                </div>
+                <div class="button-container button-ventasTotal">
+                    <button onclick="buscarTotal()" id="search">BUSCAR</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteiner-register">
+
+            <p class="p-register" id="cantRegistros">Cantidad de registros:0 </p>
+        </div>
+        <div class="table-container">
+            <table class="miTabla" id="miTabla">
+                <thead>
+                    <tr class="a">
+                        <th>FECHA</th>
+                        <th>COMERCIO</th>
+                        <th>TR ID</th>
+                        <th>OP ID</th>
+                        <th>TIPO OP.</th>
+                        <th>STATUS</th>
+                        <th>TIPO T.</th>
+                        <th>MARCA</th>
+                        <th>CUOTAS</th>
+                        <th>MONTO</th>
+                        <th>INFO</th>
+                    </tr>
+                </thead>
+                <tbody id="VentaTotal">
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal" id="myModal" style="display: none;">
+        <div class="card">
+            <span class="close" id="closeModal">&times;</span>
+            <div class="card-header">
+                <h2>No se encontraron ventas</h2>
+            </div>
+            <div class="card-body">
+                <p>Intente de nuevo</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        // Función para generar opciones de selección para días, meses y años
+        function generarOpciones(selectId, min, max) {
+            var select = document.getElementById(selectId);
+            for (var i = min; i <= max; i++) {
+                var option = document.createElement("option");
+                option.value = i;
+                option.text = i;
+                select.appendChild(option);
+            }
+        }
+        generarOpciones("Dia", 1, 31);
+
+        generarOpciones("Mes", 1, 12);
+
+        generarOpciones("Año", 2020, 2029);
+    </script>

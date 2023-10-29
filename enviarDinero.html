@@ -1,0 +1,63 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+    <script src="enviarDinero.js"></script>
+    <script src="Home.js"></script>
+    <link rel="stylesheet" href="styles.Ventas.css">
+    <link rel="stylesheet" href="stylesEnviarDinero.css">
+</head>
+
+<body>
+    <div id="content">
+        <div class="content-table">
+            <div class="conteiner">
+                <div class="content-parrafo">
+                    <span id="saldoCuenta">DISPONIBLE PARA TRANSFERIR: $697.17</span>
+                </div>
+                <div class="content-liquidacion">
+                    <button id="abrirNuevaPestana" onclick="abrirPagina()">AÑADIR CONTACTO</button>
+                </div>
+            </div>
+
+            <div class="search-filter">
+                <input type="text" placeholder="Buscar contacto">
+                <input type="text" placeholder="Monto a transferir">
+                <input type="text" placeholder="Referencia">
+
+                <div class="button-container">
+                    <button id="search" onclick="CargarTabla()">ENVIAR</button>
+                </div>
+            </div>
+            <div class="table-container">
+                <table class="miTabla" id="miTablaDINERO">
+                    <thead>
+                        <tr class="a">
+                            <th>FECHA</th>
+                            <th>DESTINO</th>
+                            <th>CVU/ALIAS/CBU</th>
+                            <th>REFERENCIA</th>
+                            <th>MONTO</th>
+                            <th>STS</th>
+                            <th>BORRAR</th>
+                            <th>REC</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbbodydinero">
+                        <tr>
+                            <th>
+
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>

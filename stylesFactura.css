@@ -1,0 +1,49 @@
+.content-factura {
+    display: flex;
+    width: 57%;
+    height: 40vh;
+    flex-direction: row;
+}
+
+.content h1 {
+    margin-right: 10px;
+    margin-left: 30px;
+    font-size: 25px;
+}
+
+.content-elementos input {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+
+.content-elementos button {
+    display: inline-block;
+    border-radius: 30px;
+    font-family: 'Open Sans';
+    color: white;
+    border: none;
+    background-color:#8cc909;
+}
+
+#content-factura {
+    display: flex;
+    width: 50%;
+    height: 40vh;
+    flex-direction: row;
+}
+.content-elementos input {
+    width: 71%;
+    border-radius: 23px;
+    height: 4vh;
+    border: none;
+    margin-left: 30px;
+    background-color: #e6e6e6;
+}
+.content-elementos{
+    display: flex;
+}
+.content{
+    width: 100%;
+
+}

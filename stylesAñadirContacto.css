@@ -1,0 +1,29 @@
+.content-button{
+    width: 25%;
+}
+.cbu{
+    border-radius: 30px;
+    height: 4vh;
+    border: none;
+    background-color: #706f6f;
+    color: white;
+    width: 60%;
+    font-family: 'Open Sans';
+}
+.button-container{
+    width: 10%;
+}
+.search {
+    background-color: #8cc909;
+    border-radius: 23px;
+    height: 4vh;
+    font-family: 'Open Sans';
+    align-items: center;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+}

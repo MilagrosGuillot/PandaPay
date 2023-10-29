@@ -1,0 +1,14 @@
+.content{
+
+    width: 100%;
+}
+#content-disponible{
+    display: flex;
+    width: 42%;
+    height: 40vh;
+    flex-direction: row;
+}
+.content h2 {
+    margin-left:15px;
+    font-size: 25px;
+}

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANDAPAY</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Home.js"></script>
+    <script src="ventaTotal.js"></script>
+    <script src="venta.js"></script>
+    <script src="ventaInicio.js"></script>
+    <script src="enviarDinero.js"></script>
+    <script src="liquidacion.js"></script>
+    <link rel="stylesheet" href="styles.Ventas.css">
+    <link rel="stylesheet" href="stylesVentasTotal.css">
+    <script src="ventaTotal.js"></script>
+    <link rel="stylesheet" href="stylesHome.css">
+    <link rel="stylesheet" href="styleNigth.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700">
+    <link rel="stylesheet" href="stylesInicio.css">
+    <link rel="stylesheet" href="styles.comprobante.css">
+    <script src="enviarDinero.js"></script>
+    <link rel="stylesheet" href="stylesEnviarDinero.css">
+    <!-- Bootstrap CSS and JS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <link rel="icon" type="image/x-icon" href="iso.png">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="header">
+            <nav class="navbar">
+                <!-- Fila para la vista móvil -->
+                <div class="row rowMobil ">
+                    <div class="col-12 d-md-none">
+                        <button id="menu-toggle-button" class="btn btn-primary">
+                            <img src="ruta-a-tu-icono-hamburguesa.png" alt="Menú">
+                        </button>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sx-2 col-12">
+                        <div class="image-container" value="Inici" onclick="Abrir()">
+                            <div class="img-panda"></div>
+                            <div class="img-logo"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-md-none">
+                        <div class="nav-icon-mobile">
+                            <a href="#">
+                                <p class="nav-paragraph"><img class="nav-icons-img"
+                                        src="icono_uno.png"></p>
+                            </a>
+                            <a href="#" onclick="toggleNightMode(event)">
+                                <p class="nav-paragraph"><img class="nav-icons-img"
+                                        src="luna.png"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fila para la vista de escritorio -->
+                <div class="col-lg-8 col-md-8 col-12 d-none d-md-flex align-items-center ">
+                    <div id="datos-json">
+                        <div class="nav-User id" value="Inici" onclick="Abrir()">
+                            <img src="user.png" alt="Usuario">
+                            <div>
+                                <span id="merchant-id-desktop"></span>
+                                <br>
+                                <span id="ultima-visita-desktop"></span>
+                            </div>
+                        </div>
+                        <div class="nav-User cuenta" value="Envdi" onclick="Abrir()">
+                            <img src="sendMoney.png" alt="Usuario">
+                            <div class="valor">
+                                <span id="dinero-en-cuenta-desktop"></span>
+                            </div>
+                        </div>
+                        <div class="nav-User liquidar" value="Liqui" onclick="Abrir()">
+                            <img src="liquidateMoney.png" alt="Usuario">
+                            <div class="valor">
+                                <span id="dinero-a-liquidar-desktop"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-12 order-3">
+                    <div class="nav-icon">
+                        <a href="#">
+                            <p class="nav-paragraph"><img class="nav-icons-img"
+                                    src="icono_uno.png"></p>
+                        </a>
+                        <a href="#">
+                            <p id="comproicon" value="Compr" onclick="Abrir()" class="nav-paragraph"><img
+                                    class="nav-icons-img" src="icono_dos.png"></p>
+                        </a>
+                        <a href="#" onclick="toggleNightMode(event)">
+                            <p class="nav-paragraph"><img class="nav-icons-img"
+                                    src="luna.png"></p>
+                        </a>
+                        <a href="#">
+                            <p id="liquiicon" value="Liqui" onclick="Abrir()" class="nav-paragraph"><img
+                                    class="nav-icons-img"
+                                    src="cambiarcontraseña_activo.png"> </p>
+                        </a>
+                        <a href="index.html">
+                            <p class="nav-paragraph" href="index.html"><img class="nav-icons-img"
+                                    src="salir_activo.png"></p>
+                        </a>
+                    </div>
+                </div>
+    </div>
+    </nav>
+    </header>
+    </div>
+    <!-- Nueva fila en la vista móvil (por debajo de la primera) -->
+    <div class="row  d-md-none">
+        <div class="col-12 rowMerchant">
+            <div id="datos-json-mobile">
+                <div class="nav-User id" value="Inici" onclick="Abrir()">
+                    <img src="user.png" alt="Usuario">
+                    <div>
+                        <span id="merchant-id-mobile"></span>
+                        <br>
+                        <span id="ultima-visita-mobile"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row no-gutters d-md-none">
+        <div class="col-6 rowDinero">
+            <div class="nav-User cuenta" value="Envdi" onclick="Abrir()">
+                <img src="sendMoney.png" alt="Usuario">
+                <div class="valor">
+                    <span id="dinero-en-cuenta-mobile"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 rowDinero">
+            <div class="nav-User liquidar" value="Liqui" onclick="Abrir()">
+                <img src="liquidateMoney.png" alt="Usuario">
+                <div class="valor">
+                    <span id="dinero-a-liquidar-mobile"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row custom-background  d-sm-flex-column align-items-center">
+        <div id="menu" class="col-3 col-lg-3 col-sm-3 col-md-3  ">
+            <!-- Contenido del menú (a la derecha) -->
+            <nav>
+                <ul>
+                    <li><a href="#" class="menu-button" onclick="selectOption(this)"
+                            data-active-image="inicio_activo.png"
+                            data-inactive-image="inicio_des.png"><img
+                                src="inicio_des.png" alt="Imagen 1" id="inicioicon"
+                                class="menu-icon ">Inicio</a></li>
+                    <li><a href="#" class="menu-button" onclick="selectOption(this)"
+                            data-active-image="venta_activo.png"
+                            data-inactive-image="sale_des.png"><img
+                                src="sale_des.png" alt="Imagen 2" class="menu-icon"
+                                id="ventasicon">Ventas</a></li>
+                    <li><a href="#" class="menu-button" onclick="selectOption(this)"
+                            data-active-image="ventas_activo.png"
+                            data-inactive-image="sales_des.png"><img
+                                src="sales_des.png" alt="Imagen 3" class="menu-icon"
+                                id="totalicon">Ventas/Total</a></li>
+                    <li><a href="#" class="menu-button" onclick="selectOption(this)"
+                            data-active-image="liquidacion_activo.png"
+                            data-inactive-image="liquidation_des.png"><img
+                                src="liquidation_des.png" alt="Imagen 3"
+                                class="menu-icon" id="liquiicon">Liquidación</a></li>
+                    <li><a href="#" class="menu-button" onclick="selectOption(this)"
+                            data-active-image="comprobante_activo.png"
+                            data-inactive-image="comprobante_des.png"><img
+                                src="comprobante_des.png" alt="Imagen 3"
+                                class="menu-icon" id="comproicon">Comprobantes</a></li>
+                    <li><a href="#" class="menu-button" onclick="selectOption(this)"
+                            data-active-image="enviardinero_activo.png"
+                            data-inactive-image="sendMoney_des.png"><img
+                                src="sendMoney_des.png" alt="Imagen 3"
+                                class="menu-icon" id="enviaricon">Enviar Dinero</a></li>
+                    <li><a href="#" class="menu-button" onclick="selectOption(this)"
+                            data-active-image="pagoservicios_activo.png"
+                            data-inactive-image="Payment services_des.png"><img
+                                src="Payment services_des.png" alt="Imagen 3"
+                                class="menu-icon" id="pagseicon">Pago de Servicios</a></li>
+                    <li><a href="#" class="menu-button" onclick="selectOption(this)"
+                            data-active-image="cambiarcontraseña_activo.png"
+                            data-inactive-image="changePassword.png"><img
+                                src="changePassword.png" alt="Imagen 3"
+                                class="menu-icon">Cambiar Contraseña</a></li>
+                    <li><a href="index.html"><img src="getOut_des.png"
+                                alt="Imagen 3">Salir</a>
+                    </li>
+                </ul>
+            </nav>
+            <button id="menu-toggle" class="btn btn-primary d-md-none">
+                <img src="ruta-a-tu-icono-hamburguesa.png" alt="Menú">
+            </button>
+        </div>
+
+        <div class="col-9 col-lg-9 col-sm-12 col-md-12 col-12 d-sm-flex-column align-items-center" id="content">
+            <div class="" id="home">
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 767px) {
+            #menu {
+                display: none;
+            }
+        .rowDinero{
+            display: flex;
+        }
+            .rowMerchant {
+                display: flex  ;
+                align-items: center ;
+                width: 100%;
+                align-content: center ;
+                justify-content: space-between;
+            }
+
+            .image-container .img-logo {
+                display: none;
+            }
+
+            .img-panda {
+                width: 100%;
+            }
+
+            .row {
+                flex-wrap: nowrap;
+            }
+
+
+            .nav-icon {
+                display: none;
+            }
+
+            .content-container {
+                display: flex;
+                height: 100vh;
+                width: 101%;
+                background-color: var(--background-color);
+                justify-content: center;
+                align-items: flex-start;
+                align-content: center;
+            }
+
+            .col-12 {
+                flex: 0 0 0%
+            }
+
+            #content {
+                justify-content: flex-start;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            .nav-icon-mobile {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            .nav-icon-mobile a {
+                text-decoration: none;
+                color: #000;
+            }
+
+            /* Estilo para el botón de hamburguesa en dispositivos móviles */
+            #menu-toggle-button {
+                order: 3;
+                /* Coloca el botón de hamburguesa al final */
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menuToggleButton = document.getElementById('menu-toggle-button'); // Nuevo botón
+
+            menuToggle.addEventListener('click', function () {
+                this.classList.toggle('active'); // Cambia la clase active en el botón hamburguesa
+            });
+
+            menuToggleButton.addEventListener('click', function () {
+                menuToggle.classList.toggle('active'); // Cambia la clase active en el botón hamburguesa al hacer clic en el nuevo botón
+            });
+        });
+
+    </script>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('menu');
+
+            menuToggle.addEventListener('click', function () {
+                menu.classList.toggle('show-menu');
+            });
+        });
+    </script>
+
+
+    <script>
+        const menuItems = document.querySelectorAll('.menu li');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+                item.classList.add('active');
+            });
+        });
+    </script>
+    <script>
+        function mostrarDatosJSON() {
+            fetch('infoNav.json')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        var item = data[0];
+
+                        // Actualiza elementos de la vista de escritorio
+                        var merchantIdDesktop = document.getElementById("merchant-id-desktop");
+                        var dineroEnCuentaDesktop = document.getElementById("dinero-en-cuenta-desktop");
+                        var dineroALiquidarDesktop = document.getElementById("dinero-a-liquidar-desktop");
+
+                        merchantIdDesktop.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
+                        dineroEnCuentaDesktop.textContent = "DINERO EN CUENTA: " + item['DINERO EN CUENTA'];
+                        dineroALiquidarDesktop.textContent = "DINERO A LIQUIDAR: " + item['DINERO A LIQUIDAR'];
+
+                        // Actualiza elementos de la vista móvil
+                        var merchantIdMobile = document.getElementById("merchant-id-mobile");
+                        var dineroEnCuentaMobile = document.getElementById("dinero-en-cuenta-mobile");
+                        var dineroALiquidarMobile = document.getElementById("dinero-a-liquidar-mobile");
+
+                        merchantIdMobile.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
+                        dineroEnCuentaMobile.textContent = "DINERO EN CUENTA: " + item['DINERO EN CUENTA'];
+                        dineroALiquidarMobile.textContent = "DINERO A LIQUIDAR: " + item['DINERO A LIQUIDAR'];
+                    } else {
+                        console.error('El archivo JSON está vacío.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al cargar el archivo JSON:', error);
+                });
+        }
+        mostrarDatosJSON();
+    </script>
+
+<script>
+    function mostrarUltimaVisita() {
+        var fechaHoraActual = new Date();
+        var dia = fechaHoraActual.getDate();
+        var mes = fechaHoraActual.getMonth() + 1;
+        var hora = fechaHoraActual.getHours();
+        var minutos = fechaHoraActual.getMinutes();
+        var fechaHoraFormato = dia + '/' + mes + ' ' + hora + ':' + (minutos < 10 ? '0' : '') + minutos;
+
+        // Para la vista de escritorio
+        document.getElementById("ultima-visita-desktop").textContent = "Última visita: " + fechaHoraFormato;
+
+        // Para la vista móvil
+        document.getElementById("ultima-visita-mobile").textContent = "Última visita: " + fechaHoraFormato;
+    }
+    mostrarUltimaVisita();
+</script>
+
+</body>
+
+</html>

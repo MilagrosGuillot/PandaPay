@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.comprobante.css">
+    <link rel="stylesheet" href="styles.Ventas.css">
+    <link rel="stylesheet" href="stylesPagodeServicios.css">
+</head>
+<body>
+    <div id="content">
+        <div class="content-table">
+            <div class="conteiner-infoo">
+                <div class="content-1-PagoServicios">
+                    <button class="option selected" onclick="selectOption(this)">SIN FACTURA</button>
+                    <button class="option" onclick="selectOption(this)">CON FACTURA</button>
+                    <button class="option" onclick="selectOption(this)">DISPONIBLE</button>
+                </div>
+                <div class="container-contenido">
+                    <div id="contenido">
+                        <h2 class="title">Busque una empresa o ingrese a traves de la marca</h2>
+                        <input class="input" type="text" placeholder="Buscar empresa"> 
+                    </div>
+                    <div class="service-image" id="service-image">
+                        <img  class="pagoServicos" src="personal.png">
+                        <img src="telecom.png">
+                        <img src="aysa.png">
+                        <img src="edesur.png">
+                        <img src="movistar.png">
+                        <img src="metrogas.png">
+                        <img src="edenor-removebg.png">
+                        <img src="cablevison.png">
+                        <img src="naturgy.png">
+                        <img src="claro.png">
+                    </div>   
+                </div>
+                </div>
+            </div>    
+            <div class="conteiner-info2"> <!-- Abre el div correcto aquí -->
+                <div class="content-1PagoServicios">
+                    <h2 class="title">ULTIMAS 20 OPERACIONES</h2>
+                </div>
+            </div> 
+            <div class="parrafo2">
+                <h2 class="title">Busque una empresa o ingrese a traves de la marca</h2>
+            </div>
+    </div>
+</body>
+
+<script>
+    var contenidoInicial = document.getElementById("contenido").innerHTML;
+
+    function ajustarAlturaContenedor(altura) {
+    var conteinerInfoo = document.querySelector(".conteiner-infoo");
+    conteinerInfoo.style.height = altura + "vh";
+}
+
+var alturaPredeterminada = 55; 
+
+window.onload = function () {
+    ajustarAlturaContenedor(alturaPredeterminada); 
+}
+
+function selectOption(option) {
+    var options = document.querySelectorAll('.option');
+    options.forEach(function (opt) {
+        opt.classList.remove('selected');
+    });
+
+    option.classList.add('selected');
+
+    switch (option.innerHTML) {
+        case "SIN FACTURA":
+        document.getElementById("service-image").style.display = "block";
+
+            document.getElementById("contenido").innerHTML = contenidoInicial; 
+            ajustarAlturaContenedor(alturaPredeterminada); 
+            break;
+        case "CON FACTURA":
+            
+        document.getElementById("service-image").style.display = "none";
+            mostrarContenidoConFactura();
+            ajustarAlturaContenedor(30); 
+            break;
+        case "DISPONIBLE":
+        document.getElementById("service-image").style.display = "none";
+
+            mostrarContenidoDisponible();
+            ajustarAlturaContenedor(30); 
+            break;
+    }
+}
+
+    function mostrarContenidoConFactura() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "factura.html", true);
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                document.getElementById("contenido").innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send();
+    }
+
+    function mostrarContenidoDisponible() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "disponible.html", true);
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                document.getElementById("contenido").innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send();
+    }
+</script>
+</html>

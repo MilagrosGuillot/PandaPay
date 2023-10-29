@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/disponible.js"></script>
+    <link rel="stylesheet" href="../css/subpages/stylesDisponible.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content-disponible">
+        <div class="content">
+            <h2>Su disponible para pagar servicios es: <p sty
+                 style="color: #8cc909; font-size: 50px;">$697.17</p>  </h2>
+            <div id="dinero"></div>
+        </div>
+
+    </div>
+
+    <!-- <script>
+       function mostrarDatosJSON() {
+    // Obtén la referencia al elemento donde deseas mostrar los datos
+    var dineroDiv = document.getElementById("dinero");
+
+    // Crea una instancia de objeto XMLHttpRequest
+    var xhr = new XMLHttpRequest();
+
+    // Configura la solicitud GET al archivo JSON (ruta relativa al archivo home.html)
+    xhr.open('GET', 'infoNav.json', true);
+
+    // Configura el evento de carga
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            // Parsea la respuesta JSON
+            var data = JSON.parse(xhr.responseText);
+            if (data.length > 0) {
+                var item = data[0];
+                // Agrega el valor de DINERO EN CUENTA al elemento en el HTML
+                dineroDiv.innerHTML = item['DINERO EN CUENTA'];
+            } else {
+                console.error('El archivo JSON está vacío.');
+            }
+        } else {
+            console.error('Error al cargar el archivo JSON:', xhr.status);
+        }
+    };
+
+    // Maneja errores de red o de solicitud
+    xhr.onerror = function () {
+        console.error('Error de red al cargar el archivo JSON.');
+    };
+
+    // Envía la solicitud
+    xhr.send();
+}
+
+// Llama a la función para mostrar los datos del JSON
+mostrarDatosJSON();
+    </script> -->
+
+</body>
+
+</html>

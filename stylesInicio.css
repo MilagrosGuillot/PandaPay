@@ -1,0 +1,375 @@
+/* Variables generales */
+:root {
+    --background-color: #706f6f;
+    --border-color: rgb(231, 231, 231);
+    --font-size: 2.3vh;
+    /* --slider-bg-color: violet; */
+}
+
+/* Estilos para el home */
+#home {
+    flex: 1;
+    background-color: var(--background-color) !important;
+    display: flex;
+    width: 78%;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 47vh;
+    /* margin-top: 18px; */
+}
+
+/* Estilos para .mainn */
+.mainn {
+    display: flex;
+    flex-direction: column;
+    width: 102%;
+}
+
+/* ----------------Estilos para Main divs y table-------------------------------------- */
+.content-container {
+    display: flex;
+    height: 56vh;
+    width: 100%;
+    background-color: var(--background-color);
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Estilos para .main-divs */
+.main-divs {
+    display: flex;
+    flex-direction: column;
+    width: 78%;
+    height: 55vh;
+    justify-content: center;
+}
+
+/* Estilos para #miTabla en .main-divs */
+#miTablaa {
+    border-collapse: collapse;
+    width: 30%;
+}
+
+/* Estilos para th en #miTabla */
+th {
+    background-color: white;
+    color: #000000;
+    padding: 8px;
+    text-align: left;
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-spacing: 0;
+}
+.tab{
+width: 0px;
+}
+/* Estilos para .a en #miTabla */
+.a {
+    border-bottom: 4px solid #706f6f;
+}
+
+/* Estilos para filas pares en #miTabla */
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Estilos para filas impares en #miTabla */
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para td en #miTabla */
+td {
+    padding: 8px;
+    text-align: left;
+    border: none;
+}
+html {
+    font-size: 16px; 
+}
+#fechaActual {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1px;
+    color: white;
+    width: 86%;
+    height: 40px;
+    background-color:#8cc909;
+    border-radius: 30px;
+    padding: 0.625rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#fechaActual hr {
+    border: none;
+    margin: 0.125rem 0; 
+}
+
+#fechaActual p {
+    font-size: 1.125rem; 
+    margin: 0.125rem 0; 
+}
+
+/* Estilos para #verMas */
+#verMas {
+    background-color:#8cc909;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 1px;
+    width: 80%;
+    font-weight: bold;
+    border-radius: 30px;
+}
+#TableInicio {
+    border: solid;
+    border-radius: 5%; 
+    /* width: 90%; */
+    overflow: hidden; 
+}
+.InicioTr{
+    font-size: 10px; 
+    font-weight: normal; 
+
+}
+#ListaInicio{
+    font-size: 10px; 
+    font-weight: normal; 
+    font-family: 'Nunito';
+
+}
+/* Estilos para .ultimos */
+#ultimos {
+    margin-left: 8px;
+    height: 55vh;
+    background-color: #d1e99d;
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img-divs-inicio{
+    width: 40%;
+}
+.centered-content div{
+    font-weight: bold;
+    color: #000000;
+    font-family: 'Open Sans';
+}
+/* Estilos para .section */
+.section {
+    background-color:#8cc909;
+    display: flex;
+    color: black;
+    margin: 4px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+}
+/* .section img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%; 
+    height: auto; 
+    margin-bottom: 10px; 
+} */
+.tarjet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62%;
+    height: auto; 
+}
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62%;
+    height: auto; 
+    margin-bottom: 10px;
+}
+.centered-content {
+    display: flex;
+    text-align: center;
+ 
+    flex-direction: column;
+    align-items: center;
+}
+.pagoServicios{
+    margin-top: 6%;
+    margin-bottom: 4%;
+}
+.ventas{
+    margin-top: 6%;
+    margin-bottom: 4%;
+}
+
+.comprobante{
+    margin-top: 6%;
+   
+}
+.option{
+    text-decoration: none;
+    background-color: transparent; 
+    border: none; 
+    color: #030303;
+    font-weight: bold;
+    font-size: 26px; 
+    cursor: pointer;
+}
+.section button.option div {
+    line-height: 1; 
+}
+/* Estilos para #containerTop y #containerBottom */
+#containerTop,
+#containerBottom {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Alineación de secciones en la fila superior */
+#containerTop .section {
+    flex: 1;
+    height: 26vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.section button .icon {
+    display: block;
+    width: 50px; 
+    height: 50px; 
+    margin: 0 auto; 
+}
+
+/* Estilos para el texto "Inicio" */
+.section button {
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+/* Elimina los estilos por defecto de los botones */
+.button-reset {
+    border: none;
+    padding: 0;
+    background: none;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Estilos para el botón "Inicio" con el icono */
+.section button.button-reset {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para el ícono dentro del botón "Inicio" */
+.section button.button-reset .icon {
+    display: block;
+    width: 200px; 
+    height: 200px; 
+    margin: 0 auto; 
+}
+/* Alineación de secciones en la fila inferior */
+#containerBottom .section {
+    flex: 1;
+    /* background: red; */
+    height: 26vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+/* Estilos para iconos en la primera fila */
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.button-icon {
+    font-size: 36px;
+    margin-right: 10px;
+    align-items: center;
+}
+
+/* Eliminación de efectos por defecto de hr */
+hr {
+    border: none;
+    margin: 10px 0;
+}
+
+/* Estilos para .section h2 */
+.section h2 {
+    font-size: 30px;
+    margin: 2px;
+}
+
+/* Estilos para .section a */
+.section a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin: 2px;
+}
+
+/*--------------Estilos para el slider------------------------------------------ */
+#Slider {
+    width: 100%;
+    background-color: var(--slider-bg-color);
+    position: relative;
+    overflow: hidden;
+    height: 33vh;
+}
+
+/* Estilos para .slider-container */
+.slider-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center; 
+}
+
+.slide {
+    display: block;
+    width: 100%;
+   height: 33vh;
+}
+
+/* Estilos para .sliderImg */
+.sliderImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos para los botones de navegación del slider */
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}

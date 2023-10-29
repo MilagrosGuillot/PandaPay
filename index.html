@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PandaPay</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="iso.png">
+    <!-- Enlace a Bootstrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-8 col-sm-8 col-md-8 left-side">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicadores -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Contenido de las diapositivas -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="panda.png" class="img-fluid" alt="Slide 1">
+
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Slider2.png" class="img-fluid" alt="Slide 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="panda.png" class="img-fluid" alt="Slide 3">
+                        </div>
+                    </div>
+                    <!-- Controles de la presentación -->
+                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" ariahidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 col-sm-4 col-md-4 right-side">
+                <div class="image-container mobile-only">
+                    <div class="img-panda"></div>
+                    <div class="img-logo"></div>
+                </div>
+
+                <div class="options">
+                    <div class="option selected" onclick="selectOption(this)">Soy usuario</div>
+                    <div class="option"  onclick="selectOption(this)">No soy usuario</div>
+                </div>
+                <div class="login-form" id="contenido">
+                    <!-- Agrega aquí el contenido del formulario de inicio de sesión si lo tienes -->
+                </div>
+                <p><a href="https://www.pandapay.com.ar/" class="link-tree" target="_blank">www.pandapay.com</a></p>
+            </div>
+        </div>
+    </div>
+    <style>
+        /* Estilos para pantallas de celular */
+        @media (max-width: 576px) {
+            .right-side {
+                /* Agrega los estilos que deseas para el diseño en pantallas de celular aquí */
+                background-color: #f3f3f3;
+                /* Ejemplo de estilo */
+                padding: 20px;
+                /* Ejemplo de estilo */
+            }
+
+            .options {
+                border-top: 1px solid #8cc909;
+            }
+        }
+        /* Estilos para pantallas más grandes (tabletas y escritorio) */
+@media (min-width: 576px) {
+    .mobile-only {
+        display: none;
+    }
+}
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/normalize.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../../js/Home.js"></script>
+    <link rel="stylesheet" href="../../../css/subpages/styles.Ventas.css">
+    <link rel="stylesheet" href="../../../css/subpages/styles.comprobante.css">
+</head>
+<div id="content">
+    <div class="content-date">
+        <div class="date">
+            <div class="content-fechaComprobante">
+                <label class="filters" for="fecha">Fecha</label>
+                <div id="fecha">
+                    <select id="Dia">
+                        <option value="1">1</option>
+                    </select>
+                    <select id="Mes">
+                        <option value="1">1</option>
+                    </select>
+                    <select id="Año">
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
+            </div>
+            <div class="button-containerComprobante">
+                <button id="search">BUSCAR</button>
+            </div>
+        </div>
+        <div class="content-liquidacion">
+            <p class="p-liquidacion">LIQUIDACION: 17-08-23</p>
+        </div>
+    </div>
+    <div class="conteiner-info"> 
+        <div class="content-1">
+            <div class="title">STOCK VIRTUAL</div>
+            <div>CALLE: CORDOBA ALTURA: 2028 PISO: -DEPTO:- </div>
+            <div>BUENOS AIRES, BUENOS_AIRES(B1824AYX)</div>
+            <div>MISCELANEOS</div>
+            <div>CUIT: 30716567709</div>
+        </div>
+
+        <div class="content-2">
+            <div class="title">ENTIDAD PAGADORA: GRUPO PANDA SRL</div>
+            <div>AV.CASAEROS 1234, 1A</div>
+            <div>CABA, CABA (1427)</div>
+            <div>SERVICIOS DE COBROS</div>
+            <div>CUIT: 33-71787575-9</div>
+        </div> 
+    </div>
+    <div class="parrafo">
+        <p>LA LEY ESTABLECE LA OBLIGACION DE SOLICITAR CODIGO DE AUTORIZACION,
+            DE NO EFECTUAR DIFERENCIA DE PRECIOS ENTRE OPERACIONES EN EFECTIVO
+            Y CON TARJETA Y DE VERIFICAR LA IDENTIDAD DEL PORTADOR DE LA TARJETA,
+            PARA LO CUAL DEBERIA REGISTRAR TIPO Y NRO. DE DOCUMENTO EN EL COMPROBANTE
+            DE VENTAS
+        </p>
+    </div>
+    <div class="conteiner-transacciones">
+        <p>No se encontraron transacciones para la fecha indicada</p>
+    </div>
+</div>
+
+<script>
+    // Función para generar opciones de selección para días, meses y años
+    function generarOpciones(selectId, min, max) {
+        var select = document.getElementById(selectId);
+        for (var i = min; i <= max; i++) {
+            var option = document.createElement("option");
+            option.value = i;
+            option.text = i;
+            select.appendChild(option);
+        }
+    }
+    generarOpciones("Dia", 1, 31);
+
+    generarOpciones("Mes", 1, 12);
+
+    generarOpciones("Año", 2020, 2029);
+</script>
+
+</div>

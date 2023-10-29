@@ -1,0 +1,75 @@
+.conteiner{
+    display: flex;
+    width: 99%;
+    height: 5vh;
+    margin-bottom: 28px;
+    margin-left: 53px;
+}
+
+.content-parrafo{
+    display: flex;
+    background-color: #706f6f;
+    width: 75%;
+    height: 5vh;
+    font-size: 25px;
+    border-radius: 23px;
+    font-weight: bold;
+    color: #fefefe;
+    align-content: flex-start;
+    align-items: center;
+}
+#abrirNuevaPestana{
+        appearance: none;
+        border: none;
+        text-decoration: none;
+        background-color: transparent; 
+        color: inherit;
+        cursor: pointer; 
+        padding: 0; 
+        font: inherit; 
+    }
+.content-liquidacion{
+    display: flex;
+    background-color: #233202;
+    width: 18%;
+    color: rgb(255, 255, 255);
+    border-radius: 23px;
+    margin-left: 40px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Open Sans';
+    justify-content: center;
+}
+.search-filter {
+    background-color: white;
+    font-family: 'Open Sans';
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 5vh;
+    width: 95%;
+}
+
+.search-filter input {
+    width: 23%;
+    background-color: #e6e6e6;
+    border: none;
+    height: 3.5vh;
+    margin-right: 53px;
+    margin-left: 25px;
+}
+
+#content .table-container {
+    overflow: hidden;
+    margin-top: 10px;
+}
+#saldoCuenta{
+    margin-left: 25px;
+    font-family: 'Open Sans';
+}
+.button-containerComprobante {
+    width: 14%;
+    margin-left: 5px;
+}

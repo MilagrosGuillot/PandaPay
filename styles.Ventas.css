@@ -1,0 +1,186 @@
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    margin:  auto; 
+    border-collapse: collapse;
+    border-spacing: 0; 
+ 
+   border-color: #444;
+   border-radius: 10%;
+    height: 300px; 
+   
+}
+.content-fechaVentas{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 82%;
+    height: 6vh;
+    align-items: center;
+    align-content: center;
+}
+#miTabla {
+    border-radius: 10%;
+    width: 100%;
+    height: 100px;
+    padding: 30px;
+
+    font-weight: normal; 
+    font-family: 'Nunito';
+
+}
+
+/* Estilos para las celdas de encabezado */
+th {
+    background-color: white; 
+    color: #000000; 
+    
+    font-family: 'Open Sans';
+    text-align: left;
+    border: none; 
+    border-top: none;
+    border-left: none; 
+    border-right: none; 
+    border-spacing: 0; 
+}
+
+.a {
+    border-bottom: 4px solid #706f6f;
+    padding: 45px;
+}
+
+/* Estilos para las filas pares */
+tr:nth-child(even) {
+    background-color: #ffffff; /* Blanco */
+}
+
+/* Estilos para las filas impares */
+tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Gris claro */
+}
+
+/* Estilos para las celdas de datos */
+td {
+    font-size: 14px;
+    padding: 20px;
+    text-align: left;
+    border: none; 
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px; 
+    
+}
+
+#content {
+    flex: 1;
+    font-family: 'Open Sans';
+    display: flex;
+    width: 98%;
+
+    margin-top: 16px;
+ 
+    align-items: center;
+}
+
+.content-table{
+    font-family: 'Open Sans';
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* height: 94vh; */
+    height: 57vh;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+#content .table-container {
+    overflow: hidden; 
+}
+#fechaDesde{
+    align-items: center;
+}
+#fechaDesde label{
+    font-family: 'Nunito';
+}
+#fechaHasta label{
+    font-family: 'Nunito';
+}
+#fechaHasta{
+    align-items: center;
+}
+
+.date-filterVentas {
+    background-color: white;
+    font-family: 'Open Sans';
+    padding: 20px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto; 
+    width: 93%;
+    margin-bottom: 21px;
+    height: 1vh;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
+#fechaDesde {
+    display: flex;
+    align-items: center;
+    margin-left: 80px; 
+}
+#fechaHasta {
+    margin-right: 50px;
+}
+/* Estilos para los selects dentro de los grupos */
+.date-filterVentas #fechaDesde select,
+.date-filterVentas #fechaHasta select {
+        margin-right: 17px;
+        width: 70px;
+        height: 3vh;
+    
+}
+/* Estilos para el botón */
+#search {
+    background-color: #8cc909;
+    border-radius: 23px;
+    height: 4vh;
+    font-family: 'Open Sans';
+    align-items: center;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+}
+
+.table-container{
+    background-color: white;
+    padding: 4px;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto; 
+    justify-content: space-between; 
+    width: 95%;
+    
+}
+
+
+.button-container {
+    width: 10%;
+    margin-left: 5px;
+}
+
+
+
+
