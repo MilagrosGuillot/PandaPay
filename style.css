@@ -264,7 +264,7 @@ input {
 }
 .terms label {
     margin-right: 10px;
-    font-size: 10px;
+    font-size: 9px;
     color: #888888;
     white-space: nowrap;
 }
@@ -386,5 +386,3 @@ button.next {
     background-color: white;
     border-radius: 80px;
 }
-
-

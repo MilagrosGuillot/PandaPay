@@ -6,27 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PANDAPAY</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="normalize.css">
+    <!-- <link rel="stylesheet" href="../../../css/subpages/stylesAltLogin.css"> -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="script.js"></script>
 </head>
+<style>
+    /* Estilos para dispositivos de escritorio */
+    @media (min-width: 576px) {
+        .mobile-fields {
+            display: none;
+            /* Oculta los campos en dispositivos de escritorio */
+        }
+    }
+
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 576px) {
+        .right-side {
+            border: none
+        }
+
+        .button {
+            height: 5vh;
+            width: 59%;
+        }
+
+    }
+</style>
 
 <body>
     <form class="fom" action="https://www.pandapay.com.ar/">
-<div class="contenedor">
-        <div class="texto">
-            <img width="100px" height="100px" src="cel.svg" alt="">
-            Recibí dinero, transferí y consultá tus movimientos cuando quieras.
+        <div class="contenedor">
+            <div class="texto">
+                <img width="100px" height="100px" src="inicio/cel.svg" alt="">
+                Recibí dinero, transferí y consultá tus movimientos cuando quieras.
+            </div>
+            <div class="texto">
+                <img width="100px" height="100px" src="casa.svg" alt="">
+                Pagá en locales escaneando cualquier QR desde nuestra App.
+            </div>
+            <div class="texto">
+                <img width="100px" height="100px" src="lupa.svg" alt="">
+                Ahorrá mucho más en tus compras.
+            </div>
         </div>
-        <div class="texto">
-            <img width="100px" height="100px" src="casa.svg" alt="">
-            Pagá en locales escaneando cualquier QR desde nuestra App.
-        </div>
-        <div class="texto">
-            <img width="100px" height="100px" src="lupa.svg" alt="">
-            Ahorrá mucho más en tus compras.
-        </div>
-    </div>
         <button type="submit" class="button">PEDILO AHORA</button>
-   
+
     </form>
 </body>
 
