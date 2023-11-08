@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,17 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
     <link rel="stylesheet" href="stylesVentasTotal.css">
     <script src="ventaTotal.js"></script>
+    <!-- Bootstrap CSS and JS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <div id="content">
-        <div class="content-tableVentasTotal">
+    <div class="container-fluid" id="content">
+        <div class="content-tableVentasTotal row">
             <div class="date-filter">
-                <div class="content-fecha">
+                <div class="col-lg-1 col-md-1 col-sm-2 content-fecha">
                     <label class="filters" for="fecha">Fecha:</label>
                     <div id="fecha">
                         <select id="Dia">
@@ -28,7 +34,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="filters">
+                <div class="col-lg-2 col-md-2 col-sm-2 filters">
                     <label for="operacion">Operacion:</label>
                     <select class="select-all" id="operacion" name="operacion">
                         <option value="TODAS">TODAS</option>
@@ -37,7 +43,7 @@
                         <option value="DEVOLUCIÓN">DEVOLUCIÓN</option>
                     </select>
                 </div>
-                <div class="filters">
+                <div class="col-lg-2 col-md-2 col-sm-2 filters">
                     <label for="status">Status:</label>
                     <select id="status" name="status">
                         <option value="TODAS">TODAS</option>
@@ -47,7 +53,7 @@
                         <option value="RECHAZADA">RECHAZADA</option>
                     </select>
                 </div>
-                <div class="filters">
+                <div class="col-lg-2 col-md-2 col-sm-2 filters">
                     <label for="tipo">Tipo:</label>
                     <select id="tipo" name="tipo">
                         <option value="TODAS">TODAS</option>
@@ -56,7 +62,7 @@
                         <option value="OTRA">OTRA</option>
                     </select>
                 </div>
-                <div class="filters">
+                <div class="col-lg-2 col-md-2 col-sm-2 filters">
                     <label for="marca">Marca:</label>
                     <select id="marca" name="marca">
                         <option value="TODAS">TODAS</option>
@@ -65,26 +71,35 @@
                         <option value="OTRA">OTRA</option>
                     </select>
                 </div>
-                <div class="filters">
+                <div class="col-lg-2 col-md-2 col-sm-2 filters">
                     <label for="terminal">Terminal:</label>
                     <select id="terminal" name="terminal">
                         <option value="TODAS">TODAS</option>
                     </select>
                 </div>
-                <div class="button-container button-ventasTotal">
-                    <button onclick="buscarTotal()" id="search">BUSCAR</button>
+                <div class="col-lg-1 col-md-1 col-sm-1 button-container button-ventasTotal">
+                    <button onclick="buscarTotal()" class="search">BUSCAR</button>
                 </div>
+            </div>
+            <div class="d-lg-none conteiner-register">
+                <div class="col-12 col-sm-12">
+                    <p class="p-register" id="cantRegistros">CantidadM de registros: 0</p>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Fila de escritorio (oculta en móviles) -->
+        <div class="row d-none d-lg-block conteiner-register">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <p class="p-register" id="cantRegistros">CantidadD de registros:0</p>
             </div>
         </div>
 
-        <div class="conteiner-register">
-
-            <p class="p-register" id="cantRegistros">Cantidad de registros:0 </p>
-        </div>
-        <div class="table-container">
-            <table class="miTabla" id="miTabla">
+        <div class="row table-container">
+            <table class="col-lg-12 col-md-12 col-sm-12 miTabla" id="miTabla">
                 <thead>
-                    <tr class="a">
+                    <tr class="col-lg-12 col-md-12 col-sm-12 a">
                         <th>FECHA</th>
                         <th>COMERCIO</th>
                         <th>TR ID</th>
@@ -99,11 +114,151 @@
                     </tr>
                 </thead>
                 <tbody id="VentaTotal">
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
+                    <tr>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                    </tr>
+                    <tr>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                    </tr>
+                    <tr>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                    </tr>
+                    <tr>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                    </tr>
+                    <tr>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                    </tr>
+                    <tr>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                    </tr>
+                    <tr>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                    </tr>
+                    <tr>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                    </tr>
+                    <tr>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                    </tr>
+                    <tr>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                        <td class="gris"></td>
+                    </tr>
+                    <tr>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                        <td class="blanco"></td>
+                    </tr>
+
+
                 </tbody>
             </table>
         </div>
@@ -120,6 +275,164 @@
         </div>
     </div>
     </div>
+
+
+    <style>
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 767px) {
+            .content-tableVentasTotal {
+                height: 34vh;
+                background-color: white;
+            }
+
+            .a {
+                border-bottom: 10px solid #706f6f;
+            }
+
+            th {
+                width: 100%;
+                background-color: #f2f2f2;
+            }
+
+            .gris {
+                background-color: gray;
+            }
+
+            .conteiner-register {
+                width: 98%;
+                border-radius: 0%;
+                border: none;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .p-register {
+                font-size: 19px;
+                margin-left: 14px;
+            }
+
+            .search {
+                width: 100%;
+            }
+
+            #fecha {
+                width: 98%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+            }
+
+            .date-filter select {
+                width: 78%;
+            }
+
+            .content-fecha {
+                width: 40%;
+                /* order: 1; */
+                display: flex;
+                /* margin-right: 9px; */
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+            }
+
+            .date-filter {
+                background-color: white;
+                font-family: 'Open Sans';
+                padding: 20px;
+                border-radius: 17px;
+                display: flex;
+                margin: 0 auto;
+                width: 100%;
+                /* margin-bottom: 21px; */
+                margin-top: 10px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-content: stretch;
+                align-items: flex-start;
+            }
+
+            .content-fecha,
+            .filters {
+                display: flex;
+                flex-direction: column;
+                /* flex-wrap: wrap; */
+            }
+
+            /* Estilos para los elementos superiores */
+            #fecha select {
+                height: 4vh;
+            }
+
+            #miTabla {
+                height: 63vh;
+            }
+
+            #content {
+                height: 95vh;
+            }
+
+            #content .table-container {
+                display: flex;
+                width: 100%;
+                /* background: yellow; */
+                /* overflow: hidden; */
+                /* margin-top: 10px; */
+                border-radius: 0%;
+                margin-top: 0;
+                overflow-x: auto;
+                align-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .filters,
+            #terminal {
+                /* order: 1; */
+                /* Establece el orden para la organización */
+                width: 27%;
+                /* Ocupar todo el ancho disponible */
+            }
+
+            select {
+                width: 100%;
+                /* Ocupar todo el ancho del contenedor */
+                margin-bottom: 5px;
+                /* Espacio entre los elementos */
+            }
+
+            #content {
+                width: 109% !important;
+            }
+
+            .button-container {
+                order: 3;
+                display: flex;
+                width: 100%;
+                margin-top: 10px;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+            }
+
+            /* Estilos para los elementos inferiores */
+            #tipo,
+            #marca,
+            #terminal {
+                order: 2;
+                /* Establece el orden para la organización */
+                width: 77%;
+                /* Ocupar todo el ancho disponible */
+            }
+        }
+    </style>
+
     <script>
         // Función para generar opciones de selección para días, meses y años
         function generarOpciones(selectId, min, max) {

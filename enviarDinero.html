@@ -4,34 +4,38 @@
     <link rel="stylesheet" href="normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
-    <script src="enviarDinero.js"></script>
-    <script src="Home.js"></script>
+    <script src="subpages/enviarDinero.js"></script>
+    <!-- <script src="../../../js/views/Home.js"></script> -->
     <link rel="stylesheet" href="styles.Ventas.css">
     <link rel="stylesheet" href="stylesEnviarDinero.css">
+    <!-- Bootstrap CSS and JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 </head>
 
 <body>
-    <div id="content">
+    <div class="container-fluid" id="content">
         <div class="content-table">
-            <div class="conteiner">
-                <div class="content-parrafo">
-                    <span id="saldoCuenta">DISPONIBLE PARA TRANSFERIR: $697.17</span>
+            <div class="row conteiner">
+                <div class="col-lg-10 col-md-10 col-sm-10 content-parrafo">
+                    <span id="saldoCuenta">DISPONIBLE PARA TRANSFERIR: <span id="numeroCuenta"> $697.17</span></span>
+
                 </div>
-                <div class="content-liquidacion">
+                <div class="col-lg-2 col-md-2 col-sm-2 content-liquidacion">
                     <button id="abrirNuevaPestana" onclick="abrirPagina()">AÑADIR CONTACTO</button>
                 </div>
             </div>
 
-            <div class="search-filter">
-                <input type="text" placeholder="Buscar contacto">
-                <input type="text" placeholder="Monto a transferir">
-                <input type="text" placeholder="Referencia">
-
-                <div class="button-container">
-                    <button id="search" onclick="CargarTabla()">ENVIAR</button>
+            <div class="row search-filter">
+                <input class="col-lg-3 col-md-3 col-sm-3" type="text" placeholder="Buscar contacto">
+                <input class="col-lg-3 col-md-3 col-sm-3" type="text" placeholder="Monto a transferir">
+                <input class="col-lg-3 col-md-3 col-sm-3" type="text" placeholder="Referencia">
+                <div class="col-lg-3 col-md-3 col-sm-3 button-container">
+                    <button class="search" onclick="CargarTabla()">ENVIAR</button>
                 </div>
             </div>
-            <div class="table-container">
+            <div class="row table-container">
                 <table class="miTabla" id="miTablaDINERO">
                     <thead>
                         <tr class="a">
@@ -55,9 +59,116 @@
                 </table>
             </div>
         </div>
-
-
     </div>
+    <style>
+        @media (max-width: 767px) {
+            .conteiner {
+                display: flex;
+                width: 99%;
+                /* gap: 19px; */
+                height: 16vh;
+                /* margin-bottom: 28px; */
+                /* margin-left: 53px; */
+                flex-direction: column;
+            }
 
+            .content-liquidacion {
+                display: flex;
+                height: 5vh;
+                background-color: #233202;
+                width: 90%;
+                color: rgb(255, 255, 255);
+                border-radius: 23px;
+                margin-left: 0 !important;
+                align-items: center;
+                font-weight: bold;
+                /* height: 50vh; */
+                font-size: 17px;
+                font-family: 'Open Sans';
+                justify-content: center;
+            }
 
+            .miTabla {
+                border-radius: 0;
+            }
+
+            .button-container {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .search {
+                height: 5vh;
+                width: 93%;
+            }
+
+            th {
+                margin-left: 11px;
+            }
+
+            .a {
+                display: flex;
+                padding: 0;
+            }
+
+            .table-container {
+                width: 100%;
+                /* background: rebeccapurple; */
+                height: 56vh;
+                margin-top: 0 !important;
+                border-radius: 0;
+            }
+
+            .content-table {
+                width: 101%;
+                margin-top: 0;
+                height: 98vh;
+                background-color: white;
+            }
+
+            .search-filter {
+                width: 100%;
+                gap: 12px;
+                /* background: green; */
+                height: 26vh;
+                flex-direction: column;
+            }
+
+            .search-filter input {
+                height: 5vh;
+                margin-left: 0;
+                width: 89%;
+            }
+
+            .row {
+                margin: 0 !important;
+            }
+
+            .content-parrafo {
+                display: flex;
+                background-color: white;
+                width: 92%;
+                height: 8vh;
+                align-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            #saldoCuenta {
+                margin-left: 0px;
+                color: black;
+                width: 58%;
+                font-size: 15px;
+
+            }
+
+            #numeroCuenta {
+                font-size: 30px;
+                color: #8cc909;
+            }
+
+        }
+    </style>
 </body>

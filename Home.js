@@ -99,55 +99,107 @@ function iniciarIntervalo() {
 function reiniciarIntervalo() {
     clearInterval(miIntervalo); 
 }
+//---------------------------------------------------------------------------------------------------------------
+    function handleClick() {
+        // Get input values
+        const nombre = document.querySelector('input[placeholder="Destino nombre"]').value;
+        const cbuCvu = document.querySelector('input[placeholder="CBU/CVU"]').value;
+        const alias = document.querySelector('input[placeholder="ALIAS"]').value;
+        const cuit = document.querySelector('input[placeholder="CUIT"]').value;
 
+        // Reference to the table's tbody
+        const tableBody = document.getElementById('enviarDinero');
 
+        // Create a new table row
+        const newRow = document.createElement('tr');
+        
+        // Add table data (columns) to the row
+        newRow.innerHTML = `
+            <td>${nombre}</td>
+            <td>${cbuCvu}</td>
+            <td>${alias}</td>
+            <td>${cuit}</td>
+            <td><img src="../../../css/assets/iconsTable/tacho_gris.png" alt="Borrar" onclick="deleteRow(this)" class="delete-icon"></td>
+        `;
 
-var tabla = [
-    { fecha: "2023-09-29", destino: "Destino 1", cvu: "CVU12345", referencia: "Referencia 1", monto: "$100", sts: "STS1", borrar: "Borrar", rec: "Rec" },
-    { fecha: "2023-09-30", destino: "Destino 2", cvu: "CVU67890", referencia: "Referencia 2", monto: "$50", sts: "STS2", borrar: "Borrar", rec: "Rec" }
-];
-function CargarTablaDinero() {
+        // Append the new row to the table
+        tableBody.appendChild(newRow);
 
-    if ($("#tbbodydinero").html()) {
-        $("#tbbodydinero").empty();
-
-        var tr = $("<tr>");
-        for (let index = 0; index < tabla.length; index++) {
-            var tr = $("<tr>");
-            var tdFecha = $("<td>");
-            var tdDestino = $("<td>");
-            var tdCVU = $("<td>");
-            var tdReferencia = $("<td>");
-            var tdMonto = $("<td>");
-            var tdSTS = $("<td>");
-            var tdBorrar = $("<td>");
-            var tdRec = $("<td>");
-
-            tdFecha.text(tabla[index].fecha);
-            tdDestino.text(tabla[index].destino);
-            tdCVU.text(tabla[index].cvu);
-            tdReferencia.text(tabla[index].referencia);
-            tdMonto.text(tabla[index].monto);
-            tdSTS.text(tabla[index].sts);
-            tdBorrar.text(tabla[index].borrar);
-            tdRec.text(tabla[index].rec);
-            tr.append(tdFecha);
-            tr.append(tdDestino);
-            tr.append(tdCVU);
-            tr.append(tdReferencia);
-            tr.append(tdMonto);
-            tr.append(tdSTS);
-            tr.append(tdBorrar);
-            tr.append(tdRec);
-
-            $("#tbbodydinero").append(tr);
-        }
-
-
-        $("#tbbodydinero").html();
-        reiniciarIntervalo();
+        // Clear input fields
+        document.querySelector('input[placeholder="Destino nombre"]').value = '';
+        document.querySelector('input[placeholder="CBU/CVU"]').value = '';
+        document.querySelector('input[placeholder="ALIAS"]').value = '';
+        document.querySelector('input[placeholder="CUIT"]').value = '';
     }
-}
+
+    function deleteRow(img) {
+        // Delete the row when the delete icon is clicked
+        const row = img.closest('tr');
+        row.remove();
+    }
+
+
+
+    var tabla = [
+        { fecha: "2023-09-29", destino: "Destino 1", cvu: "CVU12345", referencia: "Referencia 1", monto: "$100", sts: "STS2", borrar: "Borrar2", rec: "Rec1" },
+        { fecha: "2023-09-30", destino: "Destino 2", cvu: "CVU67890", referencia: "Referencia 2", monto: "$50", sts: "STS1", borrar: "Borrar1", rec: "Rec2" }
+    ];
+    
+    function CargarTablaDinero() {
+        if ($("#tbbodydinero").html()) {
+            $("#tbbodydinero").empty();
+    
+            for (let index = 0; index < tabla.length; index++) {
+                var tr = $("<tr>");
+                var tdFecha = $("<td>").text(tabla[index].fecha);
+                var tdDestino = $("<td>").text(tabla[index].destino);
+                var tdCVU = $("<td>").text(tabla[index].cvu);
+                var tdReferencia = $("<td>").text(tabla[index].referencia);
+                var tdMonto = $("<td>").text(tabla[index].monto);
+                
+                // Agregar imágenes según el valor de "sts"
+                var stsValue = tabla[index].sts;
+                var tdSTS = $("<td>");
+                if (stsValue === "STS1") {
+                    tdSTS.append('<img src="../../../css/assets/iconsTable/tilde_verde.png" alt="Cruz Verde">');
+                } else {
+                    tdSTS.append('<img src="../../../css/assets/iconsTable/cruz_roja.png" alt="Cruz Roja">');
+                }
+    
+                // Agregar imágenes según el valor de "borrar"
+                var borrarValue = tabla[index].borrar;
+                var tdBorrar = $("<td>");
+                if (borrarValue === "Borrar1") {
+                    tdBorrar.append('<img src="../../../css/assets/iconsTable/tacho_gris.png" alt="Tacho Gris">');
+                } else {
+                    tdBorrar.append('<img src="../../../css/assets/iconsTable/tacho_rojo.png" alt="Tacho Rojo">');
+                }
+    
+                // Agregar imágenes según el valor de "rec"
+                var recValue = tabla[index].rec;
+                var tdRec = $("<td>");
+                if (recValue === "Rec1") {
+                    tdRec.append('<img src="../../../css/assets/iconsTable/hoja_gris.png" alt="Hoja Gris">');
+                } else {
+                    tdRec.append('<img src="../../../css/assets/iconsTable/hoja_verde.png" alt="Hoja Verde">');
+                }
+                
+                tr.append(tdFecha);
+                tr.append(tdDestino);
+                tr.append(tdCVU);
+                tr.append(tdReferencia);
+                tr.append(tdMonto);
+                tr.append(tdSTS);
+                tr.append(tdBorrar);
+                tr.append(tdRec);
+        
+                $("#tbbodydinero").append(tr);
+            }
+        }
+    }
+    
+    
+    
 
 function Abrir() {
     var boton = event.target.parentNode;
@@ -192,7 +244,9 @@ function Abrir() {
 
             nombrePagina = "pagoDeServicios";
             break;
-        return; 
+        case "Cambia":
+            nombrePagina = "cambiarContraseña";
+            break;
         default:
             nombrePagina = "inicio";
             return;
@@ -202,6 +256,17 @@ function Abrir() {
     cargarPagina(nombrePagina);
 }
 var botonActivo = null;
+
+function ocultarElementosEnMovil() {
+    const contentMerchant = document.querySelector('.contentMerchant');
+    const contentDinero = document.querySelector('.contentDinero');
+    const dineroEnCuentaMobile = document.querySelector('#dinero-en-cuenta-mobile');
+
+    contentMerchant.classList.add('oculto');
+    contentDinero.classList.add('oculto');
+    dineroEnCuentaMobile.classList.add('oculto');
+}
+
 function selectOption(button) {
     if (botonActivo) {
         var activeImage = botonActivo.getAttribute('data-inactive-image');
@@ -220,7 +285,6 @@ function selectOption(button) {
             break;
         case "Ventas":
             nombrePagina = "ventas";
-            
             break;
         case "Ventas/Total":
             nombrePagina = "ventasTotal";
@@ -247,7 +311,10 @@ function selectOption(button) {
             nombrePagina = "inicio";
             break;
     }
-
+    if (nombrePagina !== 'inicio') {
+        // Llama a la función para ocultar los elementos si no estamos en la página de inicio
+        ocultarElementosEnMovil();
+    }
     cargarPagina(nombrePagina);
 }
 
@@ -280,6 +347,18 @@ function abrirPagina() {
 
 }
 
+function volverEnviarDinero() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "enviarDinero.html", true);
+    xhr.onload = function () {
+        if (xhr.status == 200) {
+            document.getElementById("content").innerHTML = xhr.responseText;
+        }
+    };
+    xhr.send();
+
+}
+
 function toggleNightMode(event) {
     event.preventDefault();
     var thirdLink = document.querySelector(".nav-icon a:nth-child(3)");
@@ -287,9 +366,9 @@ function toggleNightMode(event) {
     if (nightModeIcon) {
         var currentImageSrc = nightModeIcon.src;
         if (currentImageSrc.includes("luna.png")) {
-            nightModeIcon.src = "Sol.png";
+            nightModeIcon.src = "../../../css/assets/nav/nav-icons/Sol.png";
         } else {
-            nightModeIcon.src = "luna.png";
+            nightModeIcon.src = "../../../css/assets/nav/nav-icons/luna.png";
         }
     }
 
@@ -299,8 +378,7 @@ function toggleNightMode(event) {
 function obtenerFechaYHora() {
     const fechaActual = new Date();
     const dia = fechaActual.getDate().toString().padStart(2, '0');
-    const mes = (fechaActual.getMonth() + 1).toString().padStart(2, '0'); // Se suma 1 porque enero es 0
-    const año = fechaActual.getFullYear();
+    const mes = (fechaActual.getMonth() + 1).toString().padStart(2, '0');
     const horas = fechaActual.getHours().toString().padStart(2, '0');
     const minutos = fechaActual.getMinutes().toString().padStart(2, '0');
 
@@ -308,20 +386,33 @@ function obtenerFechaYHora() {
 }
 
 function actualizarFechaYHora() {
-    const fechaHoraElemento = document.getElementById('fechaActual');
-    if (fechaHoraElemento) {
-        fechaHoraElemento.textContent = obtenerFechaYHora();
-        const hrElemento = document.createElement('hr');
-        fechaHoraElemento.appendChild(hrElemento);
+    const fechaHoraElementoDesktop = document.getElementById('fechaActualDesktop');
+    const fechaHoraElementoMobile = document.getElementById('fechaActualMobile');
 
-        const precioElemento = document.createElement('p');
-        precioElemento.textContent = '$0.00';
-        fechaHoraElemento.appendChild(precioElemento);
+    if (fechaHoraElementoDesktop) {
+        fechaHoraElementoDesktop.textContent = obtenerFechaYHora();
 
+        const brElementDesktop = document.createElement('br');
+        fechaHoraElementoDesktop.appendChild(brElementDesktop);
+
+        const precioElementoDesktop = document.createElement('p');
+        precioElementoDesktop.textContent = '$0.00';
+        fechaHoraElementoDesktop.appendChild(precioElementoDesktop);
     }
-    reiniciarIntervalo();
 
+    if (fechaHoraElementoMobile) {
+        fechaHoraElementoMobile.textContent = obtenerFechaYHora();
+
+        const precioElementoMobile = document.createElement('p');
+        precioElementoMobile.textContent = '$0.00';
+        fechaHoraElementoMobile.appendChild(precioElementoMobile);
+    }
+
+    reiniciarIntervalo();
 }
+
+
+
 
 let slideIndex = 0;
 
@@ -349,3 +440,5 @@ function changeSlide(n) {
 }
 
 setInterval(() => changeSlide(1), 3000);
+
+

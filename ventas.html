@@ -1,45 +1,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="../../../css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
-        <script src="venta.js"></script>
-    <link rel="stylesheet" href="stylesVentasTotal.css">
+
 </head>
 
-<div id="content">
-    <!-- Contenido de ventas.html -->
+<div class="container-fluid" id="content">
     <div class="content-table">
-        <div class="date-filterVentas">
-            <div class="content-fechaVentas">
-                <div id="fechaDesde">
-                    <label>Desde</label>
-                    <select id="desdeDia">
-                    </select>
-                    <select id="desdeMes">
-                    </select>
-                    <select id="desdeAño">
-                    </select>
-                </div>
-                <div id="fechaHasta">
-                    <label>Hasta</label>
-                    <select id="hastaDia">
-                    </select>
-                    <select id="hastaMes">
-                    </select>
-                    <select id="hastaAño">
-                    </select>
-                </div>
+        <div class="row date-filterVentas date-filterVentasmobil">
+            <div class="col-lg-5 col-md-5 col-sm-6 content-fechaVentas" id="fechaDesde">
+                <label class="">Desde</label>
+                <select id="desdeDia"></select>
+                <select id="desdeMes"></select>
+                <select id="desdeAño"></select>
             </div>
-            <div class="button-container">
-                <button id="search" onclick="buscar()">BUSCAR</button>
+
+            <div class="col-lg-5 col-md-5 col-sm-6 content-fechaVentas" id="fechaHasta">
+                <label class="">Hasta</label>
+                <select id="hastaDia"></select>
+                <select id="hastaMes"></select>
+                <select id="hastaAño"></select>
+
+            </div>
+            <!-- Botón de búsqueda (Desktop) -->
+            <div class="col-lg-2 col-md-2 d-none d-sm-block">
+                <div class="button-containerDesktop">
+                    <button class="search" onclick="buscar()">BUSCAR</button>
+                </div>
             </div>
         </div>
-        <div class="table-container">
-            <table class="miTabla">
+
+        <!-- Botón de búsqueda (Mobile) -->
+        <div class="row d-sm-none">
+            <div class="col-sm-12 d-block d-sm-none contentButton">
+                <div class="button-containerMobil">
+                    <button class="search" onclick="buscar()">BUSCAR</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla -->
+        <div class="row table-container">
+            <table class="col-lg-12 col-md-12 col-sm-12 miTabla">
                 <thead>
-                    <tr class="a">
+                    <tr class="col-lg-12 col-md-12 col-sm-12 a">
                         <th>FECHA</th>
                         <th>APROBADAS/TOTAL</th>
                         <th>TOTAL</th>
@@ -51,19 +57,106 @@
                         <td>0/0</td>
                         <td>$0.00</td>
                     </tr>
+                    <!-- Agrega más filas si es necesario -->
                 </tbody>
             </table>
+
         </div>
     </div>
 </div>
+
+
+
+
+<style>
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 767px) {
+        .date-filterVentasmobil {
+            border-radius: 0;
+            /* padding-top: 35px; */
+            /* padding-left: 53px; */
+            width: 100%;
+            height: 7vh;
+            padding-top: 23px;
+            /* margin-bottom: 11px; */
+            flex-wrap: nowrap;
+        }
+
+
+        .content-table {
+            background-color: white;
+            height: 31vh;
+            height: 96vh;
+            width: 100%;
+        }
+
+        .a {
+            border-bottom: 7px solid #706f6f;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .content-fechaVentas {
+            width: 49%;
+        }
+
+        #content {
+            height: 3vh;
+        }
+
+        .button-containerMobil {
+            width: 91%;
+        }
+
+        #fechaDesde {
+            margin-left: 0 !important;
+        }
+
+        .date-filterVentas #fechaDesde select,
+        .date-filterVentas #fechaHasta select {
+            /* margin-right: 5px; */
+            width: 62px;
+            height: 5vh;
+            appearance: none;
+            margin-right: 5px;
+        }
+
+        .miTabla {
+            height: 81vh;
+        }
+        #content {
+            width: 109% !important;
+        }
+        .contentButton {
+            display: flex !important;
+            background: white;
+            height: 7vh;
+            width: 100%;
+            /* padding-bottom: 20px; */
+            align-items: center;
+            justify-content: center;
+        }
+
+        #content .table-container {
+            width: 101%;
+            height: 80vh;
+            /* margin-top: 0px; */
+            border-radius: 0;
+        }
+    }
+</style>
+
+
 <script>
     // Función para generar opciones de selección para días, meses y años
     function generarOpciones(selectId, min, max) {
         var select = document.getElementById(selectId);
         for (var i = min; i <= max; i++) {
             var option = document.createElement("option");
-            option.value = i < 10 ? "0" + i : i.toString(); 
-            option.text = i < 10 ? "0" + i : i.toString(); 
+            option.value = i < 10 ? "0" + i : i.toString();
+            option.text = i < 10 ? "0" + i : i.toString();
             select.appendChild(option);
         }
     }
@@ -74,5 +167,4 @@
     generarOpciones("hastaDia", 1, 31);
     generarOpciones("hastaMes", 1, 12);
     generarOpciones("hastaAño", 2020, 2029);
-
 </script>

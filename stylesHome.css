@@ -35,8 +35,16 @@ body {
     justify-content: space-around;
     align-items: center;
 }
-.custom-background {
+#custom-background {
     background-color: #706f6f;
+}
+.row {
+    display: flex;
+    width: 101%;
+ padding: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 .image-container {
     width: 100%;
@@ -216,6 +224,7 @@ li a img {
     transition: background-color 0.3s;
     display: flex;
     align-items: center;
+    display: block;
 }
 
 
@@ -241,6 +250,14 @@ li a img {
     font-weight: bold;
 }
 
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+    #menu {
+        display: none; /* Oculta el menú en resoluciones móviles */
+        position: absolute;
+        z-index: 1000;
+    }
+}
 .options {
     display: flex;
     flex-direction: row;
@@ -265,15 +282,7 @@ li a img {
     height: 90vh;
     background-color: #d1e99d;
 }
-.row {
-    display: flex;
-    width: 102%;
-    margin: auto;
-    padding: 0;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-}
+
 #miTabla {
     border-collapse: collapse;
     /* width: 30%; */

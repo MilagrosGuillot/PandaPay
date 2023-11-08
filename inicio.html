@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="styleNigth.css">
 </head>
+
 <div class="mainn d-sm-flex-column align-items-center">
     <div id="Slider">
         <div class="slider-container">
@@ -23,7 +24,9 @@
         <div class="main-divs ">
             <div id="containerTop">
                 <section class="section">
-                    <div class="centered-content ventas" value="Venta" onclick="Abrir()">
+                    <div class="centered-content 
+                    
+                " value="Venta" onclick="Abrir()">
                         <img class="page" src="sales.png" alt="Sales">
                         <div>VENTAS</div>
                         <div>$0.00</div>
@@ -79,7 +82,7 @@
         </div>
         <div id="ultimos" class="col-3 col-lg-3 col-md-3 d-md-block  d-md-flex align-items-center">
             <!-- Cambia las clases de columna según el tamaño de pantalla -->
-            <p id="fechaActual"></p>
+            <p id="fechaActualDesktop"></p>
             <div class="table-responsive">
                 <!-- Agrega una clase table-responsive para que la tabla sea responsive -->
                 <table id="TableInicio" class="">
@@ -101,8 +104,7 @@
     </div>
 
     <!-- Nueva fila en la vista móvil (por debajo de la primera) -->
-    <div class="content-movil d-sm-flex-column align-items-center">
-    <div class="row d-md-none">
+    <div class="row content-movil d-md-none d-sm-flex-column align-items-center">
         <div class="main-divs">
             <div class="col-6">
                 <!-- Primera sección -->
@@ -126,63 +128,73 @@
                 </section>
             </div>
         </div>
-    </div>
-
-    <div class="row d-md-none d-sm-flex-column align-items-center">
-        <div class="main-divs">
-            <div class="col-6">
-                <!-- Tercera sección -->
-                <section class="section">
-                    <div class="centered-content" style="
+        <div class="row d-md-none d-sm-flex-column align-items-center">
+            <div class="main-divs">
+                <div class="col-6">
+                    <!-- Tercera sección -->
+                    <section class="section">
+                        <div class="centered-content" style="
                     width: 86%;" value="Liqui" onclick="Abrir()">
-                        <img class="tarjet" src="liquidacion.png"
-                            alt="totalSales">
-                        <div>LIQUIDACION</div>
-                        <div>HOY $60</div>
-                        <div>FUTURAS $0.00</div>
-                    </div>
-                </section>
+                            <img class="tarjet" src="liquidacion.png"
+                                alt="totalSales">
+                            <div>LIQUIDACION</div>
+                            <div>HOY $60</div>
+                            <div>FUTURAS $0.00</div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-6">
+                    <!-- Cuarta sección -->
+                    <section class="section">
+                        <div class="centered-content comprobante" value="Compr" onclick="Abrir()">
+                            <img class="page" src="comprobante.png"
+                                alt="comprobante">
+                            <div>COMPROBANTES</div>
+                        </div>
+                    </section>
+                </div>
             </div>
-            <div class="col-6">
-                <!-- Cuarta sección -->
-                <section class="section">
-                    <div class="centered-content comprobante" value="Compr" onclick="Abrir()">
-                        <img class="page" src="comprobante.png"
-                            alt="comprobante">
-                        <div>COMPROBANTES</div>
-                    </div>
-                </section>
+        </div>
+
+        <div class="row d-md-none">
+            <div class="main-divs">
+                <div class="col-6">
+                    <!-- Quinta sección -->
+                    <section class="section">
+                        <div class="centered-content" value="Envdi" onclick="Abrir()">
+                            <img class="tarjet" src="sendMoney.png"
+                                alt="sendMoney">
+                            <div>ENVIAR DINERO</div>
+                            <div>$156.983</div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-6">
+                    <!-- Sexta sección -->
+                    <section class="section">
+                        <div class="centered-content pagoServicios" value="Pagse" onclick="Abrir()">
+                            <img class="page" src="ServicesPay.png"
+                                alt="ServicesPay">
+                            <div>PAGO DE SERVICIOS</div>
+                            <div>RAPIPAGO</div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     </div>
+    
+    <div class="row contentFecha">
+        <div id="fecha" class="col-12  d-md-none d-sm-flex align-items-center">
+            <!-- Cambia las clases de columna según el tamaño de pantalla -->
 
-    <div class="row d-md-none">
-        <div class="main-divs">
-            <div class="col-6">
-                <!-- Quinta sección -->
-                <section class="section">
-                    <div class="centered-content" value="Envdi" onclick="Abrir()">
-                        <img class="tarjet" src="sendMoney.png"
-                            alt="sendMoney">
-                        <div>ENVIAR DINERO</div>
-                        <div>$156.983</div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-6">
-                <!-- Sexta sección -->
-                <section class="section">
-                    <div class="centered-content pagoServicios" value="Pagse" onclick="Abrir()">
-                        <img class="page" src="ServicesPay.png"
-                            alt="ServicesPay">
-                        <div>PAGO DE SERVICIOS</div>
-                        <div>RAPIPAGO</div>
-                    </div>
-                </section>
-            </div>
+            <p id="fechaActualMobile"></p>
+
+            <button onclick="VerMas()" id="verMas">VER MAS</button>
         </div>
     </div>
 </div>
+
 </div>
 
 <style>
@@ -190,26 +202,123 @@
         #Slider {
             display: none;
         }
-        .section{
-            width: 108%;
+
+        #fecha {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-    .content-movil{
-    width: 100%;
-    }
-    .main-divs {
-        display: flex;
-        flex-direction: column;
-        width: 92%;
-        height: 26vh;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-    }
 
-    #ultimos {
-        display: none;
-    }
+        #verMas {
+            background-color: #f4f6f0;
+            color: #8cc909;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            width: 115%;
+            height: 5vh;
+            font-weight: bold;
+            border-radius: 30px;
+        }
 
-}
+        #fechaActual {
+            color: black;
+        }
+
+        #fechaActualMobile hr {
+            border: none;
+            margin: 0.125rem 0;
+        }
+
+        #fechaActualMobile {
+            font-size: 1.25rem;
+            width: 160px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #fechaActualMobile p {
+            font-size: 1.125rem;
+            margin: 0.125rem 0;
+        }
+
+        .contentFecha {
+            width: 103%;
+
+            background-color: #8cc909;
+        }
+
+        .tarjet {
+            width: 42%;
+        }
+
+        .page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 42%;
+            margin-top: 5px;
+            height: auto;
+            margin-bottom: 2px;
+            align-content: center;
+        }
+
+        .section {
+            width: 100%;
+            margin: 16px;
+            height: 168px;
+        }
+
+        .pagoServicios {
+            margin: 0;
+        }
+
+        .ventas {
+            margin: 0;
+        }
+
+        .content-movil {
+            display: flex;
+        
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 61vh;
+            width: 100%;
+        }
+
+        .col-6 {
+            padding: 3px !important;
+        }
+
+        .centered-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .main-divs {
+            display: flex;
+            flex-direction: column;
+            width: 94%;
+            height: 21vh;
+            flex-wrap: wrap;
+            /* margin-right: 12px;
+            margin-left: 32px; */
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+
+        #ultimos {
+            /* display: none; */
+        }
+
+    }
 </style>

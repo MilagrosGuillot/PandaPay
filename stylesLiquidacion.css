@@ -6,9 +6,14 @@
     display: flex;
     align-items: center;
     margin: 0 auto; 
-    width: 93%;
+    width: 101%;
     margin-bottom: 21px;
     margin-top: 10px;
+}
+.fechaHasta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .search-filter {
     background-color: white;
@@ -42,7 +47,16 @@
 .terminal{
     font-family: 'Nunito';
 }
+#fechaDesde{
+    margin-left: 0;
+}
 
+.button-container {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
 .content-fecha{
     display: flex;
     justify-content: column;

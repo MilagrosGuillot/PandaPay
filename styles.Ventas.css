@@ -12,7 +12,7 @@ table {
 }
 .content-fechaVentas{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: row;
     width: 82%;
     height: 6vh;
@@ -81,19 +81,18 @@ td {
     font-family: 'Open Sans';
     display: flex;
     width: 98%;
-
-    margin-top: 16px;
- 
+    margin-top: 14px;
     align-items: center;
 }
 
 .content-table{
     font-family: 'Open Sans';
-    width: 100%;
+    width: 98%;
     display: flex;
     flex-direction: column;
     /* height: 94vh; */
-    height: 57vh;
+    height: 39vh;
+    margin-top: 14px;
     align-items: center;
     justify-content: flex-start;
 }
@@ -114,18 +113,21 @@ td {
 #fechaHasta{
     align-items: center;
 }
-
+.row{
+    flex-wrap: nowrap !important;
+}
 .date-filterVentas {
     background-color: white;
     font-family: 'Open Sans';
     padding: 20px;
+    flex-wrap: nowrap ;
     border-radius: 24px;
     display: flex;
     align-items: center;
     margin: 0 auto; 
     width: 93%;
     margin-bottom: 21px;
-    height: 1vh;
+    height: 5vh;
     justify-content: space-between;
     margin-top: 10px;
 }
@@ -134,21 +136,21 @@ td {
 #fechaDesde {
     display: flex;
     align-items: center;
-    margin-left: 80px; 
+    margin-left: 22px; 
 }
 #fechaHasta {
-    margin-right: 50px;
+    /* margin-right: 50px; */
 }
 /* Estilos para los selects dentro de los grupos */
 .date-filterVentas #fechaDesde select,
 .date-filterVentas #fechaHasta select {
         margin-right: 17px;
         width: 70px;
-        height: 3vh;
-    
+        height: 4vh;
+        appearance: none;
 }
 /* Estilos para el botón */
-#search {
+.search {
     background-color: #8cc909;
     border-radius: 23px;
     height: 4vh;
@@ -171,14 +173,14 @@ td {
     align-items: center;
     margin: 0 auto; 
     justify-content: space-between; 
-    width: 95%;
-    
+    /* width: 95%; */
+    width: 102%;
 }
 
 
-.button-container {
-    width: 10%;
-    margin-left: 5px;
+.button-containerDesktop {
+    width: 60%;
+    /* margin-left: 89px; */
 }
 
 

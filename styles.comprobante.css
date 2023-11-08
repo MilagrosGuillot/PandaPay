@@ -14,9 +14,11 @@
     display: flex;
     width: 99%;
     height: 5vh;
+    margin-top: 14px;
     margin-bottom: 28px;
     margin-left: 53px;
 }
+
 .parrafo{
     font-size: 15px;
     padding: 5px;
@@ -48,7 +50,7 @@
     background-color: rgb(255, 255, 255);
     justify-content: space-between; 
     align-items: center; 
-    padding: 10px; 
+    /* padding: 10px;  */
 }
 
 .date .date-fields {
@@ -66,12 +68,17 @@
     
 }
 
-.date .button-container {
-    /* Estilos para el contenedor del botón */
+.contentAll{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
+
 .date button#search {
-    /* Estilos para el botón de búsqueda */
     padding: 5px 10px;
   
 }
@@ -137,4 +144,26 @@
     width: 70px;
     height: 3vh;
     margin-right: 17px;
+}
+#tablaTransacciones{
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+/* .conteiner-transacciones{
+    height: 120vh;
+} */
+
+.tabla-transacciones{
+    height: 20vh;
+    background-color: white;
+}
+.tabla-resumen{
+    height: 20vh;
+    background-color: white;
+}
+.blue-background {
+    background-color: #377bb1;
+    color: white; /* Cambia el color del texto para que sea legible en el fondo azul */
 }

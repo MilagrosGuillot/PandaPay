@@ -1,97 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="styles.comprobante.css">
-    <link rel="stylesheet" href="styles.Ventas.css">
+    <!-- <script src="../../../js/Home.js"></script> -->
+    <link rel="stylesheet" href=".styles.Ventas.css">
     <link rel="stylesheet" href="stylesPagodeServicios.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <div id="content">
+    <div class="container-fluid" id="content">
         <div class="content-table">
             <div class="conteiner-infoo">
-                <div class="content-1-PagoServicios">
-                    <button class="option selected" onclick="selectOption(this)">SIN FACTURA</button>
-                    <button class="option" onclick="selectOption(this)">CON FACTURA</button>
-                    <button class="option" onclick="selectOption(this)">DISPONIBLE</button>
+                <div class="row content-1-PagoServicios">
+                    <button class="col-lg-4 col-md-3 col-sm-3 option selected" onclick="selectOption(this)">SIN
+                        FACTURA</button>
+                    <button class="col-lg-4 col-md-3 col-sm-3 option" onclick="selectOption(this)">CON FACTURA</button>
+                    <button class="col-lg-4 col-md-3 col-sm-3 option" onclick="selectOption(this)">DISPONIBLE</button>
                 </div>
                 <div class="container-contenido">
-                    <div id="contenido">
-                        <h2 class="title">Busque una empresa o ingrese a traves de la marca</h2>
-                        <input class="input" type="text" placeholder="Buscar empresa"> 
+                    <div class="row" id="contenidoh2">
+                        <h2 class="col-lg-12 col-md-12 col-sm-12 title">Busque una empresa o ingrese a traves de la
+                            marca</h2>
                     </div>
-                    <div class="service-image" id="service-image">
-                        <img  class="pagoServicos" src="personal.png">
-                        <img src="telecom.png">
-                        <img src="aysa.png">
-                        <img src="edesur.png">
-                        <img src="movistar.png">
-                        <img src="metrogas.png">
-                        <img src="edenor-removebg.png">
-                        <img src="cablevison.png">
-                        <img src="naturgy.png">
-                        <img src="claro.png">
-                    </div>   
+                    <div class="row" id="contenido">
+                        <input class="col-lg-12 col-md-12 col-sm-12 input" type="text" placeholder="Buscar empresa">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 service-image" id="service-image">
+                            <img class="col-lg-2 col-md-2 col-sm-2 pagoServicos"
+                                src="personaljs.jpg" data-toggle="modal"
+                                data-target="#myModal">
+                            <img class="col-lg-2 col-md-2 col-sm-2 pagoServicos"
+                                src="personaljs.jpg" data-toggle="modal"
+                                data-target="#myModal">
+                            <img class="col-lg-2 col-md-2 col-sm-2 pagoServicos"
+                                src="aysaa.jpg" data-toggle="modal"
+                                data-target="#myModal">
+                            <img class="col-lg-2 col-md-2 col-sm-2 pagoServicos"
+                                src="edesur.png" data-toggle="modal"
+                                data-target="#myModal">
+                            <img class="col-lg-2 col-md-2 col-sm-2 pagoServicos"
+                                src="movistarPhoto.jpg" data-toggle="modal"
+                                data-target="#myModal">
+                            <img class="col-lg-2 col-md-2 col-sm-2 pagoServicos"
+                                src="metrogas.png" data-toggle="modal"
+                                data-target="#myModal">
+                            <img class="col-lg-2 col-md-2 col-sm-2 pagoServicos"
+                                src="edenor-removebg.png" data-toggle="modal"
+                                data-target="#myModal">
+                            <img class="col-lg-2 col-md-2 col-sm-2 pagoServicos"
+                                src="cablevisionPHOTO.jpg" data-toggle="modal"
+                                data-target="#myModal">
+                            <img class="col-lg-2 col-md-2 col-sm-2 pagoServicos"
+                                src="naturgy.png" data-toggle="modal"
+                                data-target="#myModal">
+                            <img class="col-lg-2 col-md-2 col-sm-2 pagoServicos"
+                                src="ClaroPhoto.jpg" data-toggle="modal"
+                                data-target="#myModal">
+                        </div>
+                    </div>
                 </div>
+                <div class="row conteiner-info2">
+                    <div class="content-1PagoServicios">
+                        <h2 class="title">ULTIMAS 20 OPERACIONES</h2>
+                    </div>
                 </div>
-            </div>    
-            <div class="conteiner-info2"> <!-- Abre el div correcto aquí -->
-                <div class="content-1PagoServicios">
-                    <h2 class="title">ULTIMAS 20 OPERACIONES</h2>
+                <div class="parrafo2">
+                    <h2 class="title">Busque una empresa o ingrese a traves de la marca</h2>
                 </div>
-            </div> 
-            <div class="parrafo2">
-                <h2 class="title">Busque una empresa o ingrese a traves de la marca</h2>
-            </div>
-    </div>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="myModalLabel">Título del Modal</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p id="modal-content">Contenido del modal.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Guardar cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    @media (max-width: 767px) {
+                        .service-image {
+                            display: flex;
+                            /* height: 50vh; */
+                            width: 100%;
+                            height: 44vh;
+                            /* background: pink; */
+                            justify-content: flex-start;
+                            align-content: flex-start;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                        }
+
+                        .conteiner-infoo {
+                            height: 96vh;
+                            width: 100%;
+                            justify-content: flex-start;
+                        }
+
+                        .conteiner-info2 {
+                            width: 92%;
+                            margin-top: 0;
+                        }
+
+                        #contenidoh2 {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            margin-top: 10px;
+                        }
+
+                        .content-table {
+                            width: 101%;
+                            height: 96vh;
+                        }
+
+                        .content-1PagoServicios {
+                            width: 100%;
+                        }
+
+                        #contenido {
+                            height: 6vh;
+                            /* margin-top: 10px; */
+                            display: flex;
+                            flex-direction: column;
+                            width: 77%;
+                            /* font-size: 18px; */
+                            align-items: center;
+                            justify-content: center;
+                            align-content: center;
+                        }
+
+                        .container-contenido {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            height: 55vh;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .title {
+                            font-size: 16px;
+                            width: 82%;
+                            margin-left: 0px;
+                        }
+
+                        .parrafo2 {
+                            width: 92%;
+                        }
+
+                        .input {
+                            margin-left: 0px;
+                        }
+
+                        .content-1-PagoServicios button {
+                            width: 34%;
+                            font-size: 21px;
+                        }
+
+                        #content {
+                            width: 107% !important;
+                        }
+
+                        .service-image img {
+                            margin: 7px;
+                            width: 32%;
+                            height: 9vh;
+                            padding-right: 30px;
+                            /* display: flex; */
+                            align-content: center;
+                            justify-content: flex-start;
+                            align-items: center;
+                            flex-wrap: wrap;
+                        }
+                    }
+                </style>
+
+                <script>
+                    // JavaScript para cambiar el contenido del modal según la imagen
+                    const modalContent = document.getElementById('modal-content');
+                    let inputContainer = null;
+
+                    // Función para mostrar un conjunto de input y botón en el modal
+                    function mostrarInputs(inputLabel, inputPlaceholder, buttonText, buttonClickHandler) {
+                        // Si ya hay un conjunto de input y botón mostrado, lo eliminamos
+                        if (inputContainer) {
+                            inputContainer.remove();
+                            inputContainer = null;
+                        }
+
+                        // Creamos un nuevo conjunto de input y botón
+                        inputContainer = document.createElement('div');
+
+                        const label = document.createElement('p');
+                        label.textContent = inputLabel;
+
+                        const input = document.createElement('input');
+                        input.setAttribute('type', 'text');
+                        input.setAttribute('placeholder', inputPlaceholder);
+
+                        const button = document.createElement('button');
+                        button.textContent = buttonText;
+                        button.addEventListener('click', buttonClickHandler);
+
+                        inputContainer.appendChild(label);
+                        inputContainer.appendChild(input);
+                        inputContainer.appendChild(button);
+
+                        modalContent.appendChild(inputContainer);
+                    }
+
+                    // Agrega un evento clic a todas las imágenes
+                    const images = document.querySelectorAll('.pagoServicos');
+                    images.forEach(image => {
+                        image.addEventListener('click', function () {
+                            // Elimina el contenido anterior del modal
+                            modalContent.innerHTML = '';
+
+                            // Agrega los enlaces correspondientes según la imagen clicada
+                            if (image.src.endsWith('personal.png')) {
+                                const referenciaLink = document.createElement('a');
+                                referenciaLink.textContent = 'COBRANZA SIN FACTURA POR NRO. DE REFERENCIA';
+                                referenciaLink.addEventListener('click', function () {
+                                    mostrarInputs('Número de referencia de pago', 'Número de referencia de pago', 'Continuar', function () {
+                                        const numeroReferencia = inputContainer.querySelector('input').value;
+                                        alert(`Número de referencia ingresado: ${numeroReferencia}`);
+                                    });
+                                });
+
+                                const tramiteLink = document.createElement('a');
+                                tramiteLink.textContent = 'COBRANZA SIN FACTURA POR NRO. DE TRAMITE';
+                                tramiteLink.addEventListener('click', function () {
+                                    mostrarInputs('Número de trámite', 'Número de trámite', 'Continuar', function () {
+                                        const numeroTramite = inputContainer.querySelector('input').value;
+                                        alert(`Número de trámite ingresado: ${numeroTramite}`);
+                                    });
+                                });
+
+                                const lineaLink = document.createElement('a');
+                                lineaLink.textContent = 'COBRANZA SIN FACTURA POR NRO. DE LINEA';
+                                lineaLink.addEventListener('click', function () {
+                                    mostrarInputs('Número de celular sin 15', 'Número de celular sin 15', 'Continuar', function () {
+                                        const numeroCelular = inputContainer.querySelector('input').value;
+                                        if (numeroCelular.length !== 15) {
+                                            alert('El número de celular debe tener 15 dígitos.');
+                                        } else {
+                                            alert('Número de celular ingresado: ' + numeroCelular);
+                                        }
+                                    });
+                                });
+
+                                modalContent.appendChild(referenciaLink);
+                                modalContent.appendChild(tramiteLink);
+                                modalContent.appendChild(lineaLink);
+                            } else if (image.src.endsWith('claro.png')) {
+                                const numeroCuentaLink = document.createElement('a');
+                                numeroCuentaLink.textContent = 'COBRANZA SIN FACTURA POR NUMERO DE CUENTA';
+                                numeroCuentaLink.addEventListener('click', function () {
+                                    mostrarInputs('Número de cuenta', 'Número de cuenta', 'Continuar', function () {
+                                        const numeroCuenta = inputContainer.querySelector('input').value;
+                                        alert(`Número de cuenta ingresado: ${numeroCuenta}`);
+                                    });
+                                });
+
+                                const celularDNILink = document.createElement('a');
+                                celularDNILink.textContent = 'COBRANZA SIN FACTURA POR NUMERO DE CELULAR Y DNI';
+                                celularDNILink.addEventListener('click', function () {
+                                    mostrarInputs('Número de celular y DNI', 'Número de celular y DNI', 'Continuar', function () {
+                                        const celularDNI = inputContainer.querySelector('input').value;
+                                        alert(`Número de celular y DNI ingresados: ${celularDNI}`);
+                                    });
+                                });
+
+                                const tarjetaLink = document.createElement('a');
+                                tarjetaLink.textContent = 'COBRANZA SIN FACTURA POR TARJETA CIRCULO CLARO';
+                                tarjetaLink.addEventListener('click', function () {
+                                    mostrarInputs('Número de tarjeta Círculo Claro', 'Número de tarjeta Círculo Claro', 'Continuar', function () {
+                                        const numeroTarjeta = inputContainer.querySelector('input').value;
+                                        alert(`Número de tarjeta Círculo Claro ingresado: ${numeroTarjeta}`);
+                                    });
+                                });
+
+                                modalContent.appendChild(numeroCuentaLink);
+                                modalContent.appendChild(celularDNILink);
+                                modalContent.appendChild(tarjetaLink);
+
+                            } else if (image.src.endsWith('aysa.png')) {
+                                modalContent.textContent = 'Contenido relacionado con AySA.';
+                            }
+
+                            // Agrega casos para las demás imágenes aquí
+
+                            // Abre el modal
+                            $('#myModal').modal('show');
+                        });
+                    });
+
+
+                </script>
+
 </body>
 
 <script>
     var contenidoInicial = document.getElementById("contenido").innerHTML;
 
     function ajustarAlturaContenedor(altura) {
-    var conteinerInfoo = document.querySelector(".conteiner-infoo");
-    conteinerInfoo.style.height = altura + "vh";
-}
-
-var alturaPredeterminada = 55; 
-
-window.onload = function () {
-    ajustarAlturaContenedor(alturaPredeterminada); 
-}
-
-function selectOption(option) {
-    var options = document.querySelectorAll('.option');
-    options.forEach(function (opt) {
-        opt.classList.remove('selected');
-    });
-
-    option.classList.add('selected');
-
-    switch (option.innerHTML) {
-        case "SIN FACTURA":
-        document.getElementById("service-image").style.display = "block";
-
-            document.getElementById("contenido").innerHTML = contenidoInicial; 
-            ajustarAlturaContenedor(alturaPredeterminada); 
-            break;
-        case "CON FACTURA":
-            
-        document.getElementById("service-image").style.display = "none";
-            mostrarContenidoConFactura();
-            ajustarAlturaContenedor(30); 
-            break;
-        case "DISPONIBLE":
-        document.getElementById("service-image").style.display = "none";
-
-            mostrarContenidoDisponible();
-            ajustarAlturaContenedor(30); 
-            break;
+        var conteinerInfoo = document.querySelector(".conteiner-infoo");
+        conteinerInfoo.style.height = altura + "vh";
     }
-}
+
+    var alturaPredeterminada = 55;
+
+    window.onload = function () {
+        ajustarAlturaContenedor(alturaPredeterminada);
+    }
+
+    function selectOption(option) {
+        var options = document.querySelectorAll('.option');
+        options.forEach(function (opt) {
+            opt.classList.remove('selected');
+        });
+
+        option.classList.add('selected');
+
+        switch (option.innerHTML) {
+            case "SIN FACTURA":
+                document.getElementById("service-image").style.display = "block";
+
+                document.getElementById("contenido").innerHTML = contenidoInicial;
+                ajustarAlturaContenedor(alturaPredeterminada);
+                break;
+            case "CON FACTURA":
+
+                document.getElementById("service-image").style.display = "none";
+                mostrarContenidoConFactura();
+                ajustarAlturaContenedor(30);
+                break;
+            case "DISPONIBLE":
+                document.getElementById("service-image").style.display = "none";
+
+                mostrarContenidoDisponible();
+                ajustarAlturaContenedor(30);
+                break;
+        }
+    }
 
     function mostrarContenidoConFactura() {
         var xhr = new XMLHttpRequest();
@@ -115,4 +391,5 @@ function selectOption(option) {
         xhr.send();
     }
 </script>
+
 </html>

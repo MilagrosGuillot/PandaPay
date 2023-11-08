@@ -24,15 +24,17 @@
     align-items: center;
     margin: 0 auto;
     height: 5vh;
-    width: 95%;
+    width: 100%;
+    margin-top: 14px;
 }
 
 .search-filter input {
-    background-color: #e6e6e6;
-    border: none;
-    height: 3.5vh;
-    flex-grow: 1;
-    margin-right: 10px;
+        background-color: #e6e6e6;
+        border: none;
+        height: 4vh;
+        width: 22%;
+        /* flex-grow: 1; */
+        margin-left: 43px;
 }
 
 
@@ -42,26 +44,38 @@
 }
 
 .cambiarContraseña input {
-    width: auto;
+    /* width: auto; */
     background-color: #d3d2d2;
-    margin-right: 10px;
 }
-
+.search{
+    width: 53%;
+}
 .button-containerEnviar{
-   
+    display: flex;
     width: 10%; 
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+.dialog-box img {
+    width: 17%;
+}
+.dialog-box p {
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .dialog-box {
     background-color: #f7fbff;
     color: #020202;
     text-align: center;
     position: relative;
-    width: 22%;
-    height: 7vh;
+    width: 20%;
+    height: 8vh;
     margin-top: 20px;
     border-radius: 30px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-content: center;
     align-items: center;
     justify-content: center;
@@ -76,12 +90,12 @@
     display: flex;
     align-items: center;
     /* margin: 0 auto; */
-    width: 95%;
-    height: 1vh;
+    width: 101%;
+    height: 5vh;
     justify-content: space-between;
 
 }
 .content-dialog{
     width: 100%;
-    margin-left: 60px;
+    /* margin-left: 60px; */
 }

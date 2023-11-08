@@ -30,11 +30,10 @@
     display: flex;
     align-items: center;
     margin: 0 auto; 
-    width: 93%;
+    width: 100%;
     margin-bottom: 21px;
     margin-top: 10px;
 }
-/* Estilo para el fondo oscurecido */
 .modal {
     display: none;
     position: fixed;
@@ -102,7 +101,6 @@ table {
     font-weight: normal; 
     font-family: 'Nunito';
 }
-/* Estilo para el botón de cierre */
 .close {
     position: absolute;
     top: 10px;
@@ -112,7 +110,6 @@ table {
     color: #555;
 }
 
-/* Estilo para el botón de abrir modal */
 #openModal {
     padding: 10px 20px;
     background-color: #007bff;
@@ -129,9 +126,11 @@ table {
     justify-content: center;
     align-content: center;
 }
-
+select{
+    appearance: none;
+}
 #fecha select{
-
+    appearance: none;
     width: 70px;
     margin-right: 11px;
 }
@@ -141,11 +140,11 @@ table {
     flex-direction: column;
     width: 17%;
     height: 6vh;
-
     align-content: center;
 }
 .filters{
     width: 10%;
+
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -158,4 +157,13 @@ table {
 .button-ventasTotal{
     margin-top: 19px;
  
+}
+.search{
+    width:100%;
+}
+.button-container {
+    width: 9%;
+}
+.conteiner-register {
+width: 100%;
 }

@@ -3,7 +3,7 @@
     border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;
     display: flex;
-
+align-items: center;
     height: 55vh;
     background-color: rgb(254, 254, 254);
     width: 95%;
@@ -12,13 +12,13 @@
 }
 
 .service-image{
-    width: 90%;
-    height: 90%;
-    padding: 30px 10px 50px 50px;
-    margin: auto;
+    width: 100%;
+    height: 42vh;
+
 }
 .service-image img{
     margin: 7px;
+    height: 8vh;
     padding-right: 30px ;
 
 }
@@ -36,7 +36,9 @@
     margin-left: 30px;
     font-size: 22px;
 }
-
+.PagoServicios{
+    height: 5vh;
+}
 .content-1-PagoServicios button {
     text-decoration: none;
     border: none;
@@ -70,7 +72,7 @@
 .content-1-PagoServicios{
     display: flex;
     align-items: center; 
-
+    justify-content: flex-start;
     width: 100%;
     border-bottom: 5px solid #706f6f;
     font-family: 'Open Sans';

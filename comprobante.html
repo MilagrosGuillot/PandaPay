@@ -4,67 +4,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../../../js/Home.js"></script>
-    <link rel="stylesheet" href="../../../css/subpages/styles.Ventas.css">
-    <link rel="stylesheet" href="../../../css/subpages/styles.comprobante.css">
+    <script src="comprobante.js"></script>
+    <script src="Home.js"></script>
+    <link rel="stylesheet" href="styles.Ventas.css">
+    <link rel="stylesheet" href="styles.comprobante.css">
+    <!-- Bootstrap CSS and JS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </head>
-<div id="content">
-    <div class="content-date">
-        <div class="date">
-            <div class="content-fechaComprobante">
-                <label class="filters" for="fecha">Fecha</label>
-                <div id="fecha">
-                    <select id="Dia">
-                        <option value="1">1</option>
-                    </select>
-                    <select id="Mes">
-                        <option value="1">1</option>
-                    </select>
-                    <select id="Año">
-                        <option value="2022">2022</option>
-                        <option value="2023">2023</option>
-                    </select>
+<div class="container-fluid" id="content">
+    <div class="contentAll">
+
+        <div class="row content-date">
+            <div class="col-lg-6 col-md-6 col-sm-6  date">
+                <div class="col-lg-3 col-md-3 col-sm-12 content-fechaComprobante">
+                    <label class="" for="fecha">Fecha</label>
+                    <div id="fecha">
+                        <select class="" id="Dia">
+                            <option value="1">1</option>
+                        </select>
+                        <select id="Mes">
+                            <option class="" value="1">1</option>
+                        </select>
+                        <select class="" id="Año">
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Fila para la vista de escritorio -->
+                <div class="d-none d-lg-block d-md-block col-lg-3 col-md-3 col-sm-3 button-containerComprobante">
+                    <button class="search">BUSCAR</button>
                 </div>
             </div>
-            <div class="button-containerComprobante">
-                <button id="search">BUSCAR</button>
+            <div class="col-lg-6 col-md-6 col-sm-6 d-none d-lg-block d-md-block content-liquidacion">
+                <p class="p-liquidacion">LIQUIDACION: 17-08-23</p>
             </div>
         </div>
-        <div class="content-liquidacion">
-            <p class="p-liquidacion">LIQUIDACION: 17-08-23</p>
-        </div>
-    </div>
-    <div class="conteiner-info"> 
-        <div class="content-1">
-            <div class="title">STOCK VIRTUAL</div>
-            <div>CALLE: CORDOBA ALTURA: 2028 PISO: -DEPTO:- </div>
-            <div>BUENOS AIRES, BUENOS_AIRES(B1824AYX)</div>
-            <div>MISCELANEOS</div>
-            <div>CUIT: 30716567709</div>
+        <!-- Fila para la vista de movil -->
+        <div class="d-lg-none d-md-none conteiner-register">
+            <div class="col-lg-3 col-md-3 col-sm-3 button-containerComprobante">
+                <button class="search">BUSCAR</button>
+            </div>
         </div>
 
-        <div class="content-2">
-            <div class="title">ENTIDAD PAGADORA: GRUPO PANDA SRL</div>
-            <div>AV.CASAEROS 1234, 1A</div>
-            <div>CABA, CABA (1427)</div>
-            <div>SERVICIOS DE COBROS</div>
-            <div>CUIT: 33-71787575-9</div>
-        </div> 
+        <div class="d-lg-none d-md-none content-liquidacion">
+            <p class="p-liquidacion">LIQUIDACION: 17-08-23</p>
+        </div>
+        <!-- ------------------------------------------------------------------- -->
+        <div class="row conteiner-info">
+            <div class="col-lg-6 col-md-6 col-sm-6 content-1">
+                <div class="title">STOCK VIRTUAL</div>
+                <div>CALLE: CORDOBA ALTURA: 2028 PISO: -DEPTO:- </div>
+                <div>BUENOS AIRES, BUENOS_AIRES(B1824AYX)</div>
+                <div>MISCELANEOS</div>
+                <div>CUIT: 30716567709</div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6 content-2">
+                <div class="title">ENTIDAD PAGADORA: GRUPO PANDA SRL</div>
+                <div>AV.CASAEROS 1234, 1A</div>
+                <div>CABA, CABA (1427)</div>
+                <div>SERVICIOS DE COBROS</div>
+                <div>CUIT: 33-71787575-9</div>
+            </div>
+        </div>
+        <div class="row parrafo">
+            <p>LA LEY ESTABLECE LA OBLIGACION DE SOLICITAR CODIGO DE AUTORIZACION,
+                DE NO EFECTUAR DIFERENCIA DE PRECIOS ENTRE OPERACIONES EN EFECTIVO
+                Y CON TARJETA Y DE VERIFICAR LA IDENTIDAD DEL PORTADOR DE LA TARJETA,
+                PARA LO CUAL DEBERIA REGISTRAR TIPO Y NRO. DE DOCUMENTO EN EL COMPROBANTE
+                DE VENTAS
+            </p>
+        </div>
+        <div class="row conteiner-transacciones">
+            <div id="tablaTransacciones" class="col-md-12 col-sm-12">
+                <p>No se encontraron transacciones para la fecha indicada</p>
+            </div>
+        </div>
     </div>
-    <div class="parrafo">
-        <p>LA LEY ESTABLECE LA OBLIGACION DE SOLICITAR CODIGO DE AUTORIZACION,
-            DE NO EFECTUAR DIFERENCIA DE PRECIOS ENTRE OPERACIONES EN EFECTIVO
-            Y CON TARJETA Y DE VERIFICAR LA IDENTIDAD DEL PORTADOR DE LA TARJETA,
-            PARA LO CUAL DEBERIA REGISTRAR TIPO Y NRO. DE DOCUMENTO EN EL COMPROBANTE
-            DE VENTAS
-        </p>
-    </div>
-    <div class="conteiner-transacciones">
-        <p>No se encontraron transacciones para la fecha indicada</p>
-    </div>
+
 </div>
+<style>
+    @media (max-width: 767px) {
+        .date {
+            margin-left: 0;
+            padding: 0;
+            width: 100%;
+            border-radius: 0;
+        }
+
+        .content-fechaComprobante {
+            width: 36%;
+            flex-direction: column;
+        }
+
+        .content-date {
+            /* height: 10vh; */
+        }
+
+        .button-containerComprobante {
+            display: flex;
+            width: 98%;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .search {
+            width: 89%;
+        }
+
+        .conteiner-register {
+            margin-bottom: 0;
+        }
+
+        #fecha select {
+            width: 51px;
+            height: 4vh;
+        }
+
+        .content-liquidacion {
+            display: flex;
+            width: 99%;
+            color: white;
+            background-color: white;
+            height: 4vh;
+            font-size: 16px;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .p-liquidacion {
+            width: 84%;
+            display: flex;
+            height: 4vh;
+            border-radius: 25px;
+            background-color: gray;
+            margin-bottom: 0;
+            align-items: center;
+            justify-content: flex-start;
+            align-content: center;
+        }
+
+        .container-fluid {
+            background-color: white;
+        }
+
+        .contentAll {
+            background: white;
+            height: 100vh;
+            width: 100%;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .conteiner-info {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .title {
+            color: black;
+            font-weight: bold;
+            font-family: 'Open Sans';
+        }
+
+        .content-1 {
+            color: black;
+        }
+
+        .content-2 {
+            color: black;
+        }
+
+        .parrafo {
+            padding: 10px;
+            font-size: 11px;
+            border-radius: 0;
+            /* color: black; */
+            border-bottom: 5px solid #444;
+            width: 100%;
+        }
+
+        .conteiner-transacciones {
+            display: flex;
+            background-color: #fefefe;
+            height: 11vh;
+            margin-top: 0px;
+            width: 95%;
+            /* border-radius: 30px; */
+            align-items: center;
+            justify-content: flex-end;
+            align-content: flex-start;
+        }
+
+        #tablaTransacciones {
+            background-color: red;
+            border-radius: 30px;
+            height: 6vh;
+            font-size: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+</style>
 
 <script>
     // Función para generar opciones de selección para días, meses y años

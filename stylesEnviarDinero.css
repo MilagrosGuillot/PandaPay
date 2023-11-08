@@ -1,12 +1,12 @@
-.conteiner{
+.conteiner {
     display: flex;
     width: 99%;
     height: 5vh;
     margin-bottom: 28px;
-    margin-left: 53px;
+    /* margin-left: 53px; */
 }
 
-.content-parrafo{
+.content-parrafo {
     display: flex;
     background-color: #706f6f;
     width: 75%;
@@ -18,17 +18,19 @@
     align-content: flex-start;
     align-items: center;
 }
-#abrirNuevaPestana{
-        appearance: none;
-        border: none;
-        text-decoration: none;
-        background-color: transparent; 
-        color: inherit;
-        cursor: pointer; 
-        padding: 0; 
-        font: inherit; 
-    }
-.content-liquidacion{
+
+#abrirNuevaPestana {
+    appearance: none;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+}
+
+.content-liquidacion {
     display: flex;
     background-color: #233202;
     width: 18%;
@@ -41,6 +43,9 @@
     font-family: 'Open Sans';
     justify-content: center;
 }
+.content-table{
+    height: 39vh !;
+}
 .search-filter {
     background-color: white;
     font-family: 'Open Sans';
@@ -49,7 +54,7 @@
     align-items: center;
     margin: 0 auto;
     height: 5vh;
-    width: 95%;
+    width: 101%;
 }
 
 .search-filter input {
@@ -57,7 +62,7 @@
     background-color: #e6e6e6;
     border: none;
     height: 3.5vh;
-    margin-right: 53px;
+    /* margin-right: 53px; */
     margin-left: 25px;
 }
 
@@ -65,11 +70,19 @@
     overflow: hidden;
     margin-top: 10px;
 }
-#saldoCuenta{
+
+#saldoCuenta {
     margin-left: 25px;
     font-family: 'Open Sans';
 }
+
 .button-containerComprobante {
     width: 14%;
     margin-left: 5px;
+}
+
+.delete-icon {
+    width: 12%;
+    height: 37px;
+    cursor: pointer;
 }
