@@ -103,104 +103,127 @@
         </div>
     </div>
 
-    <!-- Nueva fila en la vista móvil (por debajo de la primera) -->
+  <!-- Nueva fila en la vista móvil (por debajo de la primera) -->
+  <div class="container-section">
     <div class="row content-movil d-md-none d-sm-flex-column align-items-center">
-        <div class="main-divs">
-            <div class="col-6">
-                <!-- Primera sección -->
-                <section class="section">
-                    <div class="centered-content ventas" value="Venta" onclick="Abrir()">
-                        <img class="page" src="sales.png" alt="Sales">
-                        <div>VENTAS</div>
-                        <div>$0.00</div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-6">
-                <!-- Segunda sección -->
-                <section class="section">
-                    <div class="centered-content" value="Vento" onclick="Abrir()">
-                        <img class="tarjet" src="total-sales.png"
-                            alt="totalSales">
-                        <div>VENTAS/TOTAL</div>
-                        <div>$0.00</div>
-                    </div>
-                </section>
-            </div>
-        </div>
-        <div class="row d-md-none d-sm-flex-column align-items-center">
-            <div class="main-divs">
-                <div class="col-6">
-                    <!-- Tercera sección -->
-                    <section class="section">
-                        <div class="centered-content" style="
-                    width: 86%;" value="Liqui" onclick="Abrir()">
-                            <img class="tarjet" src="liquidacion.png"
-                                alt="totalSales">
-                            <div>LIQUIDACION</div>
-                            <div>HOY $60</div>
-                            <div>FUTURAS $0.00</div>
-                        </div>
-                    </section>
+        <div class="col-12 main-divs">
+            <!-- Primera sección -->
+            <section class="col-6 section">
+                <div class="centered-content ventas" value="Venta" onclick="Abrir()">
+                    <img class="page" src="sales.png" alt="Sales">
+                    <div>VENTAS</div>
+                    <div>$0.00</div>
                 </div>
-                <div class="col-6">
-                    <!-- Cuarta sección -->
-                    <section class="section">
-                        <div class="centered-content comprobante" value="Compr" onclick="Abrir()">
-                            <img class="page" src="comprobante.png"
-                                alt="comprobante">
-                            <div>COMPROBANTES</div>
-                        </div>
-                    </section>
+            </section>
+            <!-- Segunda sección -->
+            <section class="col-6 section">
+                <div class="centered-content" value="Vento" onclick="Abrir()">
+                    <img class="tarjet" src="total-sales.png"
+                        alt="totalSales">
+                    <div>VENTAS/TOTAL</div>
+                    <div>$0.00</div>
                 </div>
-            </div>
-        </div>
-
-        <div class="row d-md-none">
-            <div class="main-divs">
-                <div class="col-6">
-                    <!-- Quinta sección -->
-                    <section class="section">
-                        <div class="centered-content" value="Envdi" onclick="Abrir()">
-                            <img class="tarjet" src="sendMoney.png"
-                                alt="sendMoney">
-                            <div>ENVIAR DINERO</div>
-                            <div>$156.983</div>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-6">
-                    <!-- Sexta sección -->
-                    <section class="section">
-                        <div class="centered-content pagoServicios" value="Pagse" onclick="Abrir()">
-                            <img class="page" src="ServicesPay.png"
-                                alt="ServicesPay">
-                            <div>PAGO DE SERVICIOS</div>
-                            <div>RAPIPAGO</div>
-                        </div>
-                    </section>
-                </div>
-            </div>
+            </section>
         </div>
     </div>
-    
+    <div class="row content-movil d-md-none d-sm-flex-column align-items-center">
+        <div class="col-12 main-divs">
+            <!-- Tercera sección -->
+            <section class="col-6 section">
+                <div class="centered-content" style="
+                width: 86%;" value="Liqui" onclick="Abrir()">
+                    <img class="tarjet" src="liquidacion.png"
+                        alt="totalSales">
+                    <div>LIQUIDACION</div>
+                    <div>HOY $60</div>
+                    <div>FUTURAS $0.00</div>
+                </div>
+            </section>
+            <!-- Cuarta sección -->
+            <section class="col-6 section">
+                <div class="centered-content comprobante" value="Compr" onclick="Abrir()">
+                    <img class="page" src="comprobante.png"
+                        alt="comprobante">
+                    <div>COMPROBANTES</div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row content-movil d-md-none">
+        <div class="col-12 main-divs">
+            <!-- Quinta sección -->
+            <section class="col-6 section">
+                <div class="centered-content" value="Envdi" onclick="Abrir()">
+                    <img class="tarjet" src="sendMoney.png"
+                        alt="sendMoney">
+                    <div>ENVIAR DINERO</div>
+                    <div>$156.983</div>
+                </div>
+            </section>
+            <!-- Sexta sección -->
+            <section class="col-6 section">
+                <div class="centered-content pagoServicios" value="Pagse" onclick="Abrir()">
+                    <img class="page" src="ServicesPay.png"
+                        alt="ServicesPay">
+                    <div>PAGO DE SERVICIOS</div>
+                    <div>RAPIPAGO</div>
+                </div>
+            </section>
+        </div>
+    </div>
     <div class="row contentFecha">
         <div id="fecha" class="col-12  d-md-none d-sm-flex align-items-center">
             <!-- Cambia las clases de columna según el tamaño de pantalla -->
-
             <p id="fechaActualMobile"></p>
-
             <button onclick="VerMas()" id="verMas">VER MAS</button>
         </div>
     </div>
 </div>
-
 </div>
 
 <style>
     @media (max-width: 767px) {
         #Slider {
             display: none;
+        }
+
+        .main-divs {
+            gap: 3px;
+            display: flex;
+            flex-direction: column;
+            width: 98%;
+            height: 22vh;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .content-movil {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 19vh;
+            width: 100%;
+        }
+
+        .container-section {
+            display: flex;
+            height: 88vh;
+            width: 100%;
+            align-content: center;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+
+        .section {
+            margin: 0;
+            /* width: 48%; */
+            /* margin: 16px; */
+            height: 139px;
         }
 
         #fecha {
@@ -248,7 +271,7 @@
         }
 
         .contentFecha {
-            width: 103%;
+            width: 100%;
 
             background-color: #8cc909;
         }
@@ -268,28 +291,12 @@
             align-content: center;
         }
 
-        .section {
-            width: 100%;
-            margin: 16px;
-            height: 168px;
-        }
-
         .pagoServicios {
             margin: 0;
         }
 
         .ventas {
             margin: 0;
-        }
-
-        .content-movil {
-            display: flex;
-        
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 61vh;
-            width: 100%;
         }
 
         .col-6 {
@@ -299,22 +306,13 @@
         .centered-content {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            height: 19vh;
             text-align: center;
-        }
-
-        .main-divs {
-            display: flex;
-            flex-direction: column;
-            width: 94%;
-            height: 21vh;
-            flex-wrap: wrap;
-            /* margin-right: 12px;
-            margin-left: 32px; */
-            align-items: center;
             justify-content: center;
             align-content: center;
+            align-items: center;
         }
+
 
         #ultimos {
             /* display: none; */
