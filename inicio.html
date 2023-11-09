@@ -113,7 +113,7 @@
                 <!-- Segunda sección -->
                 <section class="col-6 section">
                     <div class="centered-content" value="Vento" onclick="Abrir()">
-                        <img class="tarjet" src="total-sales.png" alt="totalSales">
+                        <img class="tarjet" src="ventas (1).png" alt="totalSales">
                         <div>VENTAS/TOTAL</div>
                         <div>$0.00</div>
                     </div>
@@ -124,12 +124,13 @@
             <div class="col-12 main-divs">
                 <!-- Tercera sección -->
                 <section class="col-6 section">
-                    <div class="centered-content" style="
-                width: 86%;" value="Liqui" onclick="Abrir()">
-                        <img class="tarjet" src="liquidacion.png" alt="totalSales">
-                        <div>LIQUIDACION</div>
-                        <div>HOY $60</div>
-                        <div>FUTURAS $0.00</div>
+                    <div class="centered-content" value="Liqui" onclick="Abrir()">
+                        <img style="width: 50%;" class="tarjet" src="liquidacion (2).png" alt="totalSales">
+                        <div class="content-title">
+                            <div>LIQUIDACION</div>
+                            <div>HOY $60</div>
+                            <div>FUTURAS $0.00</div>
+                        </div>
                     </div>
                 </section>
                 <!-- Cuarta sección -->
@@ -147,7 +148,7 @@
                 <!-- Quinta sección -->
                 <section class="col-6 section">
                     <div class="centered-content" value="Envdi" onclick="Abrir()">
-                        <img class="tarjet" src="sendMoney.png" alt="sendMoney">
+                        <img class="tarjet" src="enviardinero (1).png" alt="sendMoney">
                         <div>ENVIAR DINERO</div>
                         <div>$156.983</div>
                     </div>
@@ -177,7 +178,10 @@
         #Slider {
             display: none;
         }
-
+.content-title{
+    height: 7vh;
+    /* background: pink; */
+}
         .main-divs {
             gap: 3px;
             display: flex;
@@ -213,13 +217,16 @@
         #dinero-en-cuenta-mobile {
             font-size: 14px;
         }
+
         #dinero-a-liquidar-mobile {
             font-size: 14px;
         }
+
         #merchant-id-mobile {
             font-size: 14px;
         }
-        #ultima-visita-mobile {
+
+        #ultima-id-mobile {
             font-size: 14px;
         }
 
@@ -263,6 +270,10 @@
             margin: 0.125rem 0;
         }
 
+        .centered-content div {
+            font-size: 12px;
+        }
+
         #fechaActualMobile {
             font-size: 1.25rem;
             width: 158px;
@@ -288,7 +299,8 @@
         }
 
         .tarjet {
-            width: 42%;
+            margin-bottom: 4px;
+    width: 50%;
         }
 
         .page {
@@ -317,11 +329,12 @@
         .centered-content {
             display: flex;
             flex-direction: column;
-            height: 19vh;
+            height: 16vh;
+            width: 80%;
+            /* background: pink; */
+            margin: 0;
             text-align: center;
             justify-content: center;
-            align-content: center;
-            align-items: center;
         }
 
 
