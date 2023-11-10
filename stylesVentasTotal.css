@@ -69,7 +69,15 @@ table {
     height: 300px; 
 
 }
+.table-container{
+    height: 33vh;
+}
+#miTabla{
+    padding: 0;
+height: 35vh;
+}
 .miTabla {
+ 
     border-radius: 10%;
     width: 100%;
     height: 100px;
