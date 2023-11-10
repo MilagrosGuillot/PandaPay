@@ -43,23 +43,27 @@
 
         <!-- Tabla -->
         <div class="row table-container">
-            <table class="col-lg-12 col-md-12 col-sm-12 miTabla">
-                <thead>
-                    <tr class="col-lg-12 col-md-12 col-sm-12 a">
-                        <th>FECHA</th>
-                        <th>APROBADAS/TOTAL</th>
-                        <th>TOTAL</th>
-                    </tr>
-                </thead>
-                <tbody id="VentaPagina">
-                    <tr>
-                        <td></td>
-                        <td>0/0</td>
-                        <td>$0.00</td>
-                    </tr>
-                    <!-- Agrega más filas si es necesario -->
-                </tbody>
-            </table>
+            <div class="col-lg-12 col-md-12 col-sm-12 miTabla">
+                <div class="table-responsive">
+                    <table class="table table-striped ">
+                        <thead>
+                            <tr class="col-lg-12 col-md-12 col-sm-12 a">
+                                <th>FECHA</th>
+                                <th>APROBADAS/TOTAL</th>
+                                <th>TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody id="VentaPagina">
+                            <tr>
+                                <td></td>
+                                <td>0/0</td>
+                                <td>$0.00</td>
+                            </tr>
+                            <!-- Agrega más filas si es necesario -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -81,7 +85,6 @@
             margin-bottom: 5px;
             flex-wrap: nowrap;
         }
-
 
         .content-table {
             background-color: white;
@@ -127,8 +130,10 @@
         }
 
         .miTabla {
+            padding: 0 !important;
             height: 81vh;
         }
+
         /* #content {
             width: 109% !important;
         } */
@@ -141,9 +146,11 @@
             align-items: center;
             justify-content: center;
         }
-.search{
-font-size: 14px;
-    }
+
+        .search {
+            font-size: 14px;
+        }
+
         #content .table-container {
             width: 99%;
             height: 80vh;
