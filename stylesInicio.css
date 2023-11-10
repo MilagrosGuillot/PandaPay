@@ -5,11 +5,7 @@
     --font-size: 2.3vh;
     /* --slider-bg-color: violet; */
 }
-@media (max-width: 767px) {
-    #Slider {
-        display: none;
-    }
-}
+
 /* Estilos para el home */
 #home {
     flex: 1;
@@ -21,7 +17,11 @@
     margin-left: 47vh;
     /* margin-top: 18px; */
 }
-
+@media (max-width: 767px) {
+    #Slider {
+        display: none;
+    }
+}
 /* Estilos para .mainn */
 .mainn {
     display: flex;
@@ -93,7 +93,7 @@ td {
 html {
     font-size: 16px; 
 }
-#fechaActual {
+#fechaActualDesktop {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 1px;
@@ -109,12 +109,12 @@ html {
     justify-content: center;
 }
 
-#fechaActual hr {
+#fechaActualDesktop hr {
     border: none;
     margin: 0.125rem 0; 
 }
 
-#fechaActual p {
+#fechaActualDesktop p {
     font-size: 1.125rem; 
     margin: 0.125rem 0; 
 }
