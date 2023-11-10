@@ -5,7 +5,11 @@
     --font-size: 2.3vh;
     /* --slider-bg-color: violet; */
 }
-
+@media (max-width: 767px) {
+    #Slider {
+        display: none;
+    }
+}
 /* Estilos para el home */
 #home {
     flex: 1;
@@ -89,7 +93,7 @@ td {
 html {
     font-size: 16px; 
 }
-#fechaActualDesktop {
+#fechaActual {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 1px;
@@ -105,12 +109,12 @@ html {
     justify-content: center;
 }
 
-#fechaActualDesktop hr {
+#fechaActual hr {
     border: none;
     margin: 0.125rem 0; 
 }
 
-#fechaActualDesktop p {
+#fechaActual p {
     font-size: 1.125rem; 
     margin: 0.125rem 0; 
 }

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>PANDAPAY</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
@@ -282,7 +282,12 @@
         #menu {
             display: none;
         }
-
+        .nav-User img {
+    margin-left: 7px;
+        }
+        .nav-icons-img {
+    width: 79%;
+}
         .container-header {
             width: 100%;
             display: flex;
@@ -315,7 +320,7 @@
         .image-container {
             /* background: aquamarine; */
             width: 100%;
-            height: 37px;
+            height: 5vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -323,7 +328,9 @@
             /* margin-left: 16px; */
             /* margin-right: 80px; */
         }
-
+#ultima-visita-mobile{
+    font-size: 14px;
+}
 
         .header {
             width: 98%;
@@ -410,7 +417,7 @@
 
          .img-panda {
             width: 19%;
-            height: 6vh;
+            height: 5vh;
         } 
 
         .row {
@@ -584,10 +591,10 @@
         var fechaHoraFormato = dia + '/' + mes + ' ' + hora + ':' + (minutos < 10 ? '0' : '') + minutos;
 
         // Para la vista de escritorio
-        document.getElementById("ultima-visita-desktop").textContent = "Última visita: " + fechaHoraFormato;
+        document.getElementById("ultima-visita-desktop").textContent = "ULTIMA VISITA: " + fechaHoraFormato;
 
         // Para la vista móvil
-        document.getElementById("ultima-visita-mobile").textContent = "Última visita: " + fechaHoraFormato;
+        document.getElementById("ultima-visita-mobile").textContent = "ULTIMA VISITA: " + fechaHoraFormato;
     }
     mostrarUltimaVisita();
 </script>
