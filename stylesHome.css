@@ -275,12 +275,16 @@ li a img {
 }
 
 #content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    /* justify-content: center; */
-    height: 90vh;
-    background-color: #d1e99d;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex: 1;
+        align-items: center;
+        margin-top: 14px;
+        justify-content: flex-start;
+        height: 90vh;
+        background-color: #d1e99d;
+        align-content: center;
 }
 
 #miTabla {

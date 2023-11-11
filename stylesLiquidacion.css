@@ -4,11 +4,21 @@
     padding: 20px;
     border-radius: 17px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto; 
     width: 101%;
     margin-bottom: 21px;
     margin-top: 10px;
+}
+.container-fecha{
+    padding: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    /* background: pink; */
+    align-items: center;
+    justify-content: space-between;
 }
 .fechaHasta{
     display: flex;
@@ -45,9 +55,12 @@
     justify-content: flex-start;
 }
 .terminal{
+    align-items: flex-start;
     font-family: 'Nunito';
 }
 #fechaDesde{
+    display: flex;
+    flex-direction: row;
     margin-left: 0;
 }
 
@@ -63,7 +76,6 @@
     flex-direction: column;
     width: 17%;
     height: 6vh;
-    background: rebeccapurple;
 
     align-content: center;
 }

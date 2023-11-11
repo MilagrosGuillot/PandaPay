@@ -81,14 +81,14 @@ td {
 
 }
 
-#content {
+/* #content {
     flex: 1;
     font-family: 'Open Sans';
     display: flex;
     width: 98%;
     margin-top: 14px;
     align-items: center;
-}
+} */
 
 .content-table {
     font-family: 'Open Sans';
