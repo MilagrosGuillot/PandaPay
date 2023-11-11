@@ -1,16 +1,17 @@
 /* Estilos para la tabla */
 table {
     width: 100%;
-    margin:  auto; 
+    margin: auto;
     border-collapse: collapse;
-    border-spacing: 0; 
- 
-   border-color: #444;
-   border-radius: 10%;
-    height: 300px; 
-   
+    border-spacing: 0;
+
+    border-color: #444;
+    border-radius: 10%;
+    height: 300px;
+
 }
-.content-fechaVentas{
+
+.content-fechaVentas {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -19,29 +20,31 @@ table {
     align-items: center;
     align-content: center;
 }
+
 #miTabla {
     border-radius: 10%;
     width: 100%;
     height: 100px;
-    padding: 30px;
-
-    font-weight: normal; 
+    /* padding: 30px; */
+    padding: 0;
+    height: 31vh !important;
+    font-weight: normal;
     font-family: 'Nunito';
 
 }
 
 /* Estilos para las celdas de encabezado */
 th {
-    background-color: white; 
-    color: #000000; 
-    
+    background-color: white;
+    color: #000000;
+
     font-family: 'Open Sans';
     text-align: left;
-    border: none; 
+    border: none;
     border-top: none;
-    border-left: none; 
-    border-right: none; 
-    border-spacing: 0; 
+    border-left: none;
+    border-right: none;
+    border-spacing: 0;
 }
 
 .a {
@@ -51,12 +54,14 @@ th {
 
 /* Estilos para las filas pares */
 tr:nth-child(even) {
-    background-color: #ffffff; /* Blanco */
+    background-color: #ffffff;
+    /* Blanco */
 }
 
 /* Estilos para las filas impares */
 tr:nth-child(odd) {
-    background-color: #f2f2f2; /* Gris claro */
+    background-color: #f2f2f2;
+    /* Gris claro */
 }
 
 /* Estilos para las celdas de datos */
@@ -64,7 +69,7 @@ td {
     font-size: 14px;
     padding: 20px;
     text-align: left;
-    border: none; 
+    border: none;
 }
 
 /* Estilos para el contenedor principal */
@@ -72,8 +77,8 @@ td {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 20px; 
-    
+    padding: 20px;
+
 }
 
 #content {
@@ -85,7 +90,7 @@ td {
     align-items: center;
 }
 
-.content-table{
+.content-table {
     font-family: 'Open Sans';
     width: 98%;
     display: flex;
@@ -99,32 +104,38 @@ td {
 
 
 #content .table-container {
-    overflow: hidden; 
+    overflow: hidden;
 }
-#fechaDesde{
+
+#fechaDesde {
     align-items: center;
 }
-#fechaDesde label{
+
+#fechaDesde label {
     font-family: 'Nunito';
 }
-#fechaHasta label{
+
+#fechaHasta label {
     font-family: 'Nunito';
 }
-#fechaHasta{
+
+#fechaHasta {
     align-items: center;
 }
-.row{
+
+.row {
     flex-wrap: nowrap !important;
 }
+
 .date-filterVentas {
     background-color: white;
     font-family: 'Open Sans';
     padding: 20px;
-    flex-wrap: nowrap ;
+    flex-wrap: nowrap;
     border-radius: 24px;
     display: flex;
     align-items: center;
-    margin: 0 auto; 
+    margin: 0 auto;
     width: 93%;
     margin-bottom: 21px;
     height: 5vh;
@@ -136,19 +147,22 @@ td {
 #fechaDesde {
     display: flex;
     align-items: center;
-    margin-left: 22px; 
+    margin-left: 22px;
 }
+
 #fechaHasta {
     /* margin-right: 50px; */
 }
+
 /* Estilos para los selects dentro de los grupos */
 .date-filterVentas #fechaDesde select,
 .date-filterVentas #fechaHasta select {
-        margin-right: 17px;
-        width: 70px;
-        height: 4vh;
-        appearance: none;
+    margin-right: 17px;
+    width: 70px;
+    height: 4vh;
+    appearance: none;
 }
+
 /* Estilos para el botón */
 .search {
     background-color: #8cc909;
@@ -165,14 +179,16 @@ td {
     border: none;
 }
 
-.table-container{
+
+.table-container {
     background-color: white;
     padding: 4px;
+    height: 33vh;
     border-radius: 28px;
     display: flex;
     align-items: center;
-    margin: 0 auto; 
-    justify-content: space-between; 
+    margin: 0 auto;
+    justify-content: space-between;
     /* width: 95%; */
     width: 102%;
 }
@@ -182,7 +198,3 @@ td {
     width: 60%;
     /* margin-left: 89px; */
 }
-
-
-
-
