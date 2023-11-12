@@ -161,27 +161,27 @@ function reiniciarIntervalo() {
                 var stsValue = tabla[index].sts;
                 var tdSTS = $("<td>");
                 if (stsValue === "STS1") {
-                    tdSTS.append('<img src="tilde_verde.png" alt="Cruz Verde">');
+                    tdSTS.append('<img src="../../../css/assets/iconsTable/tilde_verde.png" alt="Cruz Verde">');
                 } else {
-                    tdSTS.append('<img src="cruz_roja.png" alt="Cruz Roja">');
+                    tdSTS.append('<img src="../../../css/assets/iconsTable/cruz_roja.png" alt="Cruz Roja">');
                 }
     
                 // Agregar imágenes según el valor de "borrar"
                 var borrarValue = tabla[index].borrar;
                 var tdBorrar = $("<td>");
                 if (borrarValue === "Borrar1") {
-                    tdBorrar.append('<img src="tacho_gris.png" alt="Tacho Gris">');
+                    tdBorrar.append('<img src="../../../css/assets/iconsTable/tacho_gris.png" alt="Tacho Gris">');
                 } else {
-                    tdBorrar.append('<img src="tacho_rojo.png" alt="Tacho Rojo">');
+                    tdBorrar.append('<img src="../../../css/assets/iconsTable/tacho_rojo.png" alt="Tacho Rojo">');
                 }
     
                 // Agregar imágenes según el valor de "rec"
                 var recValue = tabla[index].rec;
                 var tdRec = $("<td>");
                 if (recValue === "Rec1") {
-                    tdRec.append('<img src="hoja_gris.png" alt="Hoja Gris">');
+                    tdRec.append('<img src="../../../css/assets/iconsTable/hoja_gris.png" alt="Hoja Gris">');
                 } else {
-                    tdRec.append('<img src="hoja_verde.png" alt="Hoja Verde">');
+                    tdRec.append('<img src="../../../css/assets/iconsTable/hoja_verde.png" alt="Hoja Verde">');
                 }
                 
                 tr.append(tdFecha);
