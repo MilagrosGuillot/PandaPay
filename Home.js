@@ -172,7 +172,7 @@ function reiniciarIntervalo() {
                 if (borrarValue === "Borrar1") {
                     tdBorrar.append('<img src="tacho_gris.png" alt="Tacho Gris">');
                 } else {
-                    tdBorrar.append('<img src="iconsTable/tacho_rojo.png" alt="Tacho Rojo">');
+                    tdBorrar.append('<img src="tacho_rojo.png" alt="Tacho Rojo">');
                 }
     
                 // Agregar imágenes según el valor de "rec"

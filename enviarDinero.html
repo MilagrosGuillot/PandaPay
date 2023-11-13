@@ -20,7 +20,6 @@
             <div class="row conteiner">
                 <div class="col-lg-10 col-md-10 col-sm-10 content-parrafo">
                     <span id="saldoCuenta">DISPONIBLE PARA TRANSFERIR: <span id="numeroCuenta"> $697.17</span></span>
-
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2 content-liquidacion">
                     <button id="abrirNuevaPestana" onclick="abrirPagina()">AÑADIR CONTACTO</button>
@@ -36,140 +35,157 @@
                 </div>
             </div>
             <div class="row table-container">
-                <table class="miTabla" id="miTablaDINERO">
-                    <thead>
-                        <tr class="a">
-                            <th>FECHA</th>
-                            <th>DESTINO</th>
-                            <th>CVU/ALIAS/CBU</th>
-                            <th>REFERENCIA</th>
-                            <th>MONTO</th>
-                            <th>STS</th>
-                            <th>BORRAR</th>
-                            <th>REC</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbbodydinero">
-                        <tr>
-                            <th>
-
-                            </th>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="col-lg-12 col-md-12 col-sm-12 miTabla" id="miTablaDINERO">
+                    <div class="table-responsive">
+                        <table class="table table-striped ">
+                            <thead>
+                                <tr class="a">
+                                    <th>FECHA</th>
+                                    <th>DESTINO</th>
+                                    <th>CVU/ALIAS/CBU</th>
+                                    <th>REFERENCIA</th>
+                                    <th>MONTO</th>
+                                    <th>STS</th>
+                                    <th>BORRAR</th>
+                                    <th>REC</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbbodydinero">
+                                <tr>
+                                    <th>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <style>
-        @media (max-width: 767px) {
-            .conteiner {
-                display: flex;
-                width: 99%;
-                /* gap: 19px; */
-                height: 16vh;
-                /* margin-bottom: 28px; */
-                /* margin-left: 53px; */
-                flex-direction: column;
-            }
+            <style>
+                @media (max-width: 767px) {
+                    .conteiner {
+                        display: flex;
+                        width: 99%;
+                        /* gap: 19px; */
+                        height: 16vh;
+                        /* margin-bottom: 28px; */
+                        /* margin-left: 53px; */
+                        flex-direction: column;
+                    }
 
-            .content-liquidacion {
-                display: flex;
-                height: 5vh;
-                background-color: #233202;
-                width: 90%;
-                color: rgb(255, 255, 255);
-                border-radius: 23px;
-                margin-left: 0 !important;
-                align-items: center;
-                font-weight: bold;
-                /* height: 50vh; */
-                font-size: 17px;
-                font-family: 'Open Sans';
-                justify-content: center;
-            }
+                    .table-responsive {
+                        height: 40vh;
+                    }
 
-            .miTabla {
-                border-radius: 0;
-            }
+                    .table {
+                        height: 13vh;
+                    }
 
-            .button-container {
-                display: flex;
-                width: 100%;
-                align-items: center;
-                justify-content: center;
-            }
+                    .content-liquidacion {
+                        display: flex;
+                        height: 5vh;
+                        background-color: #233202;
+                        width: 90%;
+                        color: rgb(255, 255, 255);
+                        border-radius: 23px;
+                        margin-left: 0 !important;
+                        align-items: center;
+                        font-weight: bold;
+                        /* height: 50vh; */
+                        font-size: 17px;
+                        font-family: 'Open Sans';
+                        justify-content: center;
+                    }
 
-            .search {
-                height: 5vh;
-                width: 93%;
-            }
+                    td {
+                        width: 10%;
+                    }
 
-            th {
-                margin-left: 11px;
-            }
+                    .miTabla {
+                        height: 45vh;
+                        padding: 0;
+                        border-radius: 0;
+                    }
 
-            .a {
-                display: flex;
-                padding: 0;
-            }
+                    .button-container {
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: center;
+                    }
 
-            .table-container {
-                overflow-x: auto;
-                width: 100%;
-                /* background: rebeccapurple; */
-                height: 56vh;
-                margin-top: 0 !important;
-                border-radius: 0;
-            }
+                    .search {
+                        height: 5vh;
+                        width: 93%;
+                    }
 
-            .content-table {
-                width: 101%;
-                margin-top: 0;
-                height: 98vh;
-                background-color: white;
-            }
+                    th {
+                        margin-left: 11px;
+                    }
 
-            .search-filter {
-                width: 100%;
-                gap: 12px;
-                /* background: green; */
-                height: 26vh;
-                flex-direction: column;
-            }
+                    .a {
+                        display: flex;
+                        padding: 0;
+                    }
 
-            .search-filter input {
-                height: 5vh;
-                margin-left: 0;
-                width: 89%;
-            }
+                    .table-container {
 
-            .row {
-                margin: 0 !important;
-            }
+                        width: 100%;
+                        /* background: rebeccapurple; */
+                        height: 56vh;
+                        margin-top: 0 !important;
+                        border-radius: 0;
+                    }
 
-            .content-parrafo {
-                display: flex;
-                background-color: white;
-                width: 92%;
-                height: 8vh;
-                align-content: flex-start;
-                align-items: flex-start;
-                flex-direction: column;
-            }
+                    .content-table {
+                        width: 101%;
+                        margin-top: 0;
+                        height: 98vh;
+                        background-color: white;
+                    }
 
-            #saldoCuenta {
-                margin-left: 0px;
-                color: black;
-                width: 58%;
-                font-size: 15px;
+                    .search-filter {
+                        width: 100%;
+                        gap: 12px;
+                        /* background: green; */
+                        height: 26vh;
+                        flex-direction: column;
+                    }
 
-            }
+                    .search-filter input {
+                        height: 5vh;
+                        margin-left: 0;
+                        width: 89%;
+                    }
 
-            #numeroCuenta {
-                font-size: 30px;
-                color: #8cc909;
-            }
+                    .row {
+                        margin: 0 !important;
+                    }
 
-        }
-    </style>
+                    .content-parrafo {
+                        display: flex;
+                        background-color: white;
+                        width: 89%;
+                        margin-top: 14px;
+                        height: 8vh;
+                        align-content: flex-start;
+                        align-items: flex-start;
+                        flex-direction: column;
+                    }
+
+                    #saldoCuenta {
+                        margin-left: 0px;
+                        color: black;
+                        width: 73%;
+                        font-size: 15px;
+
+                    }
+
+                    #numeroCuenta {
+                        font-size: 30px;
+                        color: #8cc909;
+                    }
+
+                }
+            </style>
 </body>
