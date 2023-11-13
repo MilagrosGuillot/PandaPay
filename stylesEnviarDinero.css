@@ -18,7 +18,9 @@
     align-content: flex-start;
     align-items: center;
 }
-
+.miTabla{
+    height: 26vh;
+}
 #abrirNuevaPestana {
     appearance: none;
     border: none;
