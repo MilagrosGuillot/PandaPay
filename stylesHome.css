@@ -51,8 +51,8 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center; 
-    margin-left: 16px;
-    margin-right: 80px;
+    /* margin-left: 16px;
+    margin-right: 80px; */
 }
 li button img {
     width: 55px; 
@@ -83,24 +83,31 @@ li a img {
 }
 #datos-json {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     width: 98%;
     align-items: center;
     align-content: center;
 }
+.are{
+    display: flex;
+    height: 10vh;
+    /* background-color: firebrick; */
+    align-items: center;
+    justify-content: center;
 
+}
 .nav-User {
         font-weight: bold;
-        width: 320px;
+        /* width: 320px; */
         display: flex;
         align-items: center;
         justify-content: center;
         align-content: center;
 }
-.cuenta{
+/* .cuenta{
     display: flex;
     align-items: center;
-}
+} */
 .nav-paragraph {
     text-decoration: none;
     color: var(--text-color);
@@ -172,6 +179,9 @@ li a img {
 }
 #custom-background{
     width: 103%;
+}
+.content-iconos{
+    width: 100%;
 }
 #menu ul {
     height: 87vh;

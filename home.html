@@ -42,16 +42,16 @@
         <header class="header">
             <nav class="navbar">
                 <!-- Fila para la vista móvil -->
-                <div class="row d-sm-flex-column align-items-center rowMobil">
+                <div class="row d-lg-none d-sm-block d-sm-flex align-items-center rowMobil">
                     <!-- Botón del menú -->
-                    <div class="col-3 d-md-none">
+                    <div class="col-3 d-md-none d-lg-none">
                         <button id="menu-toggle-button">
-                            <img src="hamburguesa1.png" width="60px" height="60px" alt="Menú">
+                            <img src="./hamburguesa1.png" width="60px" height="60px" alt="Menú">
                         </button>
                     </div>
 
                     <!-- Contenedor de la imagen y logo -->
-                    <div class="col-6">
+                    <div class="col-6 col-sm-6 d-lg-none d-md-none ">
                         <div class="image-container" value="Inici" onclick="Abrir()">
                             <div class="img-panda"></div>
                             <div class="img-logo"></div>
@@ -59,12 +59,13 @@
                     </div>
 
                     <!-- Contenido de iconos móviles -->
-                    <div class="col-3 d-md-none">
+                    <div class="col-3 d-lg-none d-md-none">
                         <div class="content-iconMobile">
                             <div class="nav-icon-mobile">
                                 <a href="#" class="nav-link">
                                     <p class="nav-paragraph">
-                                        <img class="nav-icons-img" src="icono_uno.png">
+                                        <img class="nav-icons-img"
+                                            src="icono_uno.png">
                                     </p>
                                 </a>
                                 <a href="#" onclick="toggleNightMode(event)" class="nav-link">
@@ -75,35 +76,40 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
                 <!-- Fila para la vista de escritorio -->
-                <div class="col-lg-8 col-md-8 col-12 d-none d-md-flex align-items-center ">
-                    <div id="datos-json">
-                        <div class="nav-User id" value="Inici" onclick="Abrir()">
-                            <img src="user.png" alt="Usuario">
-                            <div>
-                                <span id="merchant-id-desktop"></span>
-                                <br>
-                                <span id="ultima-visita-desktop"></span>
-                            </div>
+                <div class="row d-lg-block d-md-block d-none d-sm-none d-lg-flex d-md-flex">
+                    <div class="col-lg-2 col-md-2 col-2 ">
+                        <div class="image-container" value="Inici" onclick="Abrir()">
+                            <div class="img-panda"></div>
+                            <div class="img-logo"></div>
                         </div>
-                        <div class="nav-User cuenta" value="Envdi" onclick="Abrir()">
-                            <img src="sendMoney.png" alt="Usuario">
-                            <div class="valor">
-                                <span id="dinero-en-cuenta-desktop"></span>
+                    </div>
+                    <div class="col-lg-8 col-md-8 are">
+                        <div id="datos-json">
+                            <div class="nav-User id" value="Inici" onclick="Abrir()">
+                                <img src="user.png" alt="Usuario">
+                                <div>
+                                    <span id="merchant-id-desktop"></span>
+                                    <br>
+                                    <span id="ultima-visita-desktop"></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="nav-User liquidar" value="Liqui" onclick="Abrir()">
-                            <img src="liquidateMoney.png" alt="Usuario">
-                            <div class="valor">
-                                <span id="dinero-a-liquidar-desktop"></span>
+                            <div class="nav-User cuenta" value="Envdi" onclick="Abrir()">
+                                <img src="sendMoney.png" alt="Usuario">
+                                <div class="valor">
+                                    <span id="dinero-en-cuenta-desktop"></span>
+                                </div>
+                            </div>
+                            <div class="nav-User liquidar" value="Liqui" onclick="Abrir()">
+                                <img src="liquidateMoney.png" alt="Usuario">
+                                <div class="valor">
+                                    <span id="dinero-a-liquidar-desktop"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-2 col-md-2 col-12 order-3">
+                    <div class="col-lg-2 col-md-2 order-3">
                     <div class="nav-icon">
                         <a href="#">
                             <p class="nav-paragraph"><img class="nav-icons-img" src="icono_uno.png"></p>
@@ -268,8 +274,12 @@
         #menu {
             display: none;
         }
-
+        .nav-User{
+            width: 320px;
+        }
+      
         .nav-User img {
+
             margin-left: 7px;
         }
 
@@ -557,8 +567,8 @@
                     var dineroALiquidarDesktop = document.getElementById("dinero-a-liquidar-desktop");
 
                     merchantIdDesktop.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
-                    dineroEnCuentaDesktop.textContent = "DINERO EN CUENTA: " + item['DINERO EN CUENTA'];
-                    dineroALiquidarDesktop.textContent = "DINERO A LIQUIDAR: " + item['DINERO A LIQUIDAR'];
+                    dineroEnCuentaDesktop.innerHTML = "DINERO EN CUENTA: " + "<br>" + item['DINERO EN CUENTA'] ;
+                    dineroALiquidarDesktop.innerHTML = "DINERO A LIQUIDAR: " + "<br>" + item['DINERO A LIQUIDAR'];
 
                     // Actualiza elementos de la vista móvil
                     var merchantIdMobile = document.getElementById("merchant-id-mobile");
