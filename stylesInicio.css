@@ -26,7 +26,7 @@
 .mainn {
     display: flex;
     flex-direction: column;
-    width: 102%;
+    width: 100%;
 }
 
 /* ----------------Estilos para Main divs y table-------------------------------------- */
@@ -41,11 +41,10 @@
 
 /* Estilos para .main-divs */
 .main-divs {
+    padding: 0;
+    background-color: gray;
     display: flex;
-    flex-direction: column;
-    width: 78%;
-    height: 55vh;
-    justify-content: center;
+  justify-content: flex-start;
 }
 
 /* Estilos para #miTabla en .main-divs */
@@ -151,10 +150,10 @@ html {
 }
 /* Estilos para .ultimos */
 #ultimos {
-    margin-left: 8px;
+    margin-left: 18px;
     height: 55vh;
     background-color: #d1e99d;
-    width: 22%;
+    width: 23%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -177,8 +176,8 @@ html {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 200px;
-    height: 200px;
+    width: 104%;
+    height: 26vh;
 }
 /* .section img {
     display: flex;
@@ -192,14 +191,27 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 62%;
+    width: 59%;
     height: auto; 
+}
+.table-container{
+    margin: 0;
+    justify-content: center;
+    height: 56vh;
+    background-color: #d1e99d;
+}
+.table-responsive{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 .page{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 62%;
+    width: 57%;
     height: auto; 
     margin-bottom: 10px;
 }
