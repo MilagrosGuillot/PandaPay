@@ -1,5 +1,6 @@
 /* Estilos para la tabla */
 table {
+    height: 32vh;
     width: 100%;
     margin: auto;
     border-collapse: collapse;
@@ -27,7 +28,7 @@ table {
     height: 100px;
     /* padding: 30px; */
     padding: 0;
-    height: 30vh !important;
+    height: 35vh !important;
     font-weight: normal;
     font-family: 'Nunito';
 
@@ -90,6 +91,7 @@ td {
     align-items: center;
 } */
 .table-responsive{
+    height: 35vh;
     width: 100%;
 }
 .content-table {
