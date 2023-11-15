@@ -5,7 +5,7 @@
     display: flex;
     padding: 5px;
     background-color: rgb(254, 254, 254);
-    width: 95%;
+    width: 100%;
     flex-direction: row;
     justify-content: flex-end;
     border-bottom: 5px solid #444;
@@ -23,7 +23,7 @@
     font-size: 15px;
     padding: 5px;
     font-family: 'Nunito';
-    width: 95%;
+    width: 100%;
     border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;
     background-color: white;
@@ -107,7 +107,7 @@
     color: white;
     height: 5vh;
     margin-top: 22px;
-    width: 95%;
+    width: 100%;
     border-radius: 30px;
     align-items: center;
     justify-content: center;
@@ -120,7 +120,7 @@
     align-items: center;
     align-content: center;
     flex-direction: row;
-    margin-left: 40px;
+    /* margin-left: 40px; */
 }
 
 .filters{
@@ -141,8 +141,8 @@
 }
 
 #fecha select{
-    width: 70px;
-    height: 3vh;
+    width: 52px;
+    height: 3.5vh;
     margin-right: 17px;
 }
 #tablaTransacciones{
