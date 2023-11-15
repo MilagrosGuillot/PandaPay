@@ -36,11 +36,12 @@ body {
     align-items: center;
 }
 #custom-background {
+    width: 102%;
     background-color: #706f6f;
 }
 .row {
     display: flex;
-    width: 101%;
+    width: 100%;
  padding: 0;
     align-items: center;
     align-content: center;
@@ -49,6 +50,7 @@ body {
 .image-container {
     width: 100%;
     display: flex;
+    margin-left: 14px;
     justify-content: flex-start;
     align-items: center; 
     /* margin-left: 16px;
@@ -176,9 +178,7 @@ li a img {
     background-color: white;
     margin-top: 13px;
 }
-#custom-background{
-    width: 103%;
-}
+
 .content-iconos{
     width: 100%;
 }

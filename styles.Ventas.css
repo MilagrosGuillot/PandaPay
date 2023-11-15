@@ -27,7 +27,7 @@ table {
     height: 100px;
     /* padding: 30px; */
     padding: 0;
-    height: 31vh !important;
+    height: 30vh !important;
     font-weight: normal;
     font-family: 'Nunito';
 
@@ -89,10 +89,12 @@ td {
     margin-top: 14px;
     align-items: center;
 } */
-
+.table-responsive{
+    width: 100%;
+}
 .content-table {
     font-family: 'Open Sans';
-    width: 98%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     /* height: 94vh; */
@@ -183,14 +185,14 @@ td {
 .table-container {
     background-color: white;
     padding: 4px;
-    height: 33vh;
+    height: 30vh;
     border-radius: 28px;
     display: flex;
     align-items: center;
     margin: 0 auto;
     justify-content: space-between;
     /* width: 95%; */
-    width: 102%;
+    width: 100%;
 }
 
 

@@ -95,10 +95,10 @@ html {
 #fechaActualDesktop {
     font-size: 1.25rem;
     font-weight: bold;
-    margin-bottom: 1px;
+    margin-bottom: 10px;
     color: white;
-    width: 86%;
-    height: 40px;
+    width: 93%;
+    height: 49px;
     background-color:#8cc909;
     border-radius: 30px;
     padding: 0.625rem;
@@ -123,17 +123,17 @@ html {
     background-color:#8cc909;
     color: white;
     border: none;
-    padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
-    margin-top: 1px;
-    width: 80%;
+    margin-top: 3px;
+    width: 95%;
+    height: 4vh;
     font-weight: bold;
     border-radius: 30px;
 }
 #TableInicio {
-    border: solid;
     border-radius: 5%; 
+    margin-bottom: 0;
     /* width: 90%; */
     overflow: hidden; 
 }
@@ -150,10 +150,10 @@ html {
 }
 /* Estilos para .ultimos */
 #ultimos {
-    margin-left: 18px;
-    height: 55vh;
-    background-color: #d1e99d;
-    width: 23%;
+    /* margin-left: 12px; */
+    height: 56vh;
+    /* background-color: #d1e99d; */
+    width: 26%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,13 +195,20 @@ html {
     height: auto; 
 }
 .table-container{
+    display: flex;
+    border-radius: 0;
+    flex-direction: column;
     margin: 0;
+    width: 100%;
     justify-content: center;
-    height: 56vh;
+    height: 55vh;
+    margin-top: 0 !important;
     background-color: #d1e99d;
 }
 .table-responsive{
     display: flex;
+    height: 51vh;
+    width: 100%;
     flex-direction: column;
     align-content: center;
     justify-content: center;

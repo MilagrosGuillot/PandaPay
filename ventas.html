@@ -25,7 +25,7 @@
 
             </div>
             <!-- Botón de búsqueda (Desktop) -->
-            <div class="col-lg-2 col-md-2 d-none d-sm-block">
+            <div class="col-lg-2 col-md-2 d-lg-block d-md-block d-none d-sm-none">
                 <div class="button-containerDesktop">
                     <button class="search" onclick="buscar()">BUSCAR</button>
                 </div>
@@ -33,7 +33,7 @@
         </div>
 
         <!-- Botón de búsqueda (Mobile) -->
-        <div class="row d-sm-none">
+        <div class="row d-lg-none d-md-none d-sm-block">
             <div class="col-sm-12 d-block d-sm-none contentButton">
                 <div class="button-containerMobil">
                     <button class="search" onclick="buscar()">BUSCAR</button>
@@ -44,7 +44,7 @@
         <!-- Tabla -->
         <div class="row table-container">
             <div class="col-lg-12 col-md-12 col-sm-12 miTabla" id="miTabla">
-                <div class="table-responsive">
+                <div class="table-responsive" style="height: 32vh;">
                     <table class="table table-striped ">
                         <thead>
                             <tr class="col-lg-12 col-md-12 col-sm-12 a">
@@ -68,6 +68,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 
