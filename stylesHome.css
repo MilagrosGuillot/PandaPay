@@ -218,7 +218,6 @@ li a img {
     cursor: pointer;
     font-size: var(--font-size);
     text-align: left;
-    transition: background-color 0.3s;
     display: flex;
     align-items: center;
 }
@@ -233,7 +232,7 @@ li a img {
     cursor: pointer;
     font-size: var(--font-size);
     text-align: left;
-    transition: background-color 0.3s;
+
     display: flex;
     align-items: center;
     display: block;
