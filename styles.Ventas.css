@@ -1,6 +1,5 @@
 /* Estilos para la tabla */
 table {
-    height: 32vh;
     width: 100%;
     margin: auto;
     border-collapse: collapse;
@@ -28,7 +27,7 @@ table {
     height: 100px;
     /* padding: 30px; */
     padding: 0;
-    height: 35vh !important;
+    height: 30vh !important;
     font-weight: normal;
     font-family: 'Nunito';
 
@@ -161,7 +160,7 @@ td {
 .date-filterVentas #fechaDesde select,
 .date-filterVentas #fechaHasta select {
     margin-right: 17px;
-    width: 70px;
+    /* width: 12%; */
     height: 4vh;
     appearance: none;
 }
