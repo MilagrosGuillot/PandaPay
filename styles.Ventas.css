@@ -160,7 +160,7 @@ td {
 .date-filterVentas #fechaDesde select,
 .date-filterVentas #fechaHasta select {
     margin-right: 17px;
-    /* width: 12%; */
+    width: 12%;
     height: 4vh;
     appearance: none;
 }
