@@ -26,7 +26,7 @@
 .mainn {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 101%;
 }
 
 /* ----------------Estilos para Main divs y table-------------------------------------- */

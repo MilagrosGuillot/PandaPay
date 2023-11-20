@@ -171,9 +171,11 @@ li a img {
     height: 90vh;
     bottom: 0;
     left: 0;
-    width: 23%;
+    padding: 0;
+    /* width: 23%; */
     border: 2px solid #333;
     display: flex;
+    
     flex-direction: column;
     background-color: white;
     margin-top: 13px;
@@ -222,7 +224,7 @@ li a img {
     align-items: center;
 }
 
-#menu a {
+#menu span {
     text-decoration: none;
     color: var(--link-color);
     background-color: transparent;

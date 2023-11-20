@@ -2,6 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../css/normalize.css">
+    <link rel="stylesheet" href="styles.Ventas.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
 
@@ -11,23 +12,23 @@
     <div class="content-table">
         <div class="row date-filterVentas date-filterVentasmobil">
             <div class="col-lg-5 col-md-5 col-sm-6 content-fechaVentas" id="fechaDesde">
-                <label class="col-lg-3">Desde</label>
-                <select class="form-control col-lg-3" id="desdeDia"></select>
-                <select  class="form-control col-lg-3" id="desdeMes"></select>
-                <select class="form-control col-lg-3" id="desdeAño"></select>
+                <label class="">Desde</label>
+                <select class="form-control " id="desdeDia"></select>
+                <select  class="form-control " id="desdeMes"></select>
+                <select class="form-control " id="desdeAño"></select>
             </div>
 
             <div class="col-lg-5 col-md-5 col-sm-6 content-fechaVentas" id="fechaHasta">
-                <label  class="col-lg-2" >Hasta</label>
-                <select  class="form-control" id="hastaDia"></select>
-                <select  class="form-control col-md-1" id="hastaMes"></select>
-                <select  class="form-control col-md-1" id="hastaAño"></select>
+                <label  class="" >Hasta</label>
+                <select  class="form-control " id="hastaDia"></select>
+                <select  class="form-control " id="hastaMes"></select>
+                <select  class="form-control " id="hastaAño"></select>
 
             </div>
             <!-- Botón de búsqueda (Desktop) -->
-            <div class="col-lg-2 col-md-2 d-lg-block d-md-block d-none d-sm-none">
+            <div class="col-lg-2 col-md-2 d-lg-block d-lg-flex d-md-flex justify-content-lg-end justify-content-md-end   d-md-block d-none d-sm-none">
                 <div class="button-containerDesktop">
-                    <button class="search" onclick="buscar()">BUSCAR</button>
+                    <button class="col search" onclick="buscar()">BUSCAR</button>
                 </div>
             </div>
         </div>
@@ -43,11 +44,11 @@
 
         <!-- Tabla -->
         <div class="row table-container">
-            <div class="col-lg-12 col-md-12 col-sm-12 miTabla" id="miTabla">
+            <div class="miTabla" id="miTabla">
                 <div class="table-responsive" style="height: 32vh;">
                     <table class="table table-striped ">
                         <thead>
-                            <tr class="col-lg-12 col-md-12 col-sm-12 a">
+                            <tr class=" a">
                                 <th>FECHA</th>
                                 <th>APROBADAS/TOTAL</th>
                                 <th>TOTAL</th>
@@ -64,7 +65,6 @@
                     </table>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

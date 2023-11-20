@@ -15,7 +15,6 @@ table {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    width: 82%;
     height: 6vh;
     align-items: center;
     align-content: center;
@@ -109,9 +108,7 @@ td {
     overflow: hidden;
 }
 
-#fechaDesde {
-    align-items: center;
-}
+
 
 #fechaDesde label {
     font-family: 'Nunito';
@@ -131,17 +128,17 @@ td {
 
 .date-filterVentas {
     background-color: white;
-    font-family: 'Open Sans';
-    padding: 20px;
-    flex-wrap: nowrap;
+    /* font-family: 'Open Sans'; */
+    /* padding: 20px; */
+    /* flex-wrap: nowrap; */
     border-radius: 24px;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    width: 93%;
+    /* display: flex;
+    align-items: center; */
+    /* margin: 0 auto; */
+    padding: 0;
+    width: 100%;
     margin-bottom: 21px;
     height: 5vh;
-    justify-content: space-between;
     margin-top: 10px;
 }
 
@@ -149,18 +146,15 @@ td {
 #fechaDesde {
     display: flex;
     align-items: center;
-    margin-left: 22px;
-}
-
-#fechaHasta {
-    /* margin-right: 50px; */
+    align-items: center;
+    /* margin-left: 22px; */
 }
 
 /* Estilos para los selects dentro de los grupos */
 .date-filterVentas #fechaDesde select,
 .date-filterVentas #fechaHasta select {
     margin-right: 17px;
-    width: 12%;
+    width: 14%;
     height: 4vh;
     appearance: none;
 }
@@ -186,7 +180,7 @@ td {
     background-color: white;
     padding: 4px;
     height: 30vh;
-    border-radius: 28px;
+    border-radius: 30px;
     display: flex;
     align-items: center;
     margin: 0 auto;
