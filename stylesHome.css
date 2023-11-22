@@ -250,11 +250,10 @@ li a img {
 }
 
 #menu li {
-    padding: 12px;
-    text-align: left;
+    margin-bottom: 18px;
+    /* padding: 12px; */
     /* transition: border-left 0.3s, background-color 0.3s;
     border-left: 4px solid transparent; */
-    text-decoration: none;
 }
 
 #menu li.active {
