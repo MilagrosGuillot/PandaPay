@@ -152,8 +152,8 @@ html {
 #ultimos {
     /* margin-left: 12px; */
     height: 56vh;
-    /* background-color: #d1e99d; */
-    width: 26%;
+    background-color: #d1e99d;
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -197,6 +197,7 @@ html {
 .table-container{
     display: flex;
     border-radius: 0;
+    padding: 0;
     flex-direction: column;
     margin: 0;
     width: 100%;
@@ -212,7 +213,7 @@ html {
     width: 100%;
     flex-direction: column;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .page{
