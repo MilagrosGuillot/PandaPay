@@ -184,8 +184,12 @@ li a img {
 .content-iconos{
     width: 100%;
 }
+#menu nav{
+    display: flex;
+    align-items: flex-start;
+}
 #menu ul {
-    height: 87vh;
+    height: 68vh;
     list-style: none;
     padding: 0;
     margin-left: 12px;
