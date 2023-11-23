@@ -55,7 +55,9 @@
     justify-content: flex-start;
 }
 .terminal{
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Nunito';
 }
 #fechaDesde{
