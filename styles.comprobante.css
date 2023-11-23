@@ -14,8 +14,8 @@
     display: flex;
     width: 99%;
     height: 5vh;
+    margin-bottom: 21px;
     margin-top: 14px;
-    margin-bottom: 28px;
     margin-left: 53px;
 }
 
@@ -87,19 +87,18 @@
     display: flex;
     background-color: gray;
     width: 47%;
+    height: 5vh;
     color: white;
     border-radius: 23px;
-    margin-left: 40px;
+    /* margin-left: 40px; */
     align-items: center;
-    font-size: 22px;
-    font-weight: bold;
     justify-content: flex-end;
 }
 .title{
     font-weight: bold;
 }
 .p-liquidacion{
-    margin-right: 32px;
+    margin-bottom: 0;
 }
 .conteiner-transacciones{
     display: flex;
