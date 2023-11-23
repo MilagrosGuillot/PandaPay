@@ -19,11 +19,14 @@
     margin-left: 53px;
 }
 
+
 .parrafo{
     font-size: 15px;
     padding: 5px;
     font-family: 'Nunito';
     width: 100%;
+    height: 14vh;
+    margin-bottom: 21px;
     border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;
     background-color: white;
@@ -147,7 +150,10 @@
 #tablaTransacciones{
     width: 100%;
     height: 100%;
-    color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* .conteiner-transacciones{
