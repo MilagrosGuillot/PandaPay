@@ -72,7 +72,9 @@ table {
 
 }
 .table-container{
-    height: 31vh;
+    border-radius: 30px;
+
+    height: 30vh;
 }
 #miTabla{
     padding: 0;
