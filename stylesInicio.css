@@ -97,7 +97,7 @@ html {
     font-weight: bold;
     margin-bottom: 10px;
     color: white;
-    width: 93%;
+    width: 98%;
     height: 5vh;
     background-color:#8cc909;
     border-radius: 30px;
@@ -107,14 +107,9 @@ html {
     justify-content: center;
 }
 
-#fechaActualDesktop hr {
-    border: none;
-    margin: 0.125rem 0; 
-}
-
 #fechaActualDesktop p {
-    font-size: 1.125rem; 
-    margin: 0.125rem 0; 
+    font-size: 1.25rem; 
+    margin: 0; 
 }
 
 /* Estilos para #verMas */

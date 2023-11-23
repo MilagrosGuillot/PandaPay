@@ -142,7 +142,7 @@
 
 #fecha select{
     width: 52px;
-    height: 3.5vh;
+    /* height: 3.5vh; */
     margin-right: 17px;
 }
 #tablaTransacciones{
