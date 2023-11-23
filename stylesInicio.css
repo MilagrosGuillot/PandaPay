@@ -98,10 +98,9 @@ html {
     margin-bottom: 10px;
     color: white;
     width: 93%;
-    height: 49px;
+    height: 5vh;
     background-color:#8cc909;
     border-radius: 30px;
-    padding: 0.625rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -125,7 +124,8 @@ html {
     border: none;
     font-size: 18px;
     cursor: pointer;
-    margin-top: 3px;
+    margin-top: 8px;
+
     width: 95%;
     height: 4vh;
     font-weight: bold;
@@ -202,7 +202,7 @@ html {
     margin: 0;
     width: 100%;
     justify-content: center;
-    height: 55vh;
+    height: 43vh;
     margin-top: 0 !important;
 
 }
