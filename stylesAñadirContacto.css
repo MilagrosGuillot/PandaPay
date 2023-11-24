@@ -7,11 +7,14 @@
     border: none;
     background-color: #706f6f;
     color: white;
-    width: 60%;
+    width: 15%;
     font-family: 'Open Sans';
 }
 .button-container{
     width: 10%;
+}
+.contentAñadir{
+    align-items: center;
 }
 .search-filter {
 margin-bottom: 17px;
