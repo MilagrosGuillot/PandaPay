@@ -1,7 +1,7 @@
 .content-factura {
     display: flex;
     width: 57%;
-    height: 40vh;
+    height: 24vh;
     flex-direction: row;
 }
 
@@ -16,7 +16,10 @@
     margin-right: 10px; 
 }
 
-
+.button-container {
+    width: 10% !important;
+    margin-left: 0;
+}
 .content-elementos button {
     display: inline-block;
     border-radius: 30px;
@@ -28,12 +31,20 @@
 
 #content-factura {
     display: flex;
-    width: 50%;
-    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    height: 19vh;
     flex-direction: row;
 }
+#search{
+    width: 100%;
+    height: 4vh;
+}
 .content-elementos input {
-    width: 71%;
+    width: 40%;
     border-radius: 23px;
     height: 4vh;
     border: none;
@@ -45,5 +56,8 @@
 }
 .content{
     width: 100%;
-
+    display: flex;
+    height: 12vh;
+    flex-direction: column;
+    justify-content: center;
 }
