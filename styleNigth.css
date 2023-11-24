@@ -4,8 +4,7 @@
     color: #ffffff;
 }
 
-.night-content {
-}
+
 
 .night-mode body {
     background-color: #222;
@@ -42,7 +41,7 @@
 }
 
 .night-mode .navbar {
-    background-color: #111;
+    background-color: #121901;
 }
 
 .night-mode .nav-paragraph {
@@ -58,29 +57,32 @@
     color: #fff;
 }
 
-.night-mode .menu {
-    background-color: #111;
+.night-mode #menu {
+    color: white;
+    background-color: #333333;
 }
 
-.night-mode .menu ul {
+.night-mode #menu ul {
+    color: #fff;
+}
+.night-mode a {
+    color: #fff;
+}
+.night-mode #menu button a {
     color: #fff;
 }
 
-.night-mode .menu button {
-    color: #fff;
-}
-
-.night-mode .menu li {
+/* .night-mode #menu li {
     border-color: #666;
-}
+} */
 
-.night-mode .menu li.active {
+.night-mode #menu li.active {
     background-color: #666;
     color: #fff;
 }
 
 .night-mode #content {
-    background-color: #111;
+    background-color: #1a1a1a;
 }
 
 .night-mode #nightModeButton {
@@ -89,20 +91,64 @@
 }
 
 .night-mode .table-container {
-    background-color: #555;
+    background-color: #333333;
     color: #fff;
 }
-
-.night-mode tbody {
+.night-mode .date-filterVentas {
+    background-color: #333333;
+    color: white
+}
+.night-mode .miTabla {
+    background-color: #4d4d4d;
+    color: white
+}
+.night-mode .miTabla th {
+    background-color: #333333;
+    color: white
+}
+.night-mode .miTabla tr {
+    background-color: #4d4d4d;
+    color: white
+}
+.night-mode #VentaTotal {
     background-color: #555;
     color: #020202;
 }
-
-.night-mode #content .date-filter {
-    background-color: #555;
-    color: #fff;
+.night-mode .centered-content div{
+    color: white;
 }
 
+
+.night-mode .content-date .date {
+    background-color: #333333;
+    color: white;
+}
+.night-mode #tablaTransacciones {
+    color: white;
+}
+
+.night-mode .parrafo {
+    background-color: #333333;
+    color: white;
+}
+.night-mode .conteiner-info {
+    background-color: #333333;
+    color: white;
+}
+.night-mode .title {
+    color: white;
+}
+
+
+
+.night-mode #content .date-filter {
+    background-color: #333333;
+    color: #fff;
+}
+.night-mode .a{
+    background-color: #333333;
+
+}
 .night-mode #content .cambiarContraseña {
     background-color: #666;
     color: #fff;
@@ -120,4 +166,11 @@
 .night-mode #content .dialog-box {
     background-color: #444;
     color: #fff;
+}
+.night-mode .section{
+background-color:#233202;
+color: white;
+}
+.night-mode .ultimos{
+    background-color: #1a1a1a;
 }
