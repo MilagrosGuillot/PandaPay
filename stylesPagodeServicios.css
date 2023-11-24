@@ -10,7 +10,9 @@ align-items: center;
     flex-direction: column;
     justify-content: flex-start;
 }
-
+.content-table{
+    height: 79vh;
+}
 .service-image{
     display: flex;
     flex-direction: row;
@@ -62,7 +64,7 @@ align-items: center;
     display: flex;
     padding: 5px;
     background-color: rgb(254, 254, 254);
-    width: 95%;
+    width: 100%;
     flex-direction: row;
     height: 7vh;
     justify-content: flex-start;
@@ -82,7 +84,7 @@ align-items: center;
     font-size: 15px;
     padding: 5px;
     font-family: 'Open Sans';
-    width: 95%;
+    width: 100%;
     border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;
     background-color: white;
