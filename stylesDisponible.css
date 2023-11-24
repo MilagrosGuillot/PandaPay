@@ -1,14 +1,21 @@
 .content{
-
+    height: 17vh;
     width: 100%;
 }
 #content-disponible{
     display: flex;
     width: 42%;
-    height: 40vh;
+    height: 19vh;
+    /* margin-bottom: 19px; */
     flex-direction: row;
+    align-items: flex-end;
 }
 .content h2 {
     margin-left:15px;
     font-size: 25px;
+}
+#contenido{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
