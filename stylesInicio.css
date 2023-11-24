@@ -204,7 +204,7 @@ html {
 
 .table-responsive{
     display: flex;
-    height: 51vh;
+    height: 44vh;
     width: 100%;
     flex-direction: column;
     align-content: center;

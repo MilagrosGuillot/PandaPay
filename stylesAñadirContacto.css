@@ -13,6 +13,9 @@
 .button-container{
     width: 10%;
 }
+.search-filter {
+margin-bottom: 17px;
+}
 .search {
     background-color: #8cc909;
     border-radius: 23px;

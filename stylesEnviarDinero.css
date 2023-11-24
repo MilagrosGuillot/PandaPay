@@ -18,9 +18,11 @@
     align-content: flex-start;
     align-items: center;
 }
-.miTabla{
+
+.miTabla {
     height: 26vh;
 }
+
 #abrirNuevaPestana {
     appearance: none;
     border: none;
@@ -45,16 +47,30 @@
     font-family: 'Open Sans';
     justify-content: center;
 }
-.content-table{
-    height: 39vh !;
+.table-responsive{
+    height: 43vh;
 }
+.content-table-E {
+
+    font-family: 'Open Sans';
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* height: 94vh; */
+    height: 39vh;
+    margin-top: 14px;
+    align-items: center;
+    justify-content: flex-start;
+    height: 67vh;
+}
+
 .search-filter {
     background-color: white;
     font-family: 'Open Sans';
     border-radius: 17px;
     display: flex;
+    margin-bottom: 54px;
     align-items: center;
-    margin: 0 auto;
     height: 5vh;
     width: 101%;
 }
@@ -71,6 +87,7 @@
 #content .table-container {
     overflow: hidden;
     margin-top: 10px;
+    height: 41vh;
 }
 
 #saldoCuenta {

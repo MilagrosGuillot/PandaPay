@@ -98,7 +98,7 @@ td {
     flex-direction: column;
     /* height: 94vh; */
     height: 39vh;
-    margin-top: 14px;
+    /* margin-top: 14px; */
     align-items: center;
     justify-content: flex-start;
 }
