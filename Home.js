@@ -211,7 +211,6 @@ function Abrir() {
         case "Inici":
             nombrePagina = "inicio";
             document.getElementById("inicioicon").click();
-
             break;
         case "Venta":
             document.getElementById("ventasicon").click();
@@ -230,8 +229,6 @@ function Abrir() {
             break;
         case "Compr":
             document.getElementById("comproicon").click();
-
-
             nombrePagina = "comprobante";
             break;
         case "Envdi":
@@ -262,9 +259,13 @@ function ocultarElementosEnMovil() {
     const contentDinero = document.querySelector('.contentDinero');
     const dineroEnCuentaMobile = document.querySelector('#dinero-en-cuenta-mobile');
 
-    contentMerchant.classList.add('oculto');
-    contentDinero.classList.add('oculto');
-    dineroEnCuentaMobile.classList.add('oculto');
+    // Oculta los elementos y establece display: block
+    ocultarConDisplayBlock(contentMerchant);
+    ocultarConDisplayBlock(contentDinero);
+    ocultarConDisplayBlock(dineroEnCuentaMobile);
+}
+function ocultarConDisplayBlock(elemento) {
+    elemento.style.display = 'none'; // Establece display: block
 }
 
 function selectOption(button) {
@@ -311,6 +312,7 @@ function selectOption(button) {
             nombrePagina = "inicio";
             break;
     }
+   
     if (nombrePagina !== 'inicio') {
         // Llama a la función para ocultar los elementos si no estamos en la página de inicio
         ocultarElementosEnMovil();
@@ -416,9 +418,7 @@ function actualizarFechaYHora() {
 
 let slideIndex = 0;
 
-function onload() {
-    showSlide(0);
-}
+
 
 function showSlide(n) {
     const slides = document.getElementsByClassName("slide");
