@@ -259,13 +259,21 @@ function ocultarElementosEnMovil() {
     const contentDinero = document.querySelector('.contentDinero');
     const dineroEnCuentaMobile = document.querySelector('#dinero-en-cuenta-mobile');
 
-    // Oculta los elementos y establece display: block
-    ocultarConDisplayBlock(contentMerchant);
-    ocultarConDisplayBlock(contentDinero);
-    ocultarConDisplayBlock(dineroEnCuentaMobile);
+    // Oculta los elementos agregando la clase 'oculto'
+    contentMerchant.classList.add('oculto');
+    contentDinero.classList.add('oculto');
+    dineroEnCuentaMobile.classList.add('oculto');
 }
-function ocultarConDisplayBlock(elemento) {
-    elemento.style.display = 'none'; // Establece display: block
+
+function mostrarElementosEnMovil() {
+    const contentMerchant = document.querySelector('.contentMerchant');
+    const contentDinero = document.querySelector('.contentDinero');
+    const dineroEnCuentaMobile = document.querySelector('#dinero-en-cuenta-mobile');
+
+    // Muestra los elementos quitando la clase 'oculto'
+    contentMerchant.classList.remove('oculto');
+    contentDinero.classList.remove('oculto');
+    dineroEnCuentaMobile.classList.remove('oculto');
 }
 
 function selectOption(button) {
@@ -312,10 +320,13 @@ function selectOption(button) {
             nombrePagina = "inicio";
             break;
     }
-   
+
     if (nombrePagina !== 'inicio') {
         // Llama a la función para ocultar los elementos si no estamos en la página de inicio
         ocultarElementosEnMovil();
+    } else {
+        // Llama a la función para mostrar los elementos y establecer 'activado' cuando volvemos a la página de inicio
+        mostrarElementosEnMovil();
     }
     cargarPagina(nombrePagina);
 }
@@ -418,7 +429,9 @@ function actualizarFechaYHora() {
 
 let slideIndex = 0;
 
-
+function onload() {
+    showSlide(0);
+}
 
 function showSlide(n) {
     const slides = document.getElementsByClassName("slide");

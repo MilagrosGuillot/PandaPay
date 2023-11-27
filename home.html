@@ -135,7 +135,7 @@
         </header>
 
         <!-- Nueva fila en la vista móvil (por debajo de la primera) -->
-        <div class="row contentMerchant d-md-none">
+        <div class="row contentMerchant d-md-none d-sm-flex" >
             <div class="col-12 rowMerchant">
                 <div id="datos-json-mobile">
                     <div class="nav-User id" value="Inici" onclick="Abrir()">
@@ -149,11 +149,11 @@
                 </div>
             </div>
         </div>
-        <div class="row contentDinero no-gutters d-md-none">
-            <div class="col-6 rowDinero">
+        <div class="row contentDinero no-gutters d-md-none d-sm-flex">
+            <div class="col-6 rowDinero d-sm-flex" >
                 <div class="nav-User cuenta" value="Envdi" onclick="Abrir()">
                     <img src="sendMoney.png" alt="Usuario">
-                    <div class="valor">
+                    <div class="valor" >
                         <span id="dinero-en-cuenta-mobile"></span>
                     </div>
                 </div>
@@ -282,7 +282,12 @@
             height: 46px;
             width: 49px;
         }
-
+.oculto{
+    display: none;
+}
+.activado{
+    display: block;
+}
         .mainn {
             width: 103%;
         }
@@ -420,10 +425,6 @@
         .mainn {
             /* background: rebeccapurple; */
             width: 99%;
-        }
-
-        .oculto {
-            display: none;
         }
 
         .rowDinero {
