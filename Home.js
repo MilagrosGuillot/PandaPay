@@ -314,7 +314,6 @@ function selectOption(button) {
             nombrePagina = "cambiarContraseña";
             break;
         case "Salir":
-            alert("Saliste");
             return;
         default:
             nombrePagina = "inicio";
@@ -339,7 +338,10 @@ function cargarPagina(nombrePagina) {
     if (nombrePagina === "inicio") {
         document.getElementById("inicioicon").click();
     }
-
+    if (nombrePagina === "pagoDeServicios") {
+        cargarpago();
+        return;
+    }
     // Verificar si la página es "comprobante"
     if (nombrePagina === "comprobante") {
         cargarComprobante();
@@ -374,11 +376,23 @@ function cargarComprobante() {
             $("#content").html(data);
         },
         error: function () {
-            alert("Error al cargar la página de comprobante.");
+        
         }
     });
 }
-
+ cargarpago = () => {
+    console.log("hola")
+    $.ajax({
+        type: "GET",
+        url: "pagoDeServicios.html",
+        success: function (data) {
+            $("#content").html(data);
+        },
+        error: function () {
+        
+        }
+    });
+}
 // Función para cargar la página de liquidacion
 function cargarLiquidacion() {
     ocultarElementosEnMovil();
@@ -389,7 +403,7 @@ function cargarLiquidacion() {
             $("#content").html(data);
         },
         error: function () {
-            alert("Error al cargar la página de liquidacion.");
+        
         }
     });
 }

@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="normalize.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="styles.comprobante.css">
     <!-- <script src="../../../js/Home.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="stylesPagodeServicios.css">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
@@ -67,7 +65,7 @@
                 <div class="parrafo2">
                     <h2 class="title">Busque una empresa o ingrese a traves de la marca</h2>
                 </div>
-<!-- 
+                
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -87,233 +85,115 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
-
-                <style>
-                    @media (max-width: 991px) {
-                        .service-image img {
-                            margin: 10px;
-                        }
-                    }
-
-                    @media (max-width: 767px) {
-                        .service-image {
-                            display: flex;
-                            /* height: 50vh; */
-                            width: 86%;
-                            height: 44vh;
-                            padding: 0;
-                            /* background: pink; */
-                            justify-content: flex-start;
-                            align-content: flex-start;
-                            flex-wrap: wrap;
-                            align-items: center;
-                        }
-
-                        .conteiner-infoo {
-                            height: 96vh;
-                            width: 100%;
-                            justify-content: flex-start;
-                        }
-
-                        .conteiner-info2 {
-                            width: 100%;
-                            height: 5vh;
-                            /* height: 7vh; */
-                            border-radius: 0;
-                            margin-top: 0;
-                        }
-
-                        #contenidoh2 {
-                            display: flex;
-                            flex-direction: column;
-                            width: 100%;
-                            margin-top: 10px;
-                        }
-
-                        .content-table {
-                            width: 101%;
-                            height: 96vh;
-                        }
-
-                        .content-1PagoServicios {
-                            width: 100%;
-                        }
-
-                        #contenido {
-                            height: 6vh;
-                            width: 100%;
-                            margin-bottom: 16px;
-                            /* font-size: 18px; */
-                        }
-
-                        .container-contenido {
-                            display: flex;
-                            flex-direction: column;
-                            width: 100%;
-                            height: 54vh;
-                            align-items: flex-start;
-                            justify-content: flex-start;
-                        }
-
-                        .title {
-                            font-size: 16px;
-                            width: 86%;
-                            margin-bottom: 0;
-                            padding: 0;
-                        }
-
-                        .parrafo2 {
-                            width: 96%;
-                        }
-
-                        .input {
-                            width: 84%;
-                            margin-left: 0px;
-                        }
-
-                        .content-1-PagoServicios button {
-                            width: 31%;
-                            font-size: 16px;
-                        }
-
-                        #content {
-                            width: 107% !important;
-                        }
-
-                        .service-image img {
-                            margin: 5px;
-                            width: 30%;
-                            height: 9vh;
-
-                        }
-                    }
-                </style>
-
-                <script>
-                    // JavaScript para cambiar el contenido del modal según la imagen
-                    const modalContent = document.getElementById('modal-content');
-                    let inputContainer = null;
-
-                    // Función para mostrar un conjunto de input y botón en el modal
-                    function mostrarInputs(inputLabel, inputPlaceholder, buttonText, buttonClickHandler) {
-                        // Si ya hay un conjunto de input y botón mostrado, lo eliminamos
-                        if (inputContainer) {
-                            inputContainer.remove();
-                            inputContainer = null;
-                        }
-
-                        // Creamos un nuevo conjunto de input y botón
-                        inputContainer = document.createElement('div');
-
-                        const label = document.createElement('p');
-                        label.textContent = inputLabel;
-
-                        const input = document.createElement('input');
-                        input.setAttribute('type', 'text');
-                        input.setAttribute('placeholder', inputPlaceholder);
-
-                        const button = document.createElement('button');
-                        button.textContent = buttonText;
-                        button.addEventListener('click', buttonClickHandler);
-
-                        inputContainer.appendChild(label);
-                        inputContainer.appendChild(input);
-                        inputContainer.appendChild(button);
-
-                        modalContent.appendChild(inputContainer);
-                    }
-
-                    // Agrega un evento clic a todas las imágenes
-                    const images = document.querySelectorAll('.pagoServicos');
-                    images.forEach(image => {
-                        image.addEventListener('click', function () {
-                            // Elimina el contenido anterior del modal
-                            modalContent.innerHTML = '';
-
-                            // Agrega los enlaces correspondientes según la imagen clicada
-                            if (image.src.endsWith('personal.png')) {
-                                const referenciaLink = document.createElement('a');
-                                referenciaLink.textContent = 'COBRANZA SIN FACTURA POR NRO. DE REFERENCIA';
-                                referenciaLink.addEventListener('click', function () {
-                                    mostrarInputs('Número de referencia de pago', 'Número de referencia de pago', 'Continuar', function () {
-                                        const numeroReferencia = inputContainer.querySelector('input').value;
-                                        alert(`Número de referencia ingresado: ${numeroReferencia}`);
-                                    });
-                                });
-
-                                const tramiteLink = document.createElement('a');
-                                tramiteLink.textContent = 'COBRANZA SIN FACTURA POR NRO. DE TRAMITE';
-                                tramiteLink.addEventListener('click', function () {
-                                    mostrarInputs('Número de trámite', 'Número de trámite', 'Continuar', function () {
-                                        const numeroTramite = inputContainer.querySelector('input').value;
-                                        alert(`Número de trámite ingresado: ${numeroTramite}`);
-                                    });
-                                });
-
-                                const lineaLink = document.createElement('a');
-                                lineaLink.textContent = 'COBRANZA SIN FACTURA POR NRO. DE LINEA';
-                                lineaLink.addEventListener('click', function () {
-                                    mostrarInputs('Número de celular sin 15', 'Número de celular sin 15', 'Continuar', function () {
-                                        const numeroCelular = inputContainer.querySelector('input').value;
-                                        if (numeroCelular.length !== 15) {
-                                            alert('El número de celular debe tener 15 dígitos.');
-                                        } else {
-                                            alert('Número de celular ingresado: ' + numeroCelular);
-                                        }
-                                    });
-                                });
-
-                                modalContent.appendChild(referenciaLink);
-                                modalContent.appendChild(tramiteLink);
-                                modalContent.appendChild(lineaLink);
-                            } else if (image.src.endsWith('claro.png')) {
-                                const numeroCuentaLink = document.createElement('a');
-                                numeroCuentaLink.textContent = 'COBRANZA SIN FACTURA POR NUMERO DE CUENTA';
-                                numeroCuentaLink.addEventListener('click', function () {
-                                    mostrarInputs('Número de cuenta', 'Número de cuenta', 'Continuar', function () {
-                                        const numeroCuenta = inputContainer.querySelector('input').value;
-                                        alert(`Número de cuenta ingresado: ${numeroCuenta}`);
-                                    });
-                                });
-
-                                const celularDNILink = document.createElement('a');
-                                celularDNILink.textContent = 'COBRANZA SIN FACTURA POR NUMERO DE CELULAR Y DNI';
-                                celularDNILink.addEventListener('click', function () {
-                                    mostrarInputs('Número de celular y DNI', 'Número de celular y DNI', 'Continuar', function () {
-                                        const celularDNI = inputContainer.querySelector('input').value;
-                                        alert(`Número de celular y DNI ingresados: ${celularDNI}`);
-                                    });
-                                });
-
-                                const tarjetaLink = document.createElement('a');
-                                tarjetaLink.textContent = 'COBRANZA SIN FACTURA POR TARJETA CIRCULO CLARO';
-                                tarjetaLink.addEventListener('click', function () {
-                                    mostrarInputs('Número de tarjeta Círculo Claro', 'Número de tarjeta Círculo Claro', 'Continuar', function () {
-                                        const numeroTarjeta = inputContainer.querySelector('input').value;
-                                        alert(`Número de tarjeta Círculo Claro ingresado: ${numeroTarjeta}`);
-                                    });
-                                });
-
-                                modalContent.appendChild(numeroCuentaLink);
-                                modalContent.appendChild(celularDNILink);
-                                modalContent.appendChild(tarjetaLink);
-
-                            } else if (image.src.endsWith('aysa.png')) {
-                                modalContent.textContent = 'Contenido relacionado con AySA.';
-                            }
-
-                            // Agrega casos para las demás imágenes aquí
-
-                            // Abre el modal
-                            $('#myModal').modal('show');
-                        });
-                    });
-
-
-                </script>
-
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+</html>
+
+<style>
+    @media (max-width: 991px) {
+        .service-image img {
+            margin: 10px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .service-image {
+            display: flex;
+            /* height: 50vh; */
+            width: 86%;
+            height: 44vh;
+            padding: 0;
+            /* background: pink; */
+            justify-content: flex-start;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .conteiner-infoo {
+            height: 96vh;
+            width: 100%;
+            justify-content: flex-start;
+        }
+
+        .conteiner-info2 {
+            width: 100%;
+            height: 5vh;
+            /* height: 7vh; */
+            border-radius: 0;
+            margin-top: 0;
+        }
+
+        #contenidoh2 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .content-table {
+            width: 101%;
+            height: 96vh;
+        }
+
+        .content-1PagoServicios {
+            width: 100%;
+        }
+
+        #contenido {
+            height: 6vh;
+            width: 100%;
+            margin-bottom: 16px;
+            /* font-size: 18px; */
+        }
+
+        .container-contenido {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 54vh;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .title {
+            font-size: 16px;
+            width: 86%;
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+        .parrafo2 {
+            width: 96%;
+        }
+
+        .input {
+            width: 84%;
+            margin-left: 0px;
+        }
+
+        .content-1-PagoServicios button {
+            width: 31%;
+            font-size: 16px;
+        }
+
+        #content {
+            width: 107% !important;
+        }
+
+        .service-image img {
+            margin: 5px;
+            width: 30%;
+            height: 9vh;
+
+        }
+    }
+</style>
+
+
 
 <script>
     var contenidoInicial = document.getElementById("contenido").innerHTML;
@@ -381,5 +261,3 @@
         xhr.send();
     }
 </script>
-
-</html>
