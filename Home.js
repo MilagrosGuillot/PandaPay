@@ -324,18 +324,34 @@ function selectOption(button) {
     if (nombrePagina !== 'inicio') {
         // Llama a la función para ocultar los elementos si no estamos en la página de inicio
         ocultarElementosEnMovil();
-    } else {
+        
+    } 
+    else {
         // Llama a la función para mostrar los elementos y establecer 'activado' cuando volvemos a la página de inicio
         mostrarElementosEnMovil();
     }
+    console.log(nombrePagina)
     cargarPagina(nombrePagina);
 }
 
 function cargarPagina(nombrePagina) {
-
-    if(nombrePagina=="inicio"){
+    // Verificar si la página es "inicio"
+    if (nombrePagina === "inicio") {
         document.getElementById("inicioicon").click();
     }
+
+    // Verificar si la página es "comprobante"
+    if (nombrePagina === "comprobante") {
+        cargarComprobante();
+        return;
+    }
+    // Verificar si la página es "liquidacion"
+    if (nombrePagina === "liquidacion") {
+        cargarLiquidacion();
+        return;
+    }
+    
+    // Realizar la carga común de la página
     $.ajax({
         type: "GET",
         url: nombrePagina + ".html",
@@ -344,6 +360,36 @@ function cargarPagina(nombrePagina) {
         },
         error: function () {
             alert("Error al cargar la página.");
+        }
+    });
+}
+
+// Función para cargar la página de comprobante
+function cargarComprobante() {
+    ocultarElementosEnMovil();
+    $.ajax({
+        type: "GET",
+        url: "comprobante.html",
+        success: function (data) {
+            $("#content").html(data);
+        },
+        error: function () {
+            alert("Error al cargar la página de comprobante.");
+        }
+    });
+}
+
+// Función para cargar la página de liquidacion
+function cargarLiquidacion() {
+    ocultarElementosEnMovil();
+    $.ajax({
+        type: "GET",
+        url: "liquidacion.html",
+        success: function (data) {
+            $("#content").html(data);
+        },
+        error: function () {
+            alert("Error al cargar la página de liquidacion.");
         }
     });
 }
