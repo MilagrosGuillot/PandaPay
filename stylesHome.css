@@ -192,7 +192,7 @@ li a img {
     height: 68vh;
     list-style: none;
     padding: 0;
-    margin-left: 12px;
+    margin-left: 24px;
     width: 100%;
 }
 #menu button .icon {
@@ -296,6 +296,7 @@ label{
         display: flex;
         flex-direction: column;
         width: 100%;
+        
         flex: 1;
         align-items: center;
         margin-top: 14px;

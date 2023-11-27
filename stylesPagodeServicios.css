@@ -3,28 +3,34 @@
     border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;
     display: flex;
-align-items: center;
-    height: 55vh;
+    align-items: center;
+    height: 58vh;
     background-color: rgb(254, 254, 254);
-    width: 95%;
+    width: 100%;
     flex-direction: column;
     justify-content: flex-start;
 }
-.content-table{
+
+.content-table {
     height: 79vh;
 }
-.service-image{
+
+.service-image {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     height: 42vh;
 
 }
-.service-image img{
-    margin: 21px;
+
+.service-image img {
+    margin: 10px;
     height: 12vh;
 }
+
 .input {
     width: 95%;
     border-radius: 23px;
@@ -33,21 +39,24 @@ align-items: center;
     margin-left: 30px;
     background-color: #d3d2d2;
 }
+
 .title {
     font-weight: bold;
     font-family: 'Open Sans';
     margin-left: 30px;
     font-size: 22px;
 }
-.PagoServicios{
+
+.PagoServicios {
     height: 5vh;
 }
+
 .content-1-PagoServicios button {
     text-decoration: none;
     border: none;
     font-weight: bold;
     all: unset;
-    background-color:#8cc909;
+    background-color: #8cc909;
     width: 20%;
     height: 8vh;
 
@@ -56,7 +65,8 @@ align-items: center;
     align-items: center;
     font-size: 24px;
 }
-.conteiner-info2{
+
+.conteiner-info2 {
     font-family: 'Open Sans';
     border-top-left-radius: 20px;
     border-bottom: 5px solid #706f6f;
@@ -72,15 +82,17 @@ align-items: center;
 
     align-items: center;
 }
-.content-1-PagoServicios{
+
+.content-1-PagoServicios {
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: flex-start;
     width: 100%;
     border-bottom: 5px solid #706f6f;
     font-family: 'Open Sans';
 }
-.parrafo2{
+
+.parrafo2 {
     font-size: 15px;
     padding: 5px;
     font-family: 'Open Sans';
@@ -89,11 +101,13 @@ align-items: center;
     border-bottom-right-radius: 32px;
     background-color: white;
 }
-#contenido{
+
+#contenido {
     display: flex;
     flex-direction: column;
     width: 99%;
 }
+
 /* .container-contenido{
     display: flex;
     height: 40vh;
@@ -104,6 +118,7 @@ align-items: center;
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 21px;
 }
 
 .button-container {

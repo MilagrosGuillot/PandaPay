@@ -170,7 +170,7 @@
 
         <div class="row d-sm-flex-column align-items-center" id="custom-background">
             <!-- Contenido del menú (a la derecha) -->
-            <div id="menu" class="col-lg-3 col-md-1 col-sm-3">
+            <div id="menu" class="col-lg-3 col-md-1 d-sm-none d-lg-block d-md-block">
                 <!-- Contenido del menú (a la derecha) -->
                 <nav class="navbar" style="height:89vh;">
                     <ul class="navbar-nav">
@@ -191,18 +191,22 @@
                         </li>
 
                         <li class="nav-item"> <a href="#" class="menu-button" onclick="selectOption(this)"
-                            data-active-image="liquidacion_activo.png" data-inactive-image="liquidation_des.png"><img src="liquidation_des.png" alt="Imagen 3"
-                                    class="menu-icon" id="liquiicon"><span class="d-md-none d-lg-block">Liquidación</span></a>
-                                </li>
+                                data-active-image="liquidacion_activo.png"
+                                data-inactive-image="liquidation_des.png"><img src="liquidation_des.png" alt="Imagen 3"
+                                    class="menu-icon" id="liquiicon"><span
+                                    class="d-md-none d-lg-block">Liquidación</span></a>
+                        </li>
 
                         <li class="nav-item"><a href="#" class="menu-button" onclick="selectOption(this)"
-                                data-active-image="comprobante_activo.png" data-inactive-image="comprobante_des.png"><img src="comprobante_des.png" alt="Imagen 3"
+                                data-active-image="comprobante_activo.png"
+                                data-inactive-image="comprobante_des.png"><img src="comprobante_des.png" alt="Imagen 3"
                                     class="menu-icon" id="comproicon"><span
                                     class="d-md-none d-lg-block">Comprobantes</span></a>
-                                </li>
+                        </li>
 
                         <li class="nav-item"><a href="#" class="menu-button" onclick="selectOption(this)"
-                                data-active-image="enviardinero_activo.png" data-inactive-image="sendMoney_des.png"><img src="sendMoney_des.png" alt="Imagen 3" class="menu-icon" id="enviaricon">
+                                data-active-image="enviardinero_activo.png" data-inactive-image="sendMoney_des.png"><img
+                                    src="sendMoney_des.png" alt="Imagen 3" class="menu-icon" id="enviaricon">
                                 <span class="d-md-none d-lg-block">Enviar Dinero</span>
                             </a></li>
 
@@ -224,10 +228,10 @@
                     </ul>
                 </nav>
                 <button id="menu-toggle" class="btn btn-primary d-md-none">
-                    <img src="hamburguesa1.png" alt="Menú">
+
                 </button>
             </div>
-      
+
 
             <!-- termina el menu-->
             <div class="col-lg-9 col-md-11 col-sm-12 d-sm-flex-column align-items-center" id="content">
@@ -250,28 +254,23 @@
 
         // Agrega un manejador de eventos al botón "Cambiar Estilo"
         menuToggleButton.addEventListener('click', function () {
-            menuToggle.classList.toggle('active'); // Cambia la clase active en el botón hamburguesa
             const menu = document.getElementById('menu');
 
+            // Cambia la clase active en el botón hamburguesa
+            menuToggle.classList.toggle('active');
 
-            if (menu.style.display === 'none' || menu.style.display === '') {
-                menu.style.display = 'block';
-            } else {
-                menu.style.display = 'none';
+            // Verifica si la pantalla es pequeña (sm) antes de cambiar la visibilidad
+            if (window.innerWidth <= 768) { // Puedes ajustar este valor según tus necesidades
+                if (menu.style.display === 'none' || menu.style.display === '') {
+                    menu.style.display = 'block';
+                } else {
+                    menu.style.display = 'none';
+                }
             }
         });
     });
 </script>
-<script>
-    document.getElementById("menu-toggle").addEventListener("click", function () {
-        var menu = document.getElementById("menu");
-        if (menu.style.display === "none" || menu.style.display === "") {
-            menu.style.display = "block";
-        } else {
-            menu.style.display = "none";
-        }
-    });
-</script>
+
 
 
 
@@ -281,14 +280,19 @@
         li a img {
             margin-right: 0;
             height: 46px;
-            width: 100%;
+            width: 49px;
         }
+
+        .mainn {
+            width: 103%;
+        }
+
         #menu ul {
-margin: 0;
+            display: flex;
+            margin-left: 0;
+            align-items: center;
         }
-.mainn{
-    width: 103%;
-}
+
         #menu {
             display: flex;
             justify-content: center;
@@ -299,6 +303,22 @@ margin: 0;
     @media (max-width: 767px) {
         #menu {
             display: none;
+        }
+
+        #menu ul {
+            display: flex;
+            align-items: flex-start;
+            margin-left: 12px;
+        }
+
+        li a img {
+            margin-right: 18px;
+            /* height: 46px; */
+            width: 48px;
+        }
+
+        #menu {
+            width: 66%;
         }
 
         .nav-User {
