@@ -277,11 +277,21 @@ function mostrarElementosEnMovil() {
 }
 
 function selectOption(button) {
+    // Restablece el estilo del elemento <span> y del contenedor .nav-item anterior
+    var itemsAnteriores = document.querySelectorAll('.navbar-nav .nav-item');
+    itemsAnteriores.forEach(function (itemAnterior) {
+        var spanAnterior = itemAnterior.querySelector('span');
+        spanAnterior.style.fontWeight = 'normal';
+        itemAnterior.style.background = 'none'; // Restablece el fondo gris
+        itemAnterior.style.borderLeft = 'none';
+    });
+
     if (botonActivo) {
         var activeImage = botonActivo.getAttribute('data-inactive-image');
         var icon = botonActivo.querySelector('.menu-icon');
         icon.src = activeImage;
     }
+
     var activeImage = button.getAttribute('data-active-image');
     var icon = button.querySelector('.menu-icon');
     icon.src = activeImage;
@@ -323,13 +333,17 @@ function selectOption(button) {
     if (nombrePagina !== 'inicio') {
         // Llama a la función para ocultar los elementos si no estamos en la página de inicio
         ocultarElementosEnMovil();
-        
-    } 
-    else {
+    } else {
         // Llama a la función para mostrar los elementos y establecer 'activado' cuando volvemos a la página de inicio
         mostrarElementosEnMovil();
     }
-    console.log(nombrePagina)
+
+    var itemActual = button.closest('.nav-item');
+    var spanActual = itemActual.querySelector('span');
+    spanActual.style.fontWeight = 'bold';
+    itemActual.style.background = '#ddd'; // Aplica el fondo gris al contenedor .nav-item
+    itemActual.style.borderLeft = '9px solid #8cc909'; // Aplica el borde izquierdo verde al contenedor .nav-item
+    console.log(nombrePagina);
     cargarPagina(nombrePagina);
 }
 

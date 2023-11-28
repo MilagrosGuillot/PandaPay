@@ -214,9 +214,10 @@
                                     class="menu-icon"><span class="d-md-none d-lg-block">Cambiar Contraseña</span></a>
                         </li>
 
-                        <li class="nav-item"><a href="index.html"><img src="getOut_des.png" alt="Imagen 3"><span
-                                    class="d-md-none d-lg-block">Salir</span></a>
+                        <li class="nav-item"><a href="index.html" class="menu-button"><img src="getOut_des.png"
+                                    class="menu-icon" alt="Imagen 3"><span class="d-md-none d-lg-block">Salir</span></a>
                         </li>
+
                     </ul>
                 </nav>
                 <button id="menu-toggle" class="btn btn-primary d-md-none">
@@ -601,42 +602,42 @@
     });
 </script>
 <script>
-  function mostrarDatosJSON() {
-    fetch('infoNav.json')
-        .then(response => response.json())
-        .then(data => {
-            if (data.length > 0) {
-                var item = data[0];
+    function mostrarDatosJSON() {
+        fetch('infoNav.json')
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+                    var item = data[0];
 
-                // Actualiza elementos de la vista de escritorio
-                var merchantIdDesktop = document.getElementById("merchant-id-desktop");
-                var dineroEnCuentaDesktop = document.getElementById("dinero-en-cuenta-desktop");
-                var dineroALiquidarDesktop = document.getElementById("dinero-a-liquidar-desktop");
+                    // Actualiza elementos de la vista de escritorio
+                    var merchantIdDesktop = document.getElementById("merchant-id-desktop");
+                    var dineroEnCuentaDesktop = document.getElementById("dinero-en-cuenta-desktop");
+                    var dineroALiquidarDesktop = document.getElementById("dinero-a-liquidar-desktop");
 
-                merchantIdDesktop.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
-                dineroEnCuentaDesktop.innerHTML = "DINERO EN CUENTA: " + "<br>" + item['DINERO EN CUENTA'];
-                
-                // Modifica el contenido de dineroALiquidarDesktop para agregar el estilo
-                dineroALiquidarDesktop.innerHTML = "DINERO A LIQUIDAR: <br><span class=color>" + item['DINERO A LIQUIDAR'] + "</span>";
-                dineroEnCuentaDesktop.innerHTML = "DINERO EN CUENTA: <br><span style='color: #8cc909;'>" + item['DINERO EN CUENTA'] + "</span>";
-                // Actualiza elementos de la vista móvil
-                var merchantIdMobile = document.getElementById("merchant-id-mobile");
-                var dineroEnCuentaMobile = document.getElementById("dinero-en-cuenta-mobile");
-                var dineroALiquidarMobile = document.getElementById("dinero-a-liquidar-mobile");
+                    merchantIdDesktop.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
+                    dineroEnCuentaDesktop.innerHTML = "DINERO EN CUENTA: " + "<br>" + item['DINERO EN CUENTA'];
 
-                merchantIdMobile.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
-                dineroEnCuentaMobile.textContent = "DINERO EN CUENTA: " + item['DINERO EN CUENTA'];
-                dineroALiquidarMobile.textContent = "DINERO A LIQUIDAR: " + item['DINERO A LIQUIDAR'];
-            } else {
-                console.error('El archivo JSON está vacío.');
-            }
-        })
-        .catch(error => {
-            console.error('Error al cargar el archivo JSON:', error);
-        });
-}
+                    // Modifica el contenido de dineroALiquidarDesktop para agregar el estilo
+                    dineroALiquidarDesktop.innerHTML = "DINERO A LIQUIDAR: <br><span class=color>" + item['DINERO A LIQUIDAR'] + "</span>";
+                    dineroEnCuentaDesktop.innerHTML = "DINERO EN CUENTA: <br><span style='color: #8cc909;'>" + item['DINERO EN CUENTA'] + "</span>";
+                    // Actualiza elementos de la vista móvil
+                    var merchantIdMobile = document.getElementById("merchant-id-mobile");
+                    var dineroEnCuentaMobile = document.getElementById("dinero-en-cuenta-mobile");
+                    var dineroALiquidarMobile = document.getElementById("dinero-a-liquidar-mobile");
 
-mostrarDatosJSON();
+                    merchantIdMobile.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
+                    dineroEnCuentaMobile.textContent = "DINERO EN CUENTA: " + item['DINERO EN CUENTA'];
+                    dineroALiquidarMobile.textContent = "DINERO A LIQUIDAR: " + item['DINERO A LIQUIDAR'];
+                } else {
+                    console.error('El archivo JSON está vacío.');
+                }
+            })
+            .catch(error => {
+                console.error('Error al cargar el archivo JSON:', error);
+            });
+    }
+
+    mostrarDatosJSON();
 </script>
 
 <script>

@@ -1,7 +1,7 @@
 :root {
 
     --text-color: #333;
-    --link-color: rgb(13, 13, 12);
+    --link-color: #000000;
     --border-color: rgb(231, 231, 231);
     --font-size: 2.3vh;
 }
@@ -10,8 +10,6 @@ body {
     font-family: 'Nunito', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color) ;
-    font-size: 120%;
     overflow: hidden;
 }
 
@@ -64,6 +62,7 @@ li button img {
 }
 li a img {
     width: 55px; 
+    margin-left: 10px;
     height: 55px; 
     margin-right: 10px; 
     vertical-align: middle; 
@@ -117,10 +116,13 @@ li a img {
     cursor: pointer;
     margin-right: 10px;
 }
+
 .nav-icons-img{
     width: 35px
 }
-
+.menu-button{
+    margin-left: 10px;
+}
 #dinero-en-cuenta{
     margin-top: 5px;
 }
@@ -154,10 +156,8 @@ li a img {
     height: 4vh;
 }
 .navbar a {
+
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 16px;
     display: flex;
     align-items: center;
 }
@@ -192,7 +192,7 @@ li a img {
     height: 68vh;
     list-style: none;
     padding: 0;
-    margin-left: 24px;
+    /* margin-left: 19px; */
     width: 100%;
 }
 #menu button .icon {
@@ -238,7 +238,6 @@ li a img {
     cursor: pointer;
     font-size: var(--font-size);
     text-align: left;
-
     display: flex;
     align-items: center;
     display: block;
@@ -254,17 +253,14 @@ li a img {
 }
 
 #menu li {
-    margin-bottom: 18px;
+    margin-bottom: 12px;
+    padding: 7px;
     /* padding: 12px; */
     /* transition: border-left 0.3s, background-color 0.3s;
     border-left: 4px solid transparent; */
 }
 
-#menu li.active {
-    border-left: 10px solid #8cc909;
-    background-color: var(--border-color);
-    font-weight: bold;
-}
+
 label{
     font-size: 1.25rem;
 }
