@@ -40,18 +40,27 @@
     background-color: #111;
 }
 
-.night-mode .navbar {
-    background-color: #121901;
+.night-mode #menu .navbar {
+    background-color: #333333;
 }
 
 .night-mode .nav-paragraph {
     color: #fff;
 }
 
-.night-mode .navbar a {
-    color: #fff;
+.night-mode #menu span {
+    color: #ffffff;
+}
+.night-mode .valor span{
+    color: #b3b3b3;
 }
 
+.night-mode .nav-User span{
+    color: #b3b3b3;
+}
+.night-mode span .color{
+    color: #ffffff;
+}
 .night-mode .navbar .button {
     background-color: #333;
     color: #fff;

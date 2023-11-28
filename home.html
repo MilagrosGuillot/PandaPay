@@ -127,7 +127,7 @@
         </header>
 
         <!-- Nueva fila en la vista móvil (por debajo de la primera) -->
-        <div class="row contentMerchant d-md-none d-sm-flex" >
+        <div class="row contentMerchant d-md-none d-sm-flex">
             <div class="col-12 rowMerchant">
                 <div id="datos-json-mobile">
                     <div class="nav-User id" value="Inici" onclick="Abrir()">
@@ -142,10 +142,10 @@
             </div>
         </div>
         <div class="row contentDinero no-gutters d-md-none d-sm-flex">
-            <div class="col-6 rowDinero d-sm-flex" >
+            <div class="col-6 rowDinero d-sm-flex">
                 <div class="nav-User cuenta" value="Envdi" onclick="Abrir()">
                     <img src="sendMoney.png" alt="Usuario">
-                    <div class="valor" >
+                    <div class="valor">
                         <span id="dinero-en-cuenta-mobile"></span>
                     </div>
                 </div>
@@ -274,12 +274,15 @@
             height: 46px;
             width: 49px;
         }
-.oculto{
-    display: none;
-}
-.activado{
-    display: block;
-}
+
+        .oculto {
+            display: none;
+        }
+
+        .activado {
+            display: block;
+        }
+
         .mainn {
             width: 103%;
         }
@@ -495,6 +498,10 @@
             flex: 0 0 0%
         }
 
+        .gris {
+            background-color: #cccccc !important;
+        }
+
         .navbar {
             padding: 0;
             height: 9vh;
@@ -594,39 +601,42 @@
     });
 </script>
 <script>
-    function mostrarDatosJSON() {
-        fetch('infoNav.json')
-            .then(response => response.json())
-            .then(data => {
-                if (data.length > 0) {
-                    var item = data[0];
+  function mostrarDatosJSON() {
+    fetch('infoNav.json')
+        .then(response => response.json())
+        .then(data => {
+            if (data.length > 0) {
+                var item = data[0];
 
-                    // Actualiza elementos de la vista de escritorio
-                    var merchantIdDesktop = document.getElementById("merchant-id-desktop");
-                    var dineroEnCuentaDesktop = document.getElementById("dinero-en-cuenta-desktop");
-                    var dineroALiquidarDesktop = document.getElementById("dinero-a-liquidar-desktop");
+                // Actualiza elementos de la vista de escritorio
+                var merchantIdDesktop = document.getElementById("merchant-id-desktop");
+                var dineroEnCuentaDesktop = document.getElementById("dinero-en-cuenta-desktop");
+                var dineroALiquidarDesktop = document.getElementById("dinero-a-liquidar-desktop");
 
-                    merchantIdDesktop.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
-                    dineroEnCuentaDesktop.innerHTML = "DINERO EN CUENTA: " + "<br>" + item['DINERO EN CUENTA'];
-                    dineroALiquidarDesktop.innerHTML = "DINERO A LIQUIDAR: " + "<br>" + item['DINERO A LIQUIDAR'];
+                merchantIdDesktop.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
+                dineroEnCuentaDesktop.innerHTML = "DINERO EN CUENTA: " + "<br>" + item['DINERO EN CUENTA'];
+                
+                // Modifica el contenido de dineroALiquidarDesktop para agregar el estilo
+                dineroALiquidarDesktop.innerHTML = "DINERO A LIQUIDAR: <br><span class=color>" + item['DINERO A LIQUIDAR'] + "</span>";
+                dineroEnCuentaDesktop.innerHTML = "DINERO EN CUENTA: <br><span style='color: #8cc909;'>" + item['DINERO EN CUENTA'] + "</span>";
+                // Actualiza elementos de la vista móvil
+                var merchantIdMobile = document.getElementById("merchant-id-mobile");
+                var dineroEnCuentaMobile = document.getElementById("dinero-en-cuenta-mobile");
+                var dineroALiquidarMobile = document.getElementById("dinero-a-liquidar-mobile");
 
-                    // Actualiza elementos de la vista móvil
-                    var merchantIdMobile = document.getElementById("merchant-id-mobile");
-                    var dineroEnCuentaMobile = document.getElementById("dinero-en-cuenta-mobile");
-                    var dineroALiquidarMobile = document.getElementById("dinero-a-liquidar-mobile");
+                merchantIdMobile.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
+                dineroEnCuentaMobile.textContent = "DINERO EN CUENTA: " + item['DINERO EN CUENTA'];
+                dineroALiquidarMobile.textContent = "DINERO A LIQUIDAR: " + item['DINERO A LIQUIDAR'];
+            } else {
+                console.error('El archivo JSON está vacío.');
+            }
+        })
+        .catch(error => {
+            console.error('Error al cargar el archivo JSON:', error);
+        });
+}
 
-                    merchantIdMobile.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
-                    dineroEnCuentaMobile.textContent = "DINERO EN CUENTA: " + item['DINERO EN CUENTA'];
-                    dineroALiquidarMobile.textContent = "DINERO A LIQUIDAR: " + item['DINERO A LIQUIDAR'];
-                } else {
-                    console.error('El archivo JSON está vacío.');
-                }
-            })
-            .catch(error => {
-                console.error('Error al cargar el archivo JSON:', error);
-            });
-    }
-    mostrarDatosJSON();
+mostrarDatosJSON();
 </script>
 
 <script>
