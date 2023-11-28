@@ -25,7 +25,7 @@
 }
 
 .night-mode input {
-    background-color: #333;
+    background-color: #e6e6e6;
     color: #fff;
     border-color: #666;
 }
@@ -223,5 +223,14 @@ color: white;
     color: #b3b3b3;
 }
 .night-mode .search-filter {
-    background-color: #333333;;
+    background-color: #333333;
+}
+.night-mode .conteiner-infoo {
+    background-color: #333333;
+}
+.night-mode  .conteiner-info2{
+    background-color: #333333;
+}
+.night-mode  .parrafo2{
+    background-color: #333333;
 }
