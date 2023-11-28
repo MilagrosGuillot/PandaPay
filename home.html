@@ -364,7 +364,9 @@
             align-items: center;
             height: 49px;
         }
-
+.main-divs{
+    height: 18vh;
+}
         .image-container {
             /* background: aquamarine; */
             width: 100%;
@@ -501,7 +503,7 @@
         }
 
         .gris {
-            background-color: #cccccc !important;
+            background-color: #cccccc ;
         }
 
         .navbar {
@@ -603,7 +605,7 @@
     });
 </script>
 <script>
-  function mostrarDatosJSON() {
+function mostrarDatosJSON() {
     fetch('infoNav.json')
         .then(response => response.json())
         .then(data => {
@@ -616,19 +618,17 @@
                 var dineroALiquidarDesktop = document.getElementById("dinero-a-liquidar-desktop");
 
                 merchantIdDesktop.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
-                dineroEnCuentaDesktop.innerHTML = "DINERO EN CUENTA: " + "<br>" + item['DINERO EN CUENTA'];
-                
-                // Modifica el contenido de dineroALiquidarDesktop para agregar el estilo
-                dineroALiquidarDesktop.innerHTML = "DINERO A LIQUIDAR: <br><span class=color>" + item['DINERO A LIQUIDAR'] + "</span>";
                 dineroEnCuentaDesktop.innerHTML = "DINERO EN CUENTA: <br><span style='color: #8cc909;'>" + item['DINERO EN CUENTA'] + "</span>";
+                dineroALiquidarDesktop.innerHTML = "DINERO A LIQUIDAR: <br><span class='color'>" + item['DINERO A LIQUIDAR'] + "</span>";
+
                 // Actualiza elementos de la vista móvil
                 var merchantIdMobile = document.getElementById("merchant-id-mobile");
                 var dineroEnCuentaMobile = document.getElementById("dinero-en-cuenta-mobile");
                 var dineroALiquidarMobile = document.getElementById("dinero-a-liquidar-mobile");
 
                 merchantIdMobile.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
-                dineroEnCuentaMobile.textContent = "DINERO EN CUENTA: " + item['DINERO EN CUENTA'];
-                dineroALiquidarMobile.textContent = "DINERO A LIQUIDAR: " + item['DINERO A LIQUIDAR'];
+                dineroEnCuentaMobile.innerHTML = "DINERO EN CUENTA: <br><span style='color: #8cc909;'>" + item['DINERO EN CUENTA'] + "</span>";
+                dineroALiquidarMobile.innerHTML = "DINERO A LIQUIDAR: <br><span class='color'>" + item['DINERO A LIQUIDAR'] + "</span>";
             } else {
                 console.error('El archivo JSON está vacío.');
             }

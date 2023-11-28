@@ -103,10 +103,7 @@
     background-color: #333333;
     color: #fff;
 }
-.night-mode .date-filterVentas {
-    background-color: #333333;
-    color: white
-}
+
 .night-mode .miTabla {
     background-color: #4d4d4d;
     color: white
@@ -149,11 +146,6 @@
 }
 
 
-
-.night-mode #content .date-filter {
-    background-color: #333333;
-    color: #fff;
-}
 .night-mode .a{
     background-color: #333333;
 
@@ -236,3 +228,57 @@ color: white;
     background-color: #ffff;
     color: black;
 }
+/* ----Inicio mobil --------------*/
+.night-mode .contentFecha{
+    background-color: #1a1a1a;
+}
+.night-mode #verMas{
+    color: white;
+    background-color: #8cc909;
+}
+.night-mode .main-divs{
+
+    background-color: #706f6f;
+}
+/* ----Ventas total mobil --------------*/
+.night-mode .container-section{
+    background-color: #706f6f;
+}
+.night-mode .content-table{
+    background-color: #1a1a1a;
+}
+.night-mode .moodnight{
+    background-color: #1a1a1a;
+}
+.night-mode .contentButton{
+    background-color: #1a1a1a;
+}
+.night-mode .date-filterVentas {
+    background-color: #1a1a1a;
+    color: white
+}
+
+.night-mode .content-tableVentasTotal {
+    background-color: #1a1a1a;
+}
+.night-mode .date-filter {
+    background-color: #1a1a1a;
+}
+.night-mode .conteiner-register-V {
+    background-color: #1a1a1a;
+}
+.night-mode .gris {
+    background-color: #333333;
+}
+/* ----liquidacion mobil --------------*/
+.night-mode .content-table-L {
+    background-color: #1a1a1a;
+}
+.night-mode .terminal {
+    color: #b3b3b3;
+}
+.night-mode .contentAll {
+    background-color: #1a1a1a;
+}
+
+
