@@ -158,24 +158,7 @@
     background-color: #333333;
 
 }
-.night-mode #content .cambiarContraseña {
-    background-color: #666;
-    color: #fff;
-}
 
-.night-mode #content .cambiarContraseña label {
-    color: #fff;
-}
-
-.night-mode #content .cambiarContraseña input {
-    background-color: #777;
-    color: #fff;
-}
-
-.night-mode #content .dialog-box {
-    background-color: #444;
-    color: #fff;
-}
 .night-mode .section{
 background-color:#233202;
 color: white;
@@ -233,4 +216,23 @@ color: white;
 }
 .night-mode  .parrafo2{
     background-color: #333333;
+}
+.night-mode  .date-filterContraseña{
+    background-color: #333333;
+}
+.night-mode #content .cambiarContraseña {
+    background-color: #333333;
+}
+.night-mode #content .cambiarContraseña label {
+    color: #fff;
+}
+
+.night-mode #content .cambiarContraseña input {
+    background-color: #e6e6e6;
+    color: #fff;
+}
+
+.night-mode #content .dialog-box {
+    background-color: #ffff;
+    color: black;
 }
