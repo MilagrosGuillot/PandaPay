@@ -180,6 +180,48 @@
 background-color:#233202;
 color: white;
 }
-.night-mode .ultimos{
+/* ----inicio --------------*/
+.night-mode #ultimos{
     background-color: #1a1a1a;
+}
+.night-mode tr:nth-child(odd) {
+    background-color: #4d4d4d;
+}
+.night-mode tr:nth-child(even) {
+    background-color: #333333;
+}
+.night-mode th{
+    color: white;
+}
+.night-mode tr{
+    color: #b3b3b3;
+}
+.night-mode td{
+    color: #b3b3b3;
+}
+/* ----ventas --------------*/
+.night-mode .table-responsive{
+    background-color: #1a1a1a;
+}
+.night-mode #fechaDesde  label {
+    color: #b3b3b3;
+}
+.night-mode #fechaHasta label{
+    color: #b3b3b3;
+}
+/* ----ventas/total --------------*/
+.night-mode .conteiner-register {
+    background-color: #333333;
+}
+.night-mode .content-1 {
+    color: #b3b3b3;
+}
+.night-mode .content-2 {
+    color: #b3b3b3;
+}
+.night-mode .parrafo {
+    color: #b3b3b3;
+}
+.night-mode .search-filter {
+    background-color: #333333;;
 }

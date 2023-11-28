@@ -59,7 +59,6 @@ var tablaInicio = [
 
 
 function ventasInicio() {
-
     if ($("#ListaInicio").html()) {
         $("#ListaInicio").empty();
         for (let index = 0; index < tablaInicio.length; index++) {
@@ -69,22 +68,22 @@ function ventasInicio() {
             var tdTotal = $("<td>");
             tdFecha.text(tablaInicio[index].fecha);
             tdAprobados.text(tablaInicio[index].aprobadas);
-            tdTotal.text("$ " +tablaInicio[index].total);
-            tr.classList="InicioTr";
+            tdTotal.text("$ " + tablaInicio[index].total);
+            tr.addClass("InicioTr"); // Usar addClass en lugar de classList
             tr.append(tdFecha);
             tr.append(tdAprobados);
             tr.append(tdTotal);
-
             $("#ListaInicio").append(tr);
         }
-
         $("#ListaInicio").html();
         reiniciarIntervalo();
     }
 }
+
 document.addEventListener('DOMContentLoaded', function () {
     iniciarIntervalo();
 });
+
 
 
 var miIntervalo;
