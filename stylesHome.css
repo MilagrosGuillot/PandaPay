@@ -27,6 +27,7 @@ body {
 }
 
 .navbar {
+
     display: flex;
     flex-wrap: nowrap !important;
     height: 10vh;
@@ -120,9 +121,9 @@ li a img {
 .nav-icons-img{
     width: 35px
 }
-.menu-button{
+/* .menu-button{
     margin-left: 10px;
-}
+} */
 #dinero-en-cuenta{
     margin-top: 5px;
 }
@@ -254,7 +255,7 @@ li a img {
 
 #menu li {
     margin-bottom: 12px;
-    padding: 7px;
+    padding: 5px;
     /* padding: 12px; */
     /* transition: border-left 0.3s, background-color 0.3s;
     border-left: 4px solid transparent; */

@@ -283,12 +283,14 @@ function selectOption(button) {
         spanAnterior.style.fontWeight = 'normal';
         itemAnterior.style.background = 'none'; // Restablece el fondo gris
         itemAnterior.style.borderLeft = 'none';
+       
     });
 
     if (botonActivo) {
         var activeImage = botonActivo.getAttribute('data-inactive-image');
         var icon = botonActivo.querySelector('.menu-icon');
         icon.src = activeImage;
+    
     }
 
     var activeImage = button.getAttribute('data-active-image');
@@ -340,6 +342,7 @@ function selectOption(button) {
     var itemActual = button.closest('.nav-item');
     var spanActual = itemActual.querySelector('span');
     spanActual.style.fontWeight = 'bold';
+    spanActual.style.color = 'black';
     itemActual.style.background = '#ddd'; // Aplica el fondo gris al contenedor .nav-item
     itemActual.style.borderLeft = '9px solid #8cc909'; // Aplica el borde izquierdo verde al contenedor .nav-item
     console.log(nombrePagina);
