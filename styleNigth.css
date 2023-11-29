@@ -273,28 +273,26 @@ color: white;
 }
 /* ----liquidacion mobil --------------*/
 .night-mode .content-date .date {
-    background-color: #1a1a1a;
+    background-color: 
+    #333333;
 }
 
 .night-mode .conteiner-register {
-    background-color: #1a1a1a;
+    background-color: #333333;
 }
 
 .night-mode .content-1 {
-    background-color: #1a1a1a;
+    background-color: #333333;
 }
 
 .night-mode .content-2 {
-    background-color: #1a1a1a;
+    background-color: #333333;
 }
 
 .night-mode .parrafo {
-    background-color: #1a1a1a;
+    background-color: #333333;
 }
 
-.night-mode .conteiner-transacciones {
-    background-color: #1a1a1a;
-}
 
 .night-mode .table.table-bordered, .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     border: none !important;
