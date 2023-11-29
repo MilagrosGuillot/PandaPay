@@ -135,10 +135,12 @@
     font-family: 'Nunito';
 }
 #fecha{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        align-content: center;
+
 }
 
 #fecha select{
@@ -170,4 +172,7 @@
 .blue-background {
     background-color: #377bb1;
     color: white; /* Cambia el color del texto para que sea legible en el fondo azul */
+}
+.button-containerComprobante{
+    width: 60%;
 }

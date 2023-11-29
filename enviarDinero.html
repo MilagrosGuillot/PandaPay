@@ -30,8 +30,10 @@
                 <input class="col-lg-3 col-md-3 col-sm-3" type="text" placeholder="Buscar contacto">
                 <input class="col-lg-3 col-md-3 col-sm-3" type="text" placeholder="Monto a transferir">
                 <input class="col-lg-3 col-md-3 col-sm-3" type="text" placeholder="Referencia">
-                <div class="col-lg-3 col-md-3 col-sm-3 button-container">
-                    <button class="search" onclick="CargarTabla()">ENVIAR</button>
+                <div class="col-lg-3 col-md-3 col-sm-3 d-md-flex justify-content-end">
+                    <div class="button-container">
+                        <button class="search" onclick="CargarTabla()">ENVIAR</button>
+                    </div>
                 </div>
             </div>
             <div class="row table-container">
@@ -123,11 +125,6 @@
                     margin-left: 11px;
                 }
 
-                .a {
-                    display: flex;
-                    padding: 0;
-                }
-
                 .table-container {
 
                     width: 100%;
@@ -175,7 +172,7 @@
 
                 #saldoCuenta {
                     margin-left: 0px;
-                    color: black;
+                    
                     width: 73%;
                     font-size: 15px;
 
@@ -186,6 +183,15 @@
                     color: #8cc909;
                 }
 
+                .night-mode .content-table-E {
+                    background-color: #1a1a1a;
+                }
+                .night-mode .content-parrafo {
+                    background-color: #1a1a1a;
+                }
+                .night-mode .search-filter {
+    background-color: #1a1a1a;
+}
             }
         </style>
 </body>

@@ -46,8 +46,10 @@
                         <option value="TODAS">TODAS</option>
                     </select>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-12 d-md-flex d-lg-flex align-items-center button-container">
-                    <button class="search" onclick="buscar()" style="font-family: 'Open Sans';">BUSCAR</button>
+                <div class="col-lg-2 col-md-2 col-sm-12 d-lg-flex d-md-flex justify-content-end align-items-center" style="padding: 0;">
+                    <div class=" button-container">
+                        <button class="search" onclick="buscar()" style="font-family: 'Open Sans';">BUSCAR</button>
+                    </div>
                 </div>
             </div>
             <div class="row table-container">
@@ -139,6 +141,7 @@
         </div>
     </div>
 </body>
+
 </html>
 
 <style>
@@ -185,6 +188,7 @@
         }
 
         .button-container {
+            width: 100%;
             justify-content: center;
         }
 
@@ -227,6 +231,15 @@
             align-items: flex-start;
             justify-content: flex-start;
         }
+        .night-mode .content-table-L {
+    background-color: #1a1a1a;
+}
+.night-mode .terminal {
+    color: #b3b3b3;
+}
+.night-mode .date-filterVentas {
+    background-color: #1a1a1a;
+}
     }
 </style>
 

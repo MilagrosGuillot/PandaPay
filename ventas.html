@@ -27,7 +27,7 @@
             </div>
             <!-- Botón de búsqueda (Desktop) -->
             <div
-                class="col-lg-2 col-md-2 d-lg-block d-lg-flex d-md-flex justify-content-lg-end justify-content-md-end   d-md-block d-none d-sm-none">
+                class="col-lg-2 col-md-2 d-lg-block d-lg-flex d-md-flex justify-content-end d-md-block d-none d-sm-none" style="padding: 6px;">
                 <div class="button-containerDesktop">
                     <button class="col search" onclick="buscar()">BUSCAR</button>
                 </div>
@@ -76,13 +76,12 @@
 <style>
     /* Estilos para dispositivos móviles */
     @media (max-width: 991px) {
-
         .date-filterVentas #fechaDesde select,
         .date-filterVentas #fechaHasta select {
             width: 20%;
         }
         .button-containerDesktop{
-            width: 100%;
+            width: 72%;
         }
     }
 
@@ -185,6 +184,9 @@
             margin-top: 5px;
             border-radius: 0;
         }
+        .night-mode .date-filterVentas {
+    background-color: #1a1a1a;
+}
     }
 </style>
 

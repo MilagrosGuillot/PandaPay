@@ -81,7 +81,7 @@
     border: none;
     height: 3.5vh;
     /* margin-right: 53px; */
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 #content .table-container {
@@ -94,11 +94,10 @@
     margin-left: 25px;
     font-family: 'Open Sans';
 }
-
-.button-containerComprobante {
-    width: 14%;
-    margin-left: 5px;
+.button-container{
+    width: 47%;
 }
+
 
 .delete-icon {
     width: 12%;

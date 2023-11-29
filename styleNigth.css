@@ -254,16 +254,17 @@ color: white;
     background-color: #1a1a1a;
 }
 .night-mode .date-filterVentas {
-    background-color: #1a1a1a;
+    background-color: #333333;
+}
+.night-mode .date-filter {
+    background-color: #333333;
     color: white
 }
 
 .night-mode .content-tableVentasTotal {
     background-color: #1a1a1a;
 }
-.night-mode .date-filter {
-    background-color: #1a1a1a;
-}
+
 .night-mode .conteiner-register-V {
     background-color: #1a1a1a;
 }
@@ -271,14 +272,37 @@ color: white;
     background-color: #333333;
 }
 /* ----liquidacion mobil --------------*/
+.night-mode .content-date .date {
+    background-color: #1a1a1a;
+}
+
+.night-mode .conteiner-register {
+    background-color: #1a1a1a;
+}
+
+.night-mode .content-1 {
+    background-color: #1a1a1a;
+}
+
+.night-mode .content-2 {
+    background-color: #1a1a1a;
+}
+
+.night-mode .parrafo {
+    background-color: #1a1a1a;
+}
+
+.night-mode .conteiner-transacciones {
+    background-color: #1a1a1a;
+}
+
+.night-mode .table.table-bordered, .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    border: none !important;
+}
+
 .night-mode .content-table-L {
     background-color: #1a1a1a;
 }
 .night-mode .terminal {
     color: #b3b3b3;
 }
-.night-mode .contentAll {
-    background-color: #1a1a1a;
-}
-
-

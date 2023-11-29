@@ -18,10 +18,10 @@
         <div class="content-table">
             <div class="conteiner-infoo">
                 <div class="row content-1-PagoServicios">
-                    <button class="col-lg-4 col-md-3 col-sm-3 option selected" onclick="selectOption(this)">SIN
+                    <button class="col option selected" onclick="selectOption(this)">SIN
                         FACTURA</button>
-                    <button class="col-lg-4 col-md-3 col-sm-3 option" onclick="selectOption(this)">CON FACTURA</button>
-                    <button class="col-lg-4 col-md-3 col-sm-3 option" onclick="selectOption(this)">DISPONIBLE</button>
+                    <button class="col option" onclick="selectOption(this)">CON FACTURA</button>
+                    <button class="col option" onclick="selectOption(this)">DISPONIBLE</button>
                 </div>
                 <div class="container-contenido">
                     <div class="row" id="contenidoh2">
@@ -104,11 +104,11 @@
             display: flex;
             /* height: 50vh; */
             width: 86%;
-            height: 44vh;
+            height: 41vh;
             padding: 0;
             /* background: pink; */
             justify-content: flex-start;
-            align-content: flex-start;
+            align-content: center;
             flex-wrap: wrap;
             align-items: center;
         }
@@ -121,10 +121,11 @@
 
         .conteiner-info2 {
             width: 100%;
+            margin-top: 20px;
             height: 5vh;
             /* height: 7vh; */
             border-radius: 0;
-            margin-top: 0;
+        
         }
 
         #contenidoh2 {
@@ -144,6 +145,7 @@
         }
 
         #contenido {
+            align-items: center;
             height: 6vh;
             width: 100%;
             margin-bottom: 16px;
@@ -155,6 +157,7 @@
             flex-direction: column;
             width: 100%;
             height: 54vh;
+            margin-bottom: 0;
             align-items: flex-start;
             justify-content: flex-start;
         }
@@ -176,7 +179,7 @@
         }
 
         .content-1-PagoServicios button {
-            width: 31%;
+            width: 36%;
             font-size: 16px;
         }
 
@@ -190,6 +193,26 @@
             height: 9vh;
 
         }
+        .night-mode .content-table {
+    background-color: #1a1a1a;
+}
+.night-mode .conteiner-info {
+    background-color: #1a1a1a;
+}
+.night-mode .container-contenido {
+    background-color: #1a1a1a;
+}
+.night-mode .conteiner-info2 {
+    background-color: #333333;
+}
+.night-mode .parrafo2 {
+    background-color: #1a1a1a;
+}.night-mode .content-1-PagoServicios  {
+    background-color: #1a1a1a;
+}
+.night-mode .conteiner-infoo {
+    background-color: #1a1a1a;
+}
     }
 </style>
 
