@@ -38,7 +38,7 @@
                     <!-- Botón del menú -->
                     <div class="col-3 d-md-none d-lg-none">
                         <button id="menu-toggle-button">
-                            <img src="./hamburguesa1.png" width="60px" height="60px" alt="Menú">
+                            <img src="menu-removebg-preview.png" width="40px" height="33px" alt="Menú">
                         </button>
                     </div>
 
@@ -214,10 +214,10 @@
                                     class="menu-icon"><span class="d-md-none d-lg-block">Cambiar Contraseña</span></a>
                         </li>
 
-                        <li class="nav-item"><a href="index.html" class="menu-button"><img src="getOut_des.png" class="menu-icon" alt="Imagen 3"><span
-                            class="d-md-none d-lg-block">Salir</span></a>
-                </li>
-                
+                        <li class="nav-item"><a href="index.html" class="menu-button"><img src="getOut_des.png"
+                                    class="menu-icon" alt="Imagen 3"><span class="d-md-none d-lg-block">Salir</span></a>
+                        </li>
+
                     </ul>
                 </nav>
                 <button id="menu-toggle" class="btn btn-primary d-md-none">
@@ -328,8 +328,8 @@
         }
 
         .nav-User img {
-
-            margin-left: 7px;
+/* 
+            margin-left: 7px; */
         }
 
         .nav-icons-img {
@@ -364,9 +364,11 @@
             align-items: center;
             height: 49px;
         }
-.main-divs{
-    height: 18vh;
-}
+
+        .main-divs {
+            height: 18vh;
+        }
+
         .image-container {
             /* background: aquamarine; */
             width: 100%;
@@ -503,7 +505,7 @@
         }
 
         .gris {
-            background-color: #cccccc ;
+            background-color: #cccccc;
         }
 
         .navbar {
@@ -554,6 +556,9 @@
         #menu-toggle-button {
             border: none;
             order: 3;
+            width: 0%;
+            margin-left: 13px;
+            padding: 0;
             /* Coloca el botón de hamburguesa al final */
         }
     }
@@ -605,40 +610,40 @@
     });
 </script>
 <script>
-function mostrarDatosJSON() {
-    fetch('infoNav.json')
-        .then(response => response.json())
-        .then(data => {
-            if (data.length > 0) {
-                var item = data[0];
+    function mostrarDatosJSON() {
+        fetch('infoNav.json')
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+                    var item = data[0];
 
-                // Actualiza elementos de la vista de escritorio
-                var merchantIdDesktop = document.getElementById("merchant-id-desktop");
-                var dineroEnCuentaDesktop = document.getElementById("dinero-en-cuenta-desktop");
-                var dineroALiquidarDesktop = document.getElementById("dinero-a-liquidar-desktop");
+                    // Actualiza elementos de la vista de escritorio
+                    var merchantIdDesktop = document.getElementById("merchant-id-desktop");
+                    var dineroEnCuentaDesktop = document.getElementById("dinero-en-cuenta-desktop");
+                    var dineroALiquidarDesktop = document.getElementById("dinero-a-liquidar-desktop");
 
-                merchantIdDesktop.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
-                dineroEnCuentaDesktop.innerHTML = "DINERO EN CUENTA: <br><span style='color: #8cc909;'>" + item['DINERO EN CUENTA'] + "</span>";
-                dineroALiquidarDesktop.innerHTML = "DINERO A LIQUIDAR: <br><span class='color'>" + item['DINERO A LIQUIDAR'] + "</span>";
+                    merchantIdDesktop.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
+                    dineroEnCuentaDesktop.innerHTML = "DINERO EN CUENTA: <br><span style='color: #8cc909;'>" + item['DINERO EN CUENTA'] + "</span>";
+                    dineroALiquidarDesktop.innerHTML = "DINERO A LIQUIDAR: <br><span class='color'>" + item['DINERO A LIQUIDAR'] + "</span>";
 
-                // Actualiza elementos de la vista móvil
-                var merchantIdMobile = document.getElementById("merchant-id-mobile");
-                var dineroEnCuentaMobile = document.getElementById("dinero-en-cuenta-mobile");
-                var dineroALiquidarMobile = document.getElementById("dinero-a-liquidar-mobile");
+                    // Actualiza elementos de la vista móvil
+                    var merchantIdMobile = document.getElementById("merchant-id-mobile");
+                    var dineroEnCuentaMobile = document.getElementById("dinero-en-cuenta-mobile");
+                    var dineroALiquidarMobile = document.getElementById("dinero-a-liquidar-mobile");
 
-                merchantIdMobile.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
-                dineroEnCuentaMobile.innerHTML = "DINERO EN CUENTA: <br><span style='color: #8cc909;'>" + item['DINERO EN CUENTA'] + "</span>";
-                dineroALiquidarMobile.innerHTML = "DINERO A LIQUIDAR: <br><span class='color'>" + item['DINERO A LIQUIDAR'] + "</span>";
-            } else {
-                console.error('El archivo JSON está vacío.');
-            }
-        })
-        .catch(error => {
-            console.error('Error al cargar el archivo JSON:', error);
-        });
-}
+                    merchantIdMobile.textContent = "MERCHANT ID: " + item['MERCHANT ID'];
+                    dineroEnCuentaMobile.innerHTML = "DINERO EN CUENTA: <br><span style='color: #8cc909;'>" + item['DINERO EN CUENTA'] + "</span>";
+                    dineroALiquidarMobile.innerHTML = "DINERO A LIQUIDAR: <br><span class='color'>" + item['DINERO A LIQUIDAR'] + "</span>";
+                } else {
+                    console.error('El archivo JSON está vacío.');
+                }
+            })
+            .catch(error => {
+                console.error('Error al cargar el archivo JSON:', error);
+            });
+    }
 
-mostrarDatosJSON();
+    mostrarDatosJSON();
 </script>
 
 <script>
