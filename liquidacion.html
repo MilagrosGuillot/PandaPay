@@ -52,8 +52,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row table-container">
-                <table class="col-lg-12 col-md-12 col-sm-12 miTabla">
+            <div class="row  table-responsive" style=" overflow-x: none ;">
+                <table class="table table-striped col-lg-12 col-md-12 col-sm-12 miTabla" style="margin-bottom: 0;">
                     <thead>
                         <tr class="col-lg-12 col-md-12 col-sm-12 a">
                             <th>FECHA</th>
@@ -113,28 +113,8 @@
                             <td class="blanco"></td>
                             <td class="blanco"></td>
                         </tr>
-                        <tr>
-                            <td class="gris"></td>
-                            <td class="gris"></td>
-                            <td class="gris"></td>
-                            <td class="gris"></td>
-                            <td class="gris"></td>
-                        </tr>
-                        <tr>
-                            <td class="blanco"></td>
-                            <td class="blanco"></td>
-                            <td class="blanco"></td>
-                            <td class="blanco"></td>
-                            <td class="blanco"></td>
-                        </tr>
-                        <tr>
-                            <td class="gris"></td>
-                            <td class="gris"></td>
-                            <td class="gris"></td>
-                            <td class="gris"></td>
-                            <td class="gris"></td>
-                        </tr>
-
+                    
+                    
                     </tbody>
                 </table>
             </div>
@@ -147,17 +127,15 @@
 <style>
     /* Estilos para dispositivos móviles */
     @media (max-width: 767px) {
-        .table-container {
+        .table-responsive{
             width: 100%;
+            overflow-x: auto !important ;
+            height: 66vh !important;
             border-radius: 0;
         }
 
         .container-fecha {
             justify-content: center;
-        }
-
-        .gris {
-            background-color: gray;
         }
 
         .content-table-L {
@@ -181,6 +159,7 @@
         th {
             width: 10%;
             background-color: #f2f2f2;
+            white-space: nowrap !important;
         }
 
         .terminal {
@@ -191,23 +170,14 @@
             width: 100%;
             justify-content: center;
         }
-
         .row {
+            display: flex;
+            flex-wrap: wrap;
             margin: 0 !important;
         }
 
         .miTabla {
             height: 69vh;
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .table-container {
-            height: 66vh !important;
-
         }
 
         .date-filterVentas {

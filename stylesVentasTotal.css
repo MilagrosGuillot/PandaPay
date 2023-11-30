@@ -72,7 +72,7 @@ table {
 .table{
     border: 0 !important;
 }
-.table-container{
+.table-content{
     border-radius: 30px;
 
     height: 30vh;
@@ -82,8 +82,10 @@ table {
 height: 35vh;
 }
 .table-responsive{
-    height: 33vh;
+    border-radius: 30px;
+    height: 31vh
 }
+
 .miTabla {
     border-radius: 10%;
     width: 100%;

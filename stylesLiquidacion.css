@@ -84,3 +84,11 @@
 .search{
     width: 100%;
 }
+.table-responsive{
+    height: 45vh;
+    border-radius: 30px;
+    /* overflow-x: initial !important; */
+}
+.table{
+    height: 45vh;
+}
