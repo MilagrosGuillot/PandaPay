@@ -20,8 +20,11 @@
     align-items: center;
     justify-content: space-between;
 }
-.fechaHasta{
+#fechaHasta{
+    width:48%;
+    padding: 0;
     display: flex;
+    /* background: pink; */
     justify-content: center;
     align-items: center;
 }
@@ -44,6 +47,11 @@
     margin-right: 53px;
     margin-left: 25px;
 }
+.container-date{
+    display: flex;
+    width: 61% !important;
+    justify-content: space-around;
+}
 .content-table-L{
     font-family: 'Open Sans';
     width: 100%;
@@ -55,22 +63,38 @@
     justify-content: flex-start;
 }
 .terminal{
+    width: 26% !important;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* background: cadetblue; */
+    justify-content: flex-end;
     font-family: 'Nunito';
+    align-items: center;
+}
+.terminal select{
+    padding: 3px;
+width: 43%;
 }
 #fechaDesde{
+    width: 48%;
+    /* background: rebeccapurple; */
     display: flex;
     flex-direction: row;
+    padding: 0;
     margin-left: 0;
+    justify-content: center;
 }
-
+#fechaHasta #fechaDesde select {
+    margin-right: 6px;
+    width: 25%;
+    padding: 3px;
+    height: 4vh;
+    appearance: none;
+}
 .button-container {
-    width: 60%;
+    width: 16% !important;
+    padding: 0;
     display: flex;
-    align-content: center;
-    align-items: center;
+    justify-content: center;
 }
 .content-fecha{
     display: flex;
@@ -82,7 +106,7 @@
     align-content: center;
 }
 .search{
-    width: 100%;
+    width: 73%;
 }
 .table-responsive{
     height: 45vh;
@@ -91,4 +115,10 @@
 }
 .table{
     height: 45vh;
+}
+.date-filterVentas #fechaDesde select, .date-filterVentas #fechaHasta select {
+    margin-right: 9px;
+    width: 19%;
+    height: 4vh;
+    padding: 5px;
 }

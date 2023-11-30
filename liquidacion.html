@@ -20,8 +20,8 @@
     <div class="container-fluid" id="content">
         <div class="content-table-L">
             <div class="row date-filterVentas">
-
-                <div class="col-lg-4 col-md-4 col-sm-6" id="fechaDesde">
+                <div class="container-date" style="padding: 0;">
+                <div class="" id="fechaDesde">
                     <label>Desde:</label>
                     <select class="form-control" id="desdeDia">
                     </select>
@@ -30,7 +30,7 @@
                     <select class="form-control" id="desdeAño">
                     </select>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 d-md-flex" id="fechaHasta">
+                <div class="" id="fechaHasta">
                     <label>Hasta</label>
                     <select class="form-control" id="hastaDia">
                     </select>
@@ -39,20 +39,20 @@
                     <select class="form-control" id="hastaAño">
                     </select>
                 </div>
-
-                <div class="col-lg-2 col-md-2 col-sm-12 terminal">
-                    <label class="terminal">Terminal:</label>
+            </div>
+                <div class="terminal">
+                    <label class="">Terminal:</label>
                     <select class="form-control" id="terminal">
                         <option value="TODAS">TODAS</option>
                     </select>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-12 d-lg-flex d-md-flex justify-content-end align-items-center" style="padding: 0;">
-                    <div class=" button-container">
-                        <button class="search" onclick="buscar()" style="font-family: 'Open Sans';">BUSCAR</button>
-                    </div>
+
+                <div class=" button-container">
+                    <button class="search" onclick="buscar()" style="font-family: 'Open Sans';">BUSCAR</button>
                 </div>
+
             </div>
-            <div class="row  table-responsive" style=" overflow-x: none ;">
+            <div class="row table-responsive" style=" overflow-x: none ;">
                 <table class="table table-striped col-lg-12 col-md-12 col-sm-12 miTabla" style="margin-bottom: 0;">
                     <thead>
                         <tr class="col-lg-12 col-md-12 col-sm-12 a">
@@ -113,8 +113,8 @@
                             <td class="blanco"></td>
                             <td class="blanco"></td>
                         </tr>
-                    
-                    
+
+
                     </tbody>
                 </table>
             </div>
@@ -126,11 +126,25 @@
 
 <style>
     /* Estilos para dispositivos móviles */
-    @media (max-width: 767px) {
-        .table-responsive{
+    @media (max-width: 991px) {
+
+        .search {
             width: 100%;
-            overflow-x: auto !important ;
-            height: 66vh !important;
+        }
+
+        .date-filterVentas #fechaDesde select,
+        .date-filterVentas #fechaHasta select {
+            margin-right: 5px;
+            width: 20%;
+            padding: 3px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto !important;
+            height: 98vh !important;
             border-radius: 0;
         }
 
@@ -162,14 +176,26 @@
             white-space: nowrap !important;
         }
 
+        .terminal select {
+            width: 79%;
+        }
+
         .terminal {
+            display: flex;
+            /* background: cadetblue; */
+            padding: 0;
+            width: 100% !important;
             margin-bottom: 10px;
+            align-items: center;
+            justify-content: flex-start;
         }
 
         .button-container {
-            width: 100%;
+            padding: 0;
+            width: 100% !important;
             justify-content: center;
         }
+
         .row {
             display: flex;
             flex-wrap: wrap;
@@ -199,16 +225,27 @@
             box-sizing: border-box;
             margin-bottom: 10px;
             align-items: flex-start;
-            justify-content: flex-start;
+            justify-content: flex-end;
         }
+
         .night-mode .content-table-L {
-    background-color: #1a1a1a;
-}
-.night-mode .terminal {
-    color: #b3b3b3;
-}
-.night-mode .date-filterVentas {
-    background-color: #1a1a1a;
+            background-color: #1a1a1a;
+        }
+
+        .night-mode .terminal {
+            color: #b3b3b3;
+        }
+
+        .night-mode .date-filterVentas {
+            background-color: #1a1a1a;
+        }
+        .container-date {
+    display: flex;
+    width: 100% !important;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
     }
 </style>
