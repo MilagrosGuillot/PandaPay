@@ -198,14 +198,14 @@ html {
     margin: 0;
     width: 100%;
     justify-content: center;
-    height: 43vh;
+    height: 44vh;
     margin-top: 0 !important;
 
 }
 
 .table-responsive{
     display: flex;
-    overflow-x: none !important;
+    /* overflow-x: auto !important; */
     height: 44vh;
     width: 100%;
     flex-direction: column;
