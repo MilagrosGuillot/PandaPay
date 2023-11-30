@@ -79,6 +79,7 @@
     height: 30px;
 }
 .form{
+    margin-bottom: 48px;
     display: flex;
     /* background: rebeccapurple; */
     flex-direction: column;
@@ -233,14 +234,14 @@ input {
 .img-panda {
     width: 21%;
     height: 10vh;
-    background-image: url(./assets/logos/iso.png);
+    background-image: url(iso.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
 .img-logo {
     width: 61%;
     height: 6vh;
-    background-image: url(./assets/logos/logo.png);
+    background-image: url(logo.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -385,4 +386,7 @@ button.next {
     right: 10px;
     background-color: white;
     border-radius: 80px;
+}
+.container-fluid{
+    width: 102%;
 }
