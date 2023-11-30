@@ -135,9 +135,12 @@ height: 35vh;
     border-radius: 5px;
     font-size: 16px;
 }
-
+.button-container {
+    width: 10%;
+}
 #fecha{
     display: flex;
+    margin-left: 0;
     width: 100%;
     align-items: center;
     justify-content: flex-start;
@@ -148,8 +151,10 @@ select{
 }
 #fecha select{
     appearance: none;
-    width: 70px;
-    margin-right: 11px;
+    width: 49px;
+    /* margin-left: 0; */
+    padding: 5px;
+    margin-right: 8px;
 }
 .content-fecha{
     display: flex;
@@ -177,9 +182,7 @@ select{
 .search{
     width:100%;
 }
-.button-container {
-    width: 9%;
-}
+
 .conteiner-register {
 width: 100%;
 }

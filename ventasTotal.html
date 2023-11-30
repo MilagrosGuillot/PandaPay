@@ -19,7 +19,7 @@
     <div class="container-fluid" id="content">
         <div class="content-tableVentasTotal row">
             <div class=" date-filter">
-                <div class="col-lg-2 col-md-1 col-sm-2 content-fecha">
+                <div class="col-lg-2 col-md-2 col-sm-2 content-fecha">
                     <label class="filters" for="fecha">Fecha:</label>
                     <div id="fecha">
                         <select class="form-control" id="Dia">
@@ -34,7 +34,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-lg-1 col-md-1 col-sm-2 filters">
+                <div class="filters">
                     <label for="operacion">Operacion:</label>
                     <select class="form-control select-all" id="operacion" name="operacion">
                         <option value="TODAS">TODAS</option>
@@ -43,7 +43,7 @@
                         <option value="DEVOLUCIÓN">DEVOLUCIÓN</option>
                     </select>
                 </div>
-                <div class="col-lg-1 col-md-1 col-sm-2 filters">
+                <div class=" filters">
                     <label for="status">Status:</label>
                     <select class="form-control" id="status" name="status">
                         <option value="TODAS">TODAS</option>
@@ -53,7 +53,7 @@
                         <option value="RECHAZADA">RECHAZADA</option>
                     </select>
                 </div>
-                <div class="col-lg-1 col-md-1 col-sm-2 filters">
+                <div class=" filters">
                     <label for="tipo">Tipo:</label>
                     <select class="form-control" id="tipo" name="tipo">
                         <option value="TODAS">TODAS</option>
@@ -62,7 +62,7 @@
                         <option value="OTRA">OTRA</option>
                     </select>
                 </div>
-                <div class="col-lg-1 col-md-1 col-sm-2 filters">
+                <div class="filters">
                     <label for="marca">Marca:</label>
                     <select class="form-control" id="marca" name="marca">
                         <option value="TODAS">TODAS</option>
@@ -71,7 +71,7 @@
                         <option value="OTRA">OTRA</option>
                     </select>
                 </div>
-                <div class="col-lg-1 col-md-1 col-sm-2 filters">
+                <div class=" filters">
                     <label for="terminal">Terminal:</label>
                     <select class="form-control" id="terminal" name="terminal">
                         <option value="TODAS">TODAS</option>
@@ -90,8 +90,8 @@
 
         </div>
         <!-- Fila de escritorio (oculta en móviles) -->
-        <div class="row d-none d-lg-block d-md-block conteiner-register d-lg-flex">
-            <div class="col-lg-12 col-md-12 col-sm-12 d-lg-flex justify-content-end">
+        <div class="row d-none d-lg-block d-md-block conteiner-register d-lg-flex d-md-flex">
+            <div class="col-lg-12 col-md-12 col-sm-12 d-lg-flex d-md-flex justify-content-end ">
                 <p class="p-register" id="cantRegistros">Cantidad de registros: 0</p>
             </div>
         </div>
@@ -218,6 +218,16 @@
 
         <style>
             /* Estilos para dispositivos móviles */
+            @media (max-width: 991px) {
+                .button-container {
+                    width: 10%;
+                }
+
+                .date-filter select {
+                    padding: 5px;
+                }
+            }
+
             @media (max-width: 767px) {
                 .content-tableVentasTotal {
                     height: 34vh;
