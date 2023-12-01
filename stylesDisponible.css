@@ -5,6 +5,9 @@
     align-items: center;
     justify-content: flex-start;
 }
+.DineroDisponible{
+    color: #8cc909; font-size: 50px;margin-bottom: 0;
+}
 #content-disponible{
     display: flex;
     width: 42%;

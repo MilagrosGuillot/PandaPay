@@ -11,56 +11,60 @@
 </head>
 
 <body>
-    <div id="content-disponible" ">
+    <div id="content-disponible">
         <div class="content">
-            <h2>Su disponible para pagar servicios es: <p sty
-                 style="color: #8cc909; font-size: 50px;margin-bottom: 0;">$697.17</p>  </h2>
+            <h2>Su disponible para pagar servicios es: <p class="DineroDisponible">
+                    $697.17</p>
+            </h2>
             <div id="dinero"></div>
         </div>
 
     </div>
-
-    <!-- <script>
-       function mostrarDatosJSON() {
-    // Obtén la referencia al elemento donde deseas mostrar los datos
-    var dineroDiv = document.getElementById("dinero");
-
-    // Crea una instancia de objeto XMLHttpRequest
-    var xhr = new XMLHttpRequest();
-
-    // Configura la solicitud GET al archivo JSON (ruta relativa al archivo home.html)
-    xhr.open('GET', 'infoNav.json', true);
-
-    // Configura el evento de carga
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            // Parsea la respuesta JSON
-            var data = JSON.parse(xhr.responseText);
-            if (data.length > 0) {
-                var item = data[0];
-                // Agrega el valor de DINERO EN CUENTA al elemento en el HTML
-                dineroDiv.innerHTML = item['DINERO EN CUENTA'];
-            } else {
-                console.error('El archivo JSON está vacío.');
-            }
-        } else {
-            console.error('Error al cargar el archivo JSON:', xhr.status);
-        }
-    };
-
-    // Maneja errores de red o de solicitud
-    xhr.onerror = function () {
-        console.error('Error de red al cargar el archivo JSON.');
-    };
-
-    // Envía la solicitud
-    xhr.send();
-}
-
-// Llama a la función para mostrar los datos del JSON
-mostrarDatosJSON();
-    </script> -->
-
 </body>
 
 </html>
+
+<style>
+    @media (max-width: 767px) {
+        #contenido {
+            margin-bottom: 0 !important;
+            background: white;
+            height: 10vh !important;
+        }
+
+        .conteiner-infoo {
+            height: 20vh;
+        }
+
+        .container-contenido {
+            height: 16vh !important;
+        }
+
+        .content {
+            height: 10vh;
+        }
+
+        .conteiner-info2 {
+            margin-top: 0 !important;
+        }
+
+        #content-disponible {
+            display: flex;
+            width: 100%;
+            height: 10vh;
+        }
+
+        .content h2 {
+            margin-left: 0;
+            font-size: 14px;
+        }
+
+        .DineroDisponible {
+            font-size: 28px;
+        }
+
+        .night-mode #content-disponible {
+            background-color: #1a1a1a;
+        }
+    }
+</style>
