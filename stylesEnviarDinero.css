@@ -104,3 +104,140 @@
     height: 37px;
     cursor: pointer;
 }
+@media (max-width: 767px) {
+    .conteiner {
+        display: flex;
+        width: 99%;
+        /* gap: 19px; */
+        height: 18vh;
+        /* margin-bottom: 28px; */
+        /* margin-left: 53px; */
+        flex-direction: column;
+    }
+
+    .table-responsive {
+        border-radius: 0;
+        height: 40vh;
+    }
+
+    .table {
+        height: 13vh;
+    }
+
+    .content-liquidacion {
+        display: flex;
+        height: 5vh;
+        background-color: #233202;
+        width: 90% !important;
+        color: rgb(255, 255, 255);
+        border-radius: 23px;
+        margin-left: 0 !important;
+        align-items: center;
+        font-weight: bold;
+        /* height: 50vh; */
+        font-size: 17px;
+        font-family: 'Open Sans';
+        justify-content: center;
+    }
+
+    td {
+        width: 10%;
+    }
+
+    .miTabla {
+        height: 45vh;
+        border-radius: 0;
+    }
+
+    .button-container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search {
+        height: 5vh;
+        width: 93%;
+    }
+
+    th {
+        margin-left: 11px;
+    }
+
+
+    .content-table-E {
+        width: 101%;
+        margin-top: 0;
+        height: 92vh !important;
+        background-color: white;
+    }
+
+    .search-filter {
+        width: 100%;
+        gap: 12px;
+        /* background: green; */
+        height: 26vh;
+        flex-direction: column;
+    }
+
+    .search-filter input {
+        height: 5vh;
+        font-family: 'Nunito';
+        margin-left: 0;
+        width: 89%;
+    }
+
+    .row {
+        margin: 0 !important;
+    }
+
+    .content-parrafo {
+        display: flex;
+        background-color: white;
+        width: 89% !important;
+        margin-top: 14px;
+        height: 8vh;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #saldoCuenta {
+        margin-left: 0px;
+        color: black;
+        width: 73%;
+        font-size: 15px;
+
+    }
+
+    #content .table-container {
+        margin-top: 14px !important;
+        height: 38vh;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #numeroCuenta {
+        font-size: 30px;
+        color: #8cc909;
+    }
+
+    .night-mode .content-table-E {
+        background-color: #1a1a1a;
+    }
+
+    .night-mode .content-parrafo {
+        color: white;
+        background-color: #1a1a1a;
+    }
+
+    .night-mode #saldoCuenta {
+        color: white;
+
+    }
+
+    .night-mode .search-filter {
+        background-color: #1a1a1a;
+    }
+}
