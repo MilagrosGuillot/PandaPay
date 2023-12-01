@@ -27,3 +27,49 @@
     align-items: flex-start;
     justify-content: center;
 }
+@media (max-width: 767px) {
+    #contenido {
+        margin-bottom: 0 !important;
+        background: white;
+        height: 10vh !important;
+    }
+    .night-mode #content-disponible {
+        background-color: #1a1a1a;
+    }
+    .conteiner-infoo {
+        height: 20vh;
+    }
+
+    .container-contenido {
+        display: flex;
+        margin-bottom: 0 !important;
+        justify-content: center !important;
+        height: 16vh !important;
+    }
+
+    .content {
+        display: flex;
+        align-items: flex-end;
+        width: 82%;
+        height: 10vh;
+    }
+
+    .conteiner-info2 {
+        margin-top: 0 !important;
+    }
+
+    #content-disponible {
+        display: flex;
+        width: 100%;
+        height: 10vh;
+    }
+
+    .content h2 {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    .DineroDisponible {
+        font-size: 28px;
+    }
+}

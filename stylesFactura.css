@@ -8,20 +8,21 @@
 
 .content-elementos input {
     display: inline-block;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .button-container {
     width: 10% !important;
     margin-left: 0;
 }
+
 .content-elementos button {
     display: inline-block;
     border-radius: 30px;
     font-family: 'Open Sans';
     color: white;
     border: none;
-    background-color:#8cc909;
+    background-color: #8cc909;
 }
 
 #content-factura {
@@ -34,10 +35,12 @@
     height: 16vh;
     flex-direction: row;
 }
-#search{
+
+#search {
     width: 100%;
     height: 4vh;
 }
+
 .content h1 {
     margin-bottom: 20px;
     margin-right: 10px;
@@ -54,10 +57,12 @@
     margin-left: 15px;
     background-color: #e6e6e6;
 }
-.content-elementos{
+
+.content-elementos {
     display: flex;
 }
-.content{
+
+.content {
     width: 100%;
     display: flex;
     height: 16vh;
@@ -65,7 +70,93 @@
     flex-direction: column;
     justify-content: center;
 }
+
 #contenido {
     width: 100%;
 
+}
+
+@media (max-width: 767px) {
+    #contenido {
+        display: flex;
+        justify-content: flex-start;
+        height: 19vh !important;
+        width: 100%;
+        /* font-size: 18px; */
+    }
+
+    #content-factura {
+        display: flex;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 21vh;
+    }
+.container-contenido{
+    margin-bottom: 0 !important;
+}
+    .content {
+        width: 100%;
+        margin-top: 0;
+        display: flex;
+        background: white;
+        height: 22vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-end;
+    }
+
+    .content-elementos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        background: white;
+        align-items: center;
+    }
+
+    .content-elementos input {
+        width: 86%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #search {
+        width: 100%;
+        height: 5vh;
+    }
+
+    .button-container {
+        margin-top: 13px;
+        display: flex;
+        width: 86% !important;
+        /* height: 5vh; */
+        margin-left: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content h1 {
+        display: flex;
+        width: 91%;
+        margin-right: 0px;
+        /* margin-left: 0px; */
+        margin-bottom: 0;
+        font-size: 15px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .night-mode #content-factura {
+        background-color: #1a1a1a;
+    }
+
+    .night-mode .content {
+        background-color: #1a1a1a;
+    }
+
+    .night-mode .content-elementos {
+        background-color: #1a1a1a;
+    }
 }

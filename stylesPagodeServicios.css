@@ -67,10 +67,16 @@
     align-items: center;
     font-size: 24px;
 }
-.content-1PagoServicios{
+
+.content-1PagoServicios {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     padding: 15px;
     border-bottom: 5px solid #706f6f;
 }
+
 .conteiner-info2 {
     font-family: 'Open Sans';
     border-top-left-radius: 30px;
@@ -113,10 +119,12 @@
     flex-direction: column;
     align-items: flex-start;
 }
-#contenidoh2{
+
+#contenidoh2 {
     height: 6vh;
     width: 99%;
 }
+
 /* .container-contenido{
     display: flex;
     height: 40vh;
@@ -127,6 +135,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    justify-content: center;
     margin-bottom: 34px;
     align-items: center;
 }
@@ -135,6 +144,140 @@
     width: 15%;
     margin-left: 5px;
 }
-.table{
+
+.table {
     height: 8vh;
+}
+
+@media (max-width: 991px) {
+    .service-image img {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .service-image {
+        display: flex;
+        width: 86%;
+        height: 41vh;
+        padding: 0;
+        padding-left: 32px !important;
+        padding-right: 68px !important;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .conteiner-infoo {
+        height: 96vh;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .conteiner-info2 {
+        width: 100%;
+        height: 14vh;
+        margin-top: 35px;
+        height: 12vh;
+        /* height: 7vh; */
+        border-radius: 0;
+
+    }
+    #contenidoh2 h2{
+    width: 93% !important;
+
+    }
+    #contenidoh2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        align-items: center;
+    justify-content: center;
+    }
+
+    .content-table {
+        width: 101%;
+        height: 96vh;
+    }
+
+    .content-1PagoServicios {
+        background-color: #f2f2f2;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #contenido {
+
+        align-items: center;
+        height: 6vh;
+        width: 90%;
+        padding: 0;
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* font-size: 18px; */
+    }
+
+    .container-contenido {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 54vh;
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .title {
+        font-size: 15px;
+        margin-left: 0px;
+        width: 87%;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .parrafo2 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+    }
+
+    .input {
+        padding-left: 10px;
+        height: 4vh;
+        background-color: #e6e6e6;
+        width: 91% !important;
+        margin-left: 0px;
+    }
+
+    .content-1-PagoServicios button {
+        width: 31%;
+        font-size: 16px;
+    }
+
+    #content {
+        width: 107% !important;
+    }
+
+    .service-image img {
+        margin: 5px;
+        width: 29%;
+        height: 9vh;
+
+    }
+
+    #h2-info2 {
+        font-size: 15px;
+    }
 }
