@@ -78,7 +78,6 @@
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     display: flex;
-    padding: 5px;
     flex-direction: column;
     background-color: rgb(254, 254, 254);
     width: 100%;
