@@ -183,12 +183,9 @@
 
     .conteiner-info2 {
         width: 100%;
-        height: 14vh;
+        height: 9vh ;
         margin-top: 35px;
-        height: 12vh;
-        /* height: 7vh; */
         border-radius: 0;
-
     }
     #contenidoh2 h2{
     width: 93% !important;
@@ -278,5 +275,35 @@
 
     #h2-info2 {
         font-size: 15px;
+    }
+    .night-mode .content-table {
+        background-color: #1a1a1a;
+    }
+
+    .night-mode .conteiner-info {
+        background-color: #1a1a1a;
+    }
+
+    .night-mode .container-contenido {
+        background-color: #1a1a1a;
+    }
+
+    .night-mode .conteiner-info2 {
+        background-color: #333333;
+    }
+
+    .night-mode .parrafo2 {
+        background-color: #1a1a1a;
+    }
+
+    .night-mode .content-1-PagoServicios {
+        background-color: #1a1a1a;
+    }
+
+    .night-mode .conteiner-infoo {
+        background-color: #1a1a1a;
+    }
+    .night-mode .content-1PagoServicios {
+        background-color: #333333;
     }
 }
