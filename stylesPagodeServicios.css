@@ -36,10 +36,10 @@
     width: 95%;
     border-radius: 23px;
     height: 5vh;
-
+    font-family: 'Nunito';
     border: none;
     /* margin-left: 30px; */
-    background-color: #d3d2d2;
+    background-color: #e6e6e6;
 }
 
 .title {
@@ -254,10 +254,8 @@
     }
 
     .input {
-        font-family: 'Nunito';
         padding-left: 10px;
         height: 4vh;
-        background-color: #e6e6e6;
         width: 91% !important;
         margin-left: 0px;
     }
