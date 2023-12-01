@@ -87,16 +87,18 @@
 
     #content-factura {
         display: flex;
-        width: 100%;
+        width: 92%;
         padding: 0 !important;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 21vh;
     }
-.container-contenido{
-    margin-bottom: 0 !important;
-}
+
+    .container-contenido {
+        margin-bottom: 0 !important;
+    }
+
     .content {
         width: 100%;
         margin-top: 0;
