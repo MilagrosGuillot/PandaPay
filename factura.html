@@ -28,6 +28,8 @@
     /* Estilos para dispositivos móviles */
     @media (max-width: 767px) {
         #contenido {
+            display: flex;
+            justify-content: flex-start;
     height: 14vh !important;
     width: 100%;
     /* font-size: 18px; */
@@ -37,14 +39,15 @@
     width: 100%;
     background: cadetblue;
     display: flex;
-    align-items: flex-start;
-    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    height: 19vh;
 }
 .content {
     width: 100%;
     margin-top: 19px;
     display: flex;
-    height: 13vh;
+    height: 19vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -57,8 +60,9 @@
     align-items: center;
 }
         .content-elementos input {
-    width: 92%;
+    width: 86%;
     margin-left: 0;
+    margin-right: 0;
 }
 
 #search {
@@ -68,7 +72,7 @@
 .button-container {
     margin-top: 13px;
     display: flex;
-    width: 90% !important;
+    width: 86% !important;
     /* height: 5vh; */
     margin-left: 0;
     align-items: center;
