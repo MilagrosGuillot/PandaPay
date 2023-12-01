@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
     height: 39vh;
@@ -67,18 +67,22 @@
     align-items: center;
     font-size: 24px;
 }
-
+.content-1PagoServicios{
+    padding: 15px;
+    border-bottom: 5px solid #706f6f;
+}
 .conteiner-info2 {
     font-family: 'Open Sans';
-    border-top-left-radius: 20px;
-    border-bottom: 5px solid #706f6f;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     display: flex;
     padding: 5px;
+    flex-direction: column;
     background-color: rgb(254, 254, 254);
     width: 100%;
-    flex-direction: row;
-    height: 7vh;
+    height: 17vh;
     justify-content: flex-start;
     margin-top: 42px;
 
@@ -105,14 +109,13 @@
 }
 
 #contenido {
+    width: 97%;
     display: flex;
     flex-direction: column;
-    width: 95%;
     align-items: flex-start;
 }
 #contenidoh2{
     height: 6vh;
-
     width: 99%;
 }
 /* .container-contenido{
@@ -132,4 +135,7 @@
 .button-container {
     width: 15%;
     margin-left: 5px;
+}
+.table{
+    height: 8vh;
 }

@@ -1,20 +1,25 @@
-.content{
-    height: 17vh;
+.content {
+    display: flex;
+    height: 16vh;
     width: 100%;
+    align-items: center;
+    justify-content: flex-start;
 }
 #content-disponible{
     display: flex;
     width: 42%;
-    height: 19vh;
+    height: 16vh;
     /* margin-bottom: 19px; */
     flex-direction: row;
     align-items: flex-end;
+    justify-content: center;
 }
 .content h2 {
     margin-left:15px;
     font-size: 25px;
 }
 #contenido{
+    width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
