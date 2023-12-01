@@ -254,6 +254,7 @@
     }
 
     .input {
+        font-family: 'Nunito';
         padding-left: 10px;
         height: 4vh;
         background-color: #e6e6e6;
