@@ -15,39 +15,56 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <style>
         /* Estilos para dispositivos de escritorio */
-
+        @media (min-width: 576px) {
+            .mobile-fields {
+                display: none;
+                /* Oculta los campos en dispositivos de escritorio */
+            }
+        }
 
         /* Estilos para dispositivos móviles */
-        @media (max-width: 576px) {
-            .link-tree {
-                display: none;
+        @media (max-width: 767px) {
+            .button {
+                height: 6vh;
+                font-size: 20px;
+                width: 67%;
             }
 
             .mobile-fields {
                 display: block;
                 /* Muestra los campos en dispositivos móviles */
             }
-.container-fluid{
+
+            /* .container-fluid{
     width: 102%;
-}
+} */
             .right-side {
                 border: none
             }
-            
-            .button{
-                height: 5vh;
-    width: 60%;
 
-            }
             .terms {
                 display: flex;
-                flex-direction: column;
+                flex-direction: flex;
                 font-weight: normal;
                 justify-content: center;
                 align-content: center;
                 align-items: flex-start;
                 margin-bottom: 10px;
-                margin-left: 20px;
+                /* margin-left: 20px; */
+            }
+
+            .login-form {
+                justify-content: space-around;
+                height: 69vh;
+            }
+
+            .text-form {
+                margin-bottom: 30px;
+                font-size: 14px;
+            }
+
+            .options {
+                margin-bottom: 0px;
             }
 
             .form {
@@ -60,25 +77,13 @@
 
             .terms label,
             .mobile-fields label {
-                font-size: 12px;
+                font-size: 11px;
                 color: #888888;
                 white-space: nowrap;
                 margin-left: 5px;
                 /* Añadido para dar espacio al checkbox */
             }
 
-            .terms input,
-            .mobile-fields input {
-                font-size: 14px;
-                color: #888888;
-                width: auto;
-                /* Ajustar el ancho automáticamente */
-            }
-
-            .terms .mobile-fields {
-                margin-top: 5px;
-                /* Espacio entre los campos en dispositivos móviles */
-            }
         }
     </style>
 </head>
@@ -88,11 +93,10 @@
         <p class="text-form">¡Hola! Te damos la bienvenida a <span class="welcome"><span class="high">PANDA</span><span
                     class="highlight" style="color: #8cc909;">PAY</span></span>.<br>Completá tus datos y empezá a
             operar.</p>
-        <form action="home.html">
+        <form action="home.html" style="width: 100%;">
             <div class="form">
-                <input class="form-control" style="margin-bottom: 30px" type="text" placeholder="Email" required
-                    minlength="10">
-                <input class="form-control" style="margin-bottom: 30px;" type="password" placeholder="Clave" required
+                <input class="" style="margin-bottom: 24px" type="text" placeholder="Email" required minlength="10">
+                <input class="" style="margin-bottom: 24px;" type="password" placeholder="Clave" required
                     minlength="10">
                 <div class="terms">
                     <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
@@ -108,7 +112,8 @@
                 <button type="submit" class="button">INGRESAR</button>
             </div>
         </form>
-        <p><a href="https://www.pandapay.com.ar/" class="link-tree clave" target="_blank">Olvidé mi clave</a></p>
+        <p style="margin-bottom: 0;"><a href="https://www.pandapay.com.ar/" class="link-tree clave"
+                target="_blank">Olvidé mi clave</a></p>
     </div>
     <div class="verde">
     </div>

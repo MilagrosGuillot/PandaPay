@@ -108,7 +108,7 @@ body {
 .carousel-item img {
     /* width: 100%; */
     padding: 0;
-    height: 100vh;
+    height: 93vh;
     margin: 0; /* Elimina los márgenes */
     padding: 0; /* Elimina el relleno */
 }
@@ -136,13 +136,20 @@ body {
     background-size: cover;
     min-height: 100%;
 }
-
+.container-link{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    /* background: cadetblue; */
+    height: 9vh;
+    width: 100%;
+}
 .right-side {
     flex: 1;
     display: flex;
     flex-direction: column;
     background-color: #f2f2f2;
-    padding: 40px;
+    padding: 20px;
     border-left: 15px solid #706f6f;
     flex-grow: 1;
     justify-content: center;
@@ -172,7 +179,8 @@ body {
 .option {
     /* background: red; */
     text-align: left;
-    padding: 10px 20px;
+    padding: 10px 6px;
+    margin-right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -225,10 +233,11 @@ input {
     justify-content: center;
     align-items: center;
     align-content: center;
-    height: 7vh;
-    width: 54%;
+    height: 6vh;
+    width: 57%;
+    margin-bottom: 10px;
     border-radius: 33px;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
 }
 .img-panda {
@@ -249,7 +258,8 @@ input {
     display: flex;
     width: 100%;
     /* max-height: 80%; */
-    height: 23vh;
+    height: 17vh;
+    margin-left: 0;
     flex-direction: row;
     align-content: center;
     justify-content: center;
@@ -257,23 +267,23 @@ input {
 }
 .terms {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     font-weight: normal;
     justify-content: center;
     align-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 .terms label {
-    margin-right: 10px;
-    font-size: 9px;
+    margin-left: 10px;
+    font-size: 11px;
     color: #888888;
     white-space: nowrap;
 }
 
 .terms input {
-    font-size: 14px;
+    padding: 7px;
+    margin-top: 0;
     color: #888888;
-    width: 20px;
 }
 
 /* 
@@ -298,8 +308,8 @@ input {
     width: 100%;
     font-family: 'Open Sans';
     color: #706f6f;
-    font-size: 18px;
-    margin-bottom: 61px;
+    font-size: 20px;
+    margin-bottom: 54px;
 }
 
 .footer {
@@ -387,6 +397,12 @@ button.next {
     background-color: white;
     border-radius: 80px;
 }
+
 .container-fluid{
-    width: 102%;
+    flex-direction: column;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
