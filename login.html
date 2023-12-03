@@ -7,14 +7,13 @@
     <title>PANDAPAY</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="stylesHome.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../../css/stylesHome.css">
+    <link rel="stylesheet" href="../../../css/style.css">
     <!-- Enlace a Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Estilos para dispositivos de escritorio */
         @media (min-width: 576px) {
             .mobile-fields {
                 display: none;
@@ -23,48 +22,32 @@
         }
 
         /* Estilos para dispositivos móviles */
-        @media (max-width: 767px) {
-            .button {
-                height: 6vh;
-                font-size: 20px;
-                width: 67%;
+        @media (max-width: 576px) {
+            .link-tree {
+                display: none;
             }
 
             .mobile-fields {
-                display: block;
+                display: flex !important;
+                flex-direction: row;
+                align-items: center;
+                height: 4vh;
+                justify-content: center;
                 /* Muestra los campos en dispositivos móviles */
             }
 
-            /* .container-fluid{
-    width: 102%;
-} */
             .right-side {
                 border: none
             }
 
             .terms {
                 display: flex;
-                flex-direction: flex;
+                flex-direction: column;
                 font-weight: normal;
                 justify-content: center;
                 align-content: center;
-                align-items: flex-start;
-                margin-bottom: 10px;
-                /* margin-left: 20px; */
-            }
-
-            .login-form {
-                justify-content: space-around;
-                height: 69vh;
-            }
-
-            .text-form {
-                margin-bottom: 30px;
-                font-size: 14px;
-            }
-
-            .options {
-                margin-bottom: 0px;
+                align-items: center;
+                margin-bottom: 0;
             }
 
             .form {
@@ -72,49 +55,99 @@
             }
 
             .ingresar {
-                margin-bottom: 19px;
+                margin-bottom: 0;
             }
 
             .terms label,
             .mobile-fields label {
-                font-size: 11px;
+                font-size: 12px;
                 color: #888888;
                 white-space: nowrap;
                 margin-left: 5px;
-                /* Añadido para dar espacio al checkbox */
+
             }
 
+            .terms input,
+            .mobile-fields input {
+                font-size: 14px;
+                color: #888888;
+                width: auto;
+            }
+
+            .text-form {
+                width: 100%;
+                font-family: 'Open Sans';
+                color: #706f6f;
+                font-size: 14px;
+                margin-bottom: 24px;
+            }
+
+            .img-logo {
+                width: 53%;
+                height: 7vh;
+            }
+
+            .image-container {
+                display: flex;
+                width: 100%;
+                padding-top: 98px;
+    padding-bottom: 98px;
+            }
+
+            .login-form {
+                display: flex;
+                align-items: center;
+                /* background-color: gray; */
+                justify-content: space-around;
+            }
+        }
+
+        .button {
+            font-size: 21px;
+            height: 6vh;
+            width: 57%;
+            margin-bottom: 0;
+        }
+
+        .clave {
+            margin-top: 13px;
         }
     </style>
 </head>
 
 <body>
     <div class="container-fluid text-center">
+        <div class="arbol">
         <p class="text-form">¡Hola! Te damos la bienvenida a <span class="welcome"><span class="high">PANDA</span><span
                     class="highlight" style="color: #8cc909;">PAY</span></span>.<br>Completá tus datos y empezá a
             operar.</p>
-        <form action="home.html" style="width: 100%;">
+        <form class="formulario" action="home.html" style="width: 100%;">
             <div class="form">
-                <input class="" style="margin-bottom: 24px" type="text" placeholder="Email" required minlength="10">
-                <input class="" style="margin-bottom: 24px;" type="password" placeholder="Clave" required
-                    minlength="10">
+                <input class="" style="margin-bottom: 25px" type="text" placeholder="Email" required minlength="10">
+                <input class="" style="margin-bottom: 8px;" type="password" placeholder="Clave" required minlength="10">
                 <div class="terms">
-                    <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
-                    <label class="form-check-label" for="terms">ACEPTO TERMINOS Y CONDICIONES</label>
+                    <div class="contenti">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label class="form-check-label" for="terms">ACEPTO TERMINOS Y CONDICIONES</label>
+                    </div>
+                    <div class="mobile-fields  d-lg-none d-md-none d-sm-block d-sm-flex">
+                        <input class="" type="checkbox" id="rememberTerms" name="rememberTerms">
+                        <label class="form-check-label" for="rememberTerms">RECORDAR USUARIO Y CONTRASEÑA</label>
+                    </div>
                 </div>
                 <!-- Nuevos campos que solo se mostrarán en dispositivos móviles -->
-                <div class="mobile-fields terms">
-                    <input class="form-check-input" type="checkbox" id="rememberTerms" name="rememberTerms">
-                    <label class="form-check-label" for="rememberTerms">RECORDAR USUARIO Y CONTRASEÑA</label>
-                </div>
+
             </div>
             <div class="ingresar">
                 <button type="submit" class="button">INGRESAR</button>
             </div>
         </form>
-        <p style="margin-bottom: 0;"><a href="https://www.pandapay.com.ar/" class="link-tree clave"
-                target="_blank">Olvidé mi clave</a></p>
+        <div>
+
+        </div>
+        <a href="https://www.pandapay.com.ar/" class="clave" target="_blank">Olvidé mi clave</a>
     </div>
+</div>
     <div class="verde">
     </div>
 </body>

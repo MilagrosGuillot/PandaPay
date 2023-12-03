@@ -61,11 +61,10 @@
     background-color: #8cc909;
     width: 20%;
     height: 8vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 23px;
 }
 
 .content-1PagoServicios {
@@ -152,6 +151,9 @@
 @media (max-width: 991px) {
     .service-image img {
         margin: 10px;
+    }
+    .content-1-PagoServicios button {
+        font-size: 20px;
     }
 }
 
