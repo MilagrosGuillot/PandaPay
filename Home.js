@@ -269,7 +269,7 @@ function selectOption(button) {
         spanAnterior.style.fontWeight = 'normal';
         itemAnterior.style.background = 'none'; 
         itemAnterior.style.borderLeft = 'none';
-       
+        spanAnterior.style.color = ''
     });
 
     if (botonActivo) {
@@ -326,7 +326,14 @@ function selectOption(button) {
     var itemActual = button.closest('.nav-item');
     var spanActual = itemActual.querySelector('span');
     spanActual.style.fontWeight = 'bold';
-    spanActual.style.color = 'black';
+        spanActual.style.color = 'black';
+        if (document.documentElement.classList.contains('night-mode')) {
+            if (botonActivo === button) {
+                spanActual.style.color = 'black'; // Si el botón actual es igual al botón activo, el color es negro
+            } else {
+                spanActual.style.color = 'white'; // Si no es el botón activo, el color es blanco
+            }
+        }
     itemActual.style.background = '#ddd'; 
     itemActual.style.borderLeft = '9px solid #8cc909'; 
     console.log(nombrePagina);
@@ -443,6 +450,16 @@ function toggleNightMode(event) {
     }
 
     document.documentElement.classList.toggle('night-mode');
+    var spans = document.querySelectorAll('.navbar-nav .nav-item span');
+
+    // Itera sobre los elementos de texto y ajusta el color según el modo nocturno
+    spans.forEach(function (span) {
+        if (document.documentElement.classList.contains('night-mode')) {
+            span.style.color = 'white'; // Color del texto en modo nocturno
+        } else {
+            span.style.color = 'black'; // Color del texto en modo diurno
+        }
+    });
 }
 
 function obtenerFechaYHora() {
