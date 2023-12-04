@@ -52,9 +52,7 @@
 .PagoServicios {
     height: 5vh;
 }
-.content-1-PagoServicios .option {
-    background-color: #ffffff; /* Color de fondo por defecto */
-}
+
 
 .content-1-PagoServicios .selected {
     background-color: #8cc909; /* Color de fondo cuando está seleccionado (verde en este caso) */
@@ -153,6 +151,13 @@
 
 .table {
     height: 8vh;
+}
+.night-mode .content-1PagoServicios option{
+    background-color: #333333 !important;
+}
+
+.content-1-PagoServicios .selected {
+ color: black;
 }
 
 @media (max-width: 991px) {
@@ -312,7 +317,6 @@
     .night-mode .conteiner-infoo {
         background-color: #1a1a1a;
     }
-    .night-mode .content-1PagoServicios {
-        background-color: #333333;
-    }
+  
+
 }
