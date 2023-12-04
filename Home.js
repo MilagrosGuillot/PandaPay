@@ -69,7 +69,7 @@ function ventasInicio() {
             tdFecha.text(tablaInicio[index].fecha);
             tdAprobados.text(tablaInicio[index].aprobadas);
             tdTotal.text("$ " + tablaInicio[index].total);
-            tr.addClass("InicioTr"); // Usar addClass en lugar de classList
+            tr.addClass("InicioTr"); 
             tr.append(tdFecha);
             tr.append(tdAprobados);
             tr.append(tdTotal);
@@ -100,19 +100,15 @@ function reiniciarIntervalo() {
 }
 //---------------------------------------------------------------------------------------------------------------
     function handleClick() {
-        // Get input values
         const nombre = document.querySelector('input[placeholder="Destino nombre"]').value;
         const cbuCvu = document.querySelector('input[placeholder="CBU/CVU"]').value;
         const alias = document.querySelector('input[placeholder="ALIAS"]').value;
         const cuit = document.querySelector('input[placeholder="CUIT"]').value;
 
-        // Reference to the table's tbody
         const tableBody = document.getElementById('enviarDinero');
 
-        // Create a new table row
         const newRow = document.createElement('tr');
         
-        // Add table data (columns) to the row
         newRow.innerHTML = `
             <td>${nombre}</td>
             <td>${cbuCvu}</td>
@@ -121,10 +117,8 @@ function reiniciarIntervalo() {
             <td><img src="../../../css/assets/iconsTable/tacho_gris.png" alt="Borrar" onclick="deleteRow(this)" class="delete-icon"></td>
         `;
 
-        // Append the new row to the table
         tableBody.appendChild(newRow);
 
-        // Clear input fields
         document.querySelector('input[placeholder="Destino nombre"]').value = '';
         document.querySelector('input[placeholder="CBU/CVU"]').value = '';
         document.querySelector('input[placeholder="ALIAS"]').value = '';
@@ -132,7 +126,6 @@ function reiniciarIntervalo() {
     }
 
     function deleteRow(img) {
-        // Delete the row when the delete icon is clicked
         const row = img.closest('tr');
         row.remove();
     }
@@ -164,8 +157,6 @@ function reiniciarIntervalo() {
                 } else {
                     tdSTS.append('<img src="cruz_roja.png" alt="Cruz Roja">');
                 }
-    
-                // Agregar imágenes según el valor de "borrar"
                 var borrarValue = tabla[index].borrar;
                 var tdBorrar = $("<td>");
                 if (borrarValue === "Borrar1") {
@@ -173,8 +164,6 @@ function reiniciarIntervalo() {
                 } else {
                     tdBorrar.append('<img src="tacho_rojo.png" alt="Tacho Rojo">');
                 }
-    
-                // Agregar imágenes según el valor de "rec"
                 var recValue = tabla[index].rec;
                 var tdRec = $("<td>");
                 if (recValue === "Rec1") {
@@ -258,7 +247,6 @@ function ocultarElementosEnMovil() {
     const contentDinero = document.querySelector('.contentDinero');
     const dineroEnCuentaMobile = document.querySelector('#dinero-en-cuenta-mobile');
 
-    // Oculta los elementos agregando la clase 'oculto'
     contentMerchant.classList.add('oculto');
     contentDinero.classList.add('oculto');
     dineroEnCuentaMobile.classList.add('oculto');
@@ -269,19 +257,17 @@ function mostrarElementosEnMovil() {
     const contentDinero = document.querySelector('.contentDinero');
     const dineroEnCuentaMobile = document.querySelector('#dinero-en-cuenta-mobile');
 
-    // Muestra los elementos quitando la clase 'oculto'
     contentMerchant.classList.remove('oculto');
     contentDinero.classList.remove('oculto');
     dineroEnCuentaMobile.classList.remove('oculto');
 }
 
 function selectOption(button) {
-    // Restablece el estilo del elemento <span> y del contenedor .nav-item anterior
     var itemsAnteriores = document.querySelectorAll('.navbar-nav .nav-item');
     itemsAnteriores.forEach(function (itemAnterior) {
         var spanAnterior = itemAnterior.querySelector('span');
         spanAnterior.style.fontWeight = 'normal';
-        itemAnterior.style.background = 'none'; // Restablece el fondo gris
+        itemAnterior.style.background = 'none'; 
         itemAnterior.style.borderLeft = 'none';
        
     });
@@ -332,10 +318,8 @@ function selectOption(button) {
     }
 
     if (nombrePagina !== 'inicio') {
-        // Llama a la función para ocultar los elementos si no estamos en la página de inicio
         ocultarElementosEnMovil();
     } else {
-        // Llama a la función para mostrar los elementos y establecer 'activado' cuando volvemos a la página de inicio
         mostrarElementosEnMovil();
     }
 
@@ -343,14 +327,13 @@ function selectOption(button) {
     var spanActual = itemActual.querySelector('span');
     spanActual.style.fontWeight = 'bold';
     spanActual.style.color = 'black';
-    itemActual.style.background = '#ddd'; // Aplica el fondo gris al contenedor .nav-item
-    itemActual.style.borderLeft = '9px solid #8cc909'; // Aplica el borde izquierdo verde al contenedor .nav-item
+    itemActual.style.background = '#ddd'; 
+    itemActual.style.borderLeft = '9px solid #8cc909'; 
     console.log(nombrePagina);
     cargarPagina(nombrePagina);
 }
 
 function cargarPagina(nombrePagina) {
-    // Verificar si la página es "inicio"
     if (nombrePagina === "inicio") {
         document.getElementById("inicioicon").click();
     }
@@ -358,18 +341,16 @@ function cargarPagina(nombrePagina) {
         cargarpago();
         return;
     }
-    // Verificar si la página es "comprobante"
     if (nombrePagina === "comprobante") {
         cargarComprobante();
         return;
     }
-    // Verificar si la página es "liquidacion"
     if (nombrePagina === "liquidacion") {
         cargarLiquidacion();
         return;
     }
     
-    // Realizar la carga común de la página
+    // carga común de la página
     $.ajax({
         type: "GET",
         url: nombrePagina + ".html",
@@ -479,34 +460,27 @@ function actualizarFechaYHora() {
     const fechaHoraElementoMobile = document.getElementById('fechaActualMobile');
 
     if (fechaHoraElementoDesktop) {
-        // Crear un elemento p
+
         const pElementDesktop = document.createElement('p');
 
-        // Asignar el contenido de obtenerFechaYHora al elemento p
         pElementDesktop.textContent = obtenerFechaYHora();
 
-        // Crear un elemento p para el precio
         const precioElementoDesktop = document.createElement('p');
         precioElementoDesktop.textContent = '$0.00';
 
-        // Agregar los elementos p al contenedor fechaHoraElementoDesktop
         fechaHoraElementoDesktop.innerHTML = '';
         fechaHoraElementoDesktop.appendChild(pElementDesktop);
         fechaHoraElementoDesktop.appendChild(precioElementoDesktop);
     }
 
     if (fechaHoraElementoMobile) {
-        // Crear un elemento p
         const pElementMobile = document.createElement('p');
 
-        // Asignar el contenido de obtenerFechaYHora al elemento p
         pElementMobile.textContent = obtenerFechaYHora();
 
-        // Crear un elemento p para el precio
         const precioElementoMobile = document.createElement('p');
         precioElementoMobile.textContent = '$0.00';
 
-        // Agregar los elementos p al contenedor fechaHoraElementoMobile
         fechaHoraElementoMobile.innerHTML = '';
         fechaHoraElementoMobile.appendChild(pElementMobile);
         fechaHoraElementoMobile.appendChild(precioElementoMobile);
