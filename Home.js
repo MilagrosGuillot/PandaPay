@@ -479,28 +479,41 @@ function actualizarFechaYHora() {
     const fechaHoraElementoMobile = document.getElementById('fechaActualMobile');
 
     if (fechaHoraElementoDesktop) {
-        fechaHoraElementoDesktop.textContent = obtenerFechaYHora();
+        // Crear un elemento p
+        const pElementDesktop = document.createElement('p');
 
-        const brElementDesktop = document.createElement('br');
-        fechaHoraElementoDesktop.appendChild(brElementDesktop);
+        // Asignar el contenido de obtenerFechaYHora al elemento p
+        pElementDesktop.textContent = obtenerFechaYHora();
 
+        // Crear un elemento p para el precio
         const precioElementoDesktop = document.createElement('p');
         precioElementoDesktop.textContent = '$0.00';
+
+        // Agregar los elementos p al contenedor fechaHoraElementoDesktop
+        fechaHoraElementoDesktop.innerHTML = '';
+        fechaHoraElementoDesktop.appendChild(pElementDesktop);
         fechaHoraElementoDesktop.appendChild(precioElementoDesktop);
     }
 
     if (fechaHoraElementoMobile) {
-        fechaHoraElementoMobile.textContent = obtenerFechaYHora();
+        // Crear un elemento p
+        const pElementMobile = document.createElement('p');
 
+        // Asignar el contenido de obtenerFechaYHora al elemento p
+        pElementMobile.textContent = obtenerFechaYHora();
+
+        // Crear un elemento p para el precio
         const precioElementoMobile = document.createElement('p');
         precioElementoMobile.textContent = '$0.00';
+
+        // Agregar los elementos p al contenedor fechaHoraElementoMobile
+        fechaHoraElementoMobile.innerHTML = '';
+        fechaHoraElementoMobile.appendChild(pElementMobile);
         fechaHoraElementoMobile.appendChild(precioElementoMobile);
     }
 
     reiniciarIntervalo();
 }
-
-
 
 
 let slideIndex = 0;

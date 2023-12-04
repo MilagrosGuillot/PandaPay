@@ -69,18 +69,18 @@
                     </div>
                 </div>
                 <!-- Fila para la vista de escritorio -->
-                <div class="row d-lg-block d-md-block d-none d-sm-none d-lg-flex d-md-flex">
-                    <div class="col-lg-2 col-md-2">
+                <div class="row d-lg-block d-md-block d-none d-sm-none d-lg-flex d-md-flex justify-content-md-around">
+                    <div class="col-lg-2 col-md-1 p-md-0">
                         <div class="image-container" value="Inici" onclick="Abrir()">
                             <div class="img-panda"></div>
-                            <div class="img-logo"></div>
+                            <div class="img-logo d-lg-block d-md-none"></div>
                         </div>
                     </div>
-                    <div class="col-lg-8 col-md-8 are">
+                    <div class="col-lg-8 col-md-9 are p-md-0">
                         <div id="datos-json">
                             <div class="nav-User id" value="Inici" onclick="Abrir()">
                                 <img src="user.png" alt="Usuario">
-                                <div>
+                                <div class="content-Merchan">
                                     <span id="merchant-id-desktop"></span>
                                     <br>
                                     <span id="ultima-visita-desktop"></span>
@@ -245,15 +245,12 @@
         const menuToggle = document.getElementById('menu-toggle');
         const menuToggleButton = document.getElementById('menu-toggle-button');
 
-        // Agrega un manejador de eventos al botón "Cambiar Estilo"
         menuToggleButton.addEventListener('click', function () {
             const menu = document.getElementById('menu');
 
-            // Cambia la clase active en el botón hamburguesa
             menuToggle.classList.toggle('active');
 
-            // Verifica si la pantalla es pequeña (sm) antes de cambiar la visibilidad
-            if (window.innerWidth <= 768) { // Puedes ajustar este valor según tus necesidades
+            if (window.innerWidth <= 768) { 
                 if (menu.style.display === 'none' || menu.style.display === '') {
                     menu.style.display = 'block';
                 } else {
@@ -275,6 +272,47 @@
             margin-left: 0;
             height: 46px;
             width: 49px;
+        }
+
+        .container-fluid {
+            overflow-x: hidden;
+        }
+
+        .content-Merchan {
+            font-size: 13px;
+        }
+
+        .nav-User img {
+            margin-right: 0px;
+            width: 39px;
+        }
+
+        .image-container {
+            margin-left: 9px;
+        }
+
+        .img-panda {
+            width: 73%;
+        }
+
+        #datos-json {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 17px;
+            width: 93%;
+        }
+
+        .valor {
+            font-size: 13px;
+        }
+
+        .nav-paragraph {
+            margin-right: 7px;
+        }
+
+        .nav-icon {
+            width: 82%;
         }
 
         .oculto {
@@ -303,6 +341,28 @@
         }
     }
 
+    @media (max-width: 800px) {
+        #datos-json {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0px;
+            /* background: cadetblue; */
+            width: 100%;
+        }
+
+        .nav-User {
+            cursor: pointer;
+            font-weight: bold;
+            width: 30%;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
     @media (max-width: 767px) {
         #menu {
             display: none;
@@ -322,10 +382,11 @@
         }
 
 
-.container-fluid {
+        .container-fluid {
 
-    overflow-x: hidden;
-}
+            overflow-x: hidden;
+        }
+
         #menu {
             width: 66%;
         }
@@ -335,7 +396,7 @@
         }
 
         .nav-User img {
-/* 
+            /* 
             margin-left: 7px; */
         }
 
@@ -387,9 +448,11 @@
             /* margin-left: 16px; */
             /* margin-right: 80px; */
         }
+
         #menu li {
-    width: 100%;
+            width: 100%;
         }
+
         #ultima-visita-mobile {
             font-size: 14px;
         }
@@ -561,14 +624,12 @@
             color: #000;
         }
 
-        /* Estilo para el botón de hamburguesa en dispositivos móviles */
         #menu-toggle-button {
             border: none;
             order: 3;
             width: 0%;
             margin-left: 13px;
             padding: 0;
-            /* Coloca el botón de hamburguesa al final */
         }
     }
 </style>
