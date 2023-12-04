@@ -55,7 +55,8 @@
 
 
 .content-1-PagoServicios .selected {
-    background-color: #8cc909; /* Color de fondo cuando está seleccionado (verde en este caso) */
+    background-color: #8cc909;
+    color: black; /* Color de fondo cuando está seleccionado (verde en este caso) */
 }
 
 .content-1-PagoServicios button {
@@ -156,9 +157,6 @@
     background-color: #333333 !important;
 }
 
-.content-1-PagoServicios .selected {
- color: black;
-}
 
 @media (max-width: 991px) {
     .service-image img {
