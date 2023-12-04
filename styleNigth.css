@@ -301,3 +301,6 @@ color: white;
 .night-mode .terminal {
     color: #b3b3b3;
 }
+.night-mode th {
+    background-color: #333333 !important;
+}

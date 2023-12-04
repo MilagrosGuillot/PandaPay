@@ -186,3 +186,9 @@ select{
 .conteiner-register {
 width: 100%;
 }
+.fila-encabezado th{
+    padding: 15px !important;
+}
+.fila-encabezado{
+    border-bottom: 4px solid #706f6f;
+}

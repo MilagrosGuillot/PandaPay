@@ -34,18 +34,17 @@ table {
 
 /* Estilos para las celdas de encabezado */
 th {
-    background-color: white;
+    background-color: white !important;
     color: #000000;
-
     font-family: 'Open Sans';
-    text-align: left;
-    border: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
     border-spacing: 0;
+    padding: 15px;
 }
+.a th {
+    font-size: 18px;
+    padding: 13px ;
 
+}
 .a {
     border-bottom: 4px solid #706f6f;
     padding: 45px;
