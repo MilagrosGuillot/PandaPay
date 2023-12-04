@@ -52,13 +52,20 @@
 .PagoServicios {
     height: 5vh;
 }
+.content-1-PagoServicios .option {
+    background-color: #ffffff; /* Color de fondo por defecto */
+}
+
+.content-1-PagoServicios .selected {
+    background-color: #8cc909; /* Color de fondo cuando está seleccionado (verde en este caso) */
+}
 
 .content-1-PagoServicios button {
     text-decoration: none;
     border: none;
     font-weight: bold;
     all: unset;
-    background-color: #8cc909;
+ 
     width: 20%;
     height: 8vh;
     display: flex;

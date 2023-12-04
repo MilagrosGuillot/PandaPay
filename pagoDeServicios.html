@@ -113,19 +113,19 @@
         switch (option.innerHTML) {
             case "SIN FACTURA":
                 document.getElementById("service-image").style.display = "block";
-                document.getElementById("contenidoh2").style.display = "block"; // Mostrar el contenido
+                document.getElementById("contenidoh2").style.display = "block";
                 document.getElementById("contenido").innerHTML = contenidoInicial;
                 ajustarAlturaContenedor(alturaPredeterminada);
                 break;
             case "CON FACTURA":
                 document.getElementById("service-image").style.display = "none";
-                document.getElementById("contenidoh2").style.display = "none"; // Ocultar el contenido
+                document.getElementById("contenidoh2").style.display = "none";
                 mostrarContenidoConFactura();
                 ajustarAlturaContenedor(25);
                 break;
             case "DISPONIBLE":
                 document.getElementById("service-image").style.display = "none";
-                document.getElementById("contenidoh2").style.display = "none"; // Ocultar el contenido
+                document.getElementById("contenidoh2").style.display = "none";
                 mostrarContenidoDisponible();
                 ajustarAlturaContenedor(25);
                 break;
