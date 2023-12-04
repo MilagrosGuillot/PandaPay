@@ -69,6 +69,7 @@
     font-family: 'Open Sans';
     border-radius: 17px;
     display: flex;
+    justify-content: flex-end;
     margin-bottom: 54px;
     align-items: center;
     height: 5vh;
